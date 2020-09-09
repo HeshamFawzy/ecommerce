@@ -6,7 +6,7 @@ Route::group(['namespace' => 'Admin'], function() {
 
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('admin.login');
-    Route::post('login', 'Auth\LoginController@login');
+    Route::post('login', 'Auth\LoginController@login')->name('admin.plogin');
     Route::post('logout', 'Auth\LoginController@logout')->name('admin.logout');
 
     // Register
