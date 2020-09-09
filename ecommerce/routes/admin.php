@@ -10,7 +10,7 @@ Route::group(['namespace' => 'Admin'], function() {
     Route::get('logout', 'Auth\LoginController@logout')->name('admin.logout');
 
     // Register
-    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('admin.register');
+    /*Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('admin.register');
     Route::post('register', 'Auth\RegisterController@register');
 
     // Reset Password
@@ -21,7 +21,7 @@ Route::group(['namespace' => 'Admin'], function() {
 
     // Confirm Password
     Route::get('password/confirm', 'Auth\ConfirmPasswordController@showConfirmForm')->name('admin.password.confirm');
-    Route::post('password/confirm', 'Auth\ConfirmPasswordController@confirm');
+    Route::post('password/confirm', 'Auth\ConfirmPasswordController@confirm');*/
 
     // Verify Email
     // Route::get('email/verify', 'Auth\VerificationController@show')->name('admin.verification.notice');
