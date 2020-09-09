@@ -105,6 +105,7 @@
       <path value="$PROJECT_DIR$/ecommerce/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/bmatovu/multi-auth" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

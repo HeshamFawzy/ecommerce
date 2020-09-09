@@ -11,9 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +134,7 @@
       <path value="$PROJECT_DIR$/ecommerce/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/bmatovu/multi-auth" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hHY366jqKqdB9R04MT77LVw97c" />
@@ -160,7 +163,7 @@
       <updated>1599669331168</updated>
       <workItem from="1599669355483" duration="2269000" />
       <workItem from="1599673037959" duration="2046000" />
-      <workItem from="1599681922401" duration="1515000" />
+      <workItem from="1599681922401" duration="2335000" />
     </task>
     <servers />
   </component>
