@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
         //create superAdmin
         $superAdmin = Admin::create([
             'name' => 'Admin',
@@ -24,5 +23,10 @@ class DatabaseSeeder extends Seeder
 
         $superAdminRole = Role::create(['guard_name' => 'admin', 'name' => 'superAdmin']);
         $superAdmin->assignRole($superAdminRole);
+
+        //seed systemUsers
+        $this->call(AdminsTableSeeder::class);
+        //seed users
+        $this->call(UsersTableSeeder::class);
     }
 }

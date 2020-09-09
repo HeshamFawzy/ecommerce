@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Admin;
 use App\Http\Controllers\Controller;
+use Spatie\Permission\Models\Role;
 
 class HomeController extends Controller
 {
@@ -21,7 +23,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index() {
-        return view('admin.home');
+    public function index()
+    {
+        $systemUsers = Admin::paginate(10);
+        return view('admin.home', compact('systemUsers'));
     }
 }
