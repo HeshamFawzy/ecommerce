@@ -25,6 +25,8 @@ class CreateProductsTable extends Migration
             $table->string('alter_image_filename')->nullable();
             $table->string('alter_image_mime')->nullable();
             $table->string('alter_image_original_filename')->nullable();
+            $table->json('colors');
+            $table->json('sizes');
             $table->timestamps();
 
             $table->Integer('category_id')->unsigned();

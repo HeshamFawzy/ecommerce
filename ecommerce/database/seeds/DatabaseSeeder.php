@@ -24,6 +24,12 @@ class DatabaseSeeder extends Seeder
         $superAdminRole = Role::create(['guard_name' => 'admin', 'name' => 'superAdmin']);
         $superAdmin->assignRole($superAdminRole);
 
+        //seed colors
+        $this->call(ColorsSeeder::class);
+        //seed sizes
+        $this->call(SizesSeeder::class);
+
+
         //seed systemUsers
         $this->call(AdminsTableSeeder::class);
         //seed users

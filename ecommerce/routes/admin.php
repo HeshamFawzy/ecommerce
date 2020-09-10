@@ -29,6 +29,6 @@ Route::group(['namespace' => 'Admin'], function () {
     // Route::post('email/resend', 'Auth\VerificationController@resend')->name('admin.verification.resend');
 
     Route::resource('categories', 'CategoryController');
-    Route::resource('products', 'ProductsController');
+    Route::resource('products', 'ProductController');
 
 });
