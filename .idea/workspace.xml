@@ -11,14 +11,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/seeds/AdminsTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Discount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/UpdateCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/database/factories/CategoryFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_10_064710_create_discounts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/database/seeds/CategoriesTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/assets/admin/images/Question_Mark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/category/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/category/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205541_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205541_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +182,9 @@
       <workItem from="1599669355483" duration="2269000" />
       <workItem from="1599673037959" duration="2046000" />
       <workItem from="1599681922401" duration="4978000" />
+      <workItem from="1599719871744" duration="1823000" />
+      <workItem from="1599721710652" duration="941000" />
+      <workItem from="1599725495939" duration="12660000" />
     </task>
     <servers />
   </component>
@@ -189,9 +207,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="8" key="SettingsEditor" timestamp="1599673728450">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1599721811818">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599673728450" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599721811818" />
   </component>
 </project>

@@ -48,9 +48,16 @@ return [
             'root' => storage_path('app'),
         ],
 
-        'public' => [
+        'public/categories' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => public_path('categories/images'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'public/sizeImages' => [
+            'driver' => 'local',
+            'root' => public_path('categories/sizeImages'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],

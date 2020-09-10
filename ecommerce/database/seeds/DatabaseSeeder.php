@@ -28,5 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminsTableSeeder::class);
         //seed users
         $this->call(UsersTableSeeder::class);
+
+        //seed categories
+        $this->call(CategoriesTableSeeder::class);
     }
 }

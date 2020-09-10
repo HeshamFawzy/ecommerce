@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['namespace' => 'Admin'], function() {
+Route::group(['namespace' => 'Admin'], function () {
     // Dashboard
     Route::get('/', 'HomeController@index')->name('admin.home');
 
@@ -27,4 +27,8 @@ Route::group(['namespace' => 'Admin'], function() {
     // Route::get('email/verify', 'Auth\VerificationController@show')->name('admin.verification.notice');
     // Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('admin.verification.verify');
     // Route::post('email/resend', 'Auth\VerificationController@resend')->name('admin.verification.resend');
+
+    Route::resource('categories', 'CategoryController');
+    Route::resource('products', 'ProductsController');
+
 });
