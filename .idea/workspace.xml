@@ -11,14 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_11_171753_create_images_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php5B57.tmp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/images/php5B08.tmp.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +167,7 @@
       <workItem from="1599725495939" duration="32727000" />
       <workItem from="1599808265745" duration="7450000" />
       <workItem from="1599822565876" duration="3261000" />
-      <workItem from="1599844225994" duration="7589000" />
+      <workItem from="1599844225994" duration="8899000" />
     </task>
     <servers />
   </component>
