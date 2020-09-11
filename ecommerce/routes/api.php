@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'API'], function () {
     Route::resource('categories', 'CategoryController');
+    Route::resource('products', 'ProductController');
 });

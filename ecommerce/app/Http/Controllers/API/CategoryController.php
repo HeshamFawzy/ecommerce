@@ -4,7 +4,6 @@ namespace App\Http\Controllers\API;
 
 use App\Category;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\CategoryResourc;
 use App\Http\Resources\CategoryResource;
 use Illuminate\Http\Request;
 

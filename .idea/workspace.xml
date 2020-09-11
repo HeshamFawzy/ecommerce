@@ -11,8 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Resources/ProductResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php5B57.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/php5B08.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +169,8 @@
       <workItem from="1599719871744" duration="1823000" />
       <workItem from="1599721710652" duration="941000" />
       <workItem from="1599725495939" duration="32727000" />
-      <workItem from="1599808265745" duration="6797000" />
+      <workItem from="1599808265745" duration="7450000" />
+      <workItem from="1599822565876" duration="2020000" />
     </task>
     <servers />
   </component>
@@ -187,10 +193,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599753141293">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599823720421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599753141293" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599823720421" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1599810042210">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -203,5 +209,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599746819501" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
