@@ -11,13 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Resources/ProductResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php5B57.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/php5B08.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_11_171753_create_images_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php5B57.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/images/php5B08.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/ecommerce/vendor/composer" />
@@ -170,7 +173,8 @@
       <workItem from="1599721710652" duration="941000" />
       <workItem from="1599725495939" duration="32727000" />
       <workItem from="1599808265745" duration="7450000" />
-      <workItem from="1599822565876" duration="2020000" />
+      <workItem from="1599822565876" duration="3261000" />
+      <workItem from="1599844225994" duration="7589000" />
     </task>
     <servers />
   </component>
@@ -193,6 +197,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599851024959">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599851024959" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599823720421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

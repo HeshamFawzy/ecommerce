@@ -105,12 +105,12 @@
                                             <div class="row">
                                                 <p>Available Colors :*</p>
                                             </div>
-                                            <div class="col-12" data-pg-collapsed>
+                                            <div id="colorImages" class="col-12" data-pg-collapsed>
                                                 @foreach ($colors as $color)
                                                     <div class="p-2 d-inline">
-                                                        <input name="colors[]" type="checkbox"
+                                                        <input name="colors[]" type="checkbox" class="check"
                                                                value="{{ $color->name }}">
-                                                        <label for="white">{{ $color->name }}</label>
+                                                        <label for="colors[]">{{ $color->name }}</label>
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -135,7 +135,7 @@
                                                 <h4 class="text text-danger" style="color: white">Price (EGY) :</h4>
                                             </div>
                                             <div class="col-12" data-pg-collapsed>
-                                                <input type="number" class="form-control"
+                                                <input type="number" step="0.01" class="form-control"
                                                        placeholder="Please Enter a Product Price in Egyption Pound"
                                                        name="price" required>
                                             </div>
@@ -237,6 +237,15 @@
                     $('#discount').hide();
                 }
             });
+            $("input[type=checkbox][name^='color']").click(function () {
+                if (this.checked) {
+                    let x = '<div class="'+$(this).val()+'" class="col-6 card card-dark p-3"> <label for="colorImage[]">Image <span class="badge badge-info">' + $(this).val() + '</span> :</label> <input type="file" class="form-control" placeholder="Please Enter Color Image" id="colorImage" name="colorImage[]"> <label for="colorAlterImage[]">Alter :</label> <input type="file" class="form-control" placeholder="Please Enter Color Alter Image" id="colorAlterImage" name="colorAlterImage[]"></div>';
+                    $("#colorImages").append(x);
+                } else {
+                    $("." + $(this).val()).remove();
+                }
+            });
         });
     </script>
 @endpush
+

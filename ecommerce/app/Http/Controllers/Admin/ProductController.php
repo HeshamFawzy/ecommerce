@@ -7,6 +7,7 @@ use App\Color;
 use App\Discount;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProduct;
+use App\Image;
 use App\Product;
 use App\Size;
 use Illuminate\Http\Request;
@@ -81,6 +82,26 @@ class ProductController extends Controller
             ]);
         }
 
+        foreach ($request->colorImage as $key => $colorImage) {
+            $colorImg = $request->colorImage[$key];
+            $extension = $colorImg->getClientOriginalExtension();
+            Storage::disk('public/products/colorImages')->put($colorImg->getFilename() . "." . $extension, File::get($colorImg));
+            $colorAlterImg = $request->colorAlterImage[$key];
+            $extension = $colorAlterImg->getClientOriginalExtension();
+            Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $extension, File::get($colorAlterImg));
+
+            Image::create([
+                'product_id' => $product->id,
+                'color' => $request->colors[$key],
+                "image_mime" => $colorImg->getClientMimeType(),
+                "image_original_filename" => $colorImg->getClientOriginalName(),
+                "image_filename" => $colorImg->getFilename() . "." . $extension,
+                "alter_image_mime" => $colorAlterImg->getClientMimeType(),
+                "alter_image_original_filename" => $colorAlterImg->getClientOriginalName(),
+                "alter_image_filename" => $colorAlterImg->getFilename() . "." . $extension,
+            ]);
+        }
+
         return redirect()->route('products.index');
     }
 
@@ -128,9 +149,14 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+        $images = Image::where('product_id', $id)->get();
         $product->delete();
         File::delete('products/images/' . $product->image_filename);
-        File::delete('products/alterImages/' . $product->size_filename);
+        File::delete('products/alterImages/' . $product->alter_image_filename);
+        foreach ($images as $image) {
+            File::delete('products/colorImages/' . $image->image_filename);
+            File::delete('products/colorAlterImages/' . $image->alter_image_filename);
+        }
         return redirect()->route('products.index');
     }
 }

@@ -51,28 +51,42 @@ return [
         'public/categories' => [
             'driver' => 'local',
             'root' => public_path('categories/images'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
         'public/sizeImages' => [
             'driver' => 'local',
             'root' => public_path('categories/sizeImages'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
         'public/products' => [
             'driver' => 'local',
             'root' => public_path('products/images'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
         'public/alterImages' => [
             'driver' => 'local',
             'root' => public_path('products/alterImages'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
+            'visibility' => 'public',
+        ],
+
+        'public/products/colorImages' => [
+            'driver' => 'local',
+            'root' => public_path('products/colorImages'),
+            'url' => env('APP_URL') . '/storage',
+            'visibility' => 'public',
+        ],
+
+        'public/products/colorAlterImages' => [
+            'driver' => 'local',
+            'root' => public_path('products/colorAlterImages'),
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
