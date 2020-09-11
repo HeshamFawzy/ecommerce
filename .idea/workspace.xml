@@ -11,34 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Color.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Size.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/factories/ColorFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/factories/SizeFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_10_145321_create_colors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_10_145402_create_sizes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/seeds/ColorsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/seeds/SizesSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php8C9B.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpA511.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpDDE2.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/phpA500.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php39E6.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php4CEE.tmp.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php7C6F.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpBCAB.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpFC87.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/php4CED.tmp.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/php7B36.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/phpBCAA.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Discount.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Discount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_10_064710_create_discounts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_10_064710_create_discounts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +175,8 @@
       <workItem from="1599681922401" duration="4978000" />
       <workItem from="1599719871744" duration="1823000" />
       <workItem from="1599721710652" duration="941000" />
-      <workItem from="1599725495939" duration="32640000" />
+      <workItem from="1599725495939" duration="32727000" />
+      <workItem from="1599808265745" duration="6455000" />
     </task>
     <servers />
   </component>
@@ -216,14 +203,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599753141293" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1599721811818">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1599810042210">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599721811818" />
-    <state x="389" y="97" width="596" height="534" key="find.popup" timestamp="1599751112959">
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599810042210" />
+    <state x="389" y="97" width="596" height="534" key="find.popup" timestamp="1599813121133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="596" height="534" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599751112959" />
+    <state x="389" y="97" width="596" height="534" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599813121133" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599746819501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

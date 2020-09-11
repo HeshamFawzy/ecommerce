@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with('category')->paginate(10);
+        $products = Product::with('categoryR')->paginate(10);
         return view('admin.products.index', compact('products'));
 
     }
@@ -66,8 +66,8 @@ class ProductController extends Controller
             "alter_image_mime" => $alterImage->getClientMimeType(),
             "alter_image_original_filename" => $alterImage->getClientOriginalName(),
             "alter_image_filename" => $alterImage->getFilename() . "." . $extension,
-            'colors' => json_encode($request->colors),
-            'sizes' => json_encode($request->sizes),
+            'colors' => $request->colors,
+            'sizes' => $request->sizes,
             'price' => $request->input('price'),
             'discount' => $request->input('discount'),
         ]);
@@ -92,7 +92,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::with(['categoryR', 'discountR'])->find($id);
+        return view('admin.products.show', compact('product'));
     }
 
     /**

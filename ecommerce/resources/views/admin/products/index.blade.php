@@ -46,42 +46,47 @@
                                                     <div>{{ $product->name_ar }}</div>
                                                 </td>
                                                 <td>
-                                                    <div>{{ $product->category->name_en }}
-                                                        - {{ $product->category->name_ar }}</div>
+                                                    <div>{{ $product->categoryR->name_en }}
+                                                        - {{ $product->categoryR->name_ar }}</div>
                                                 </td>
-                                                <td>
+                                                <td style="width: 20%">
                                                     @if ($product->image_filename == null)
-                                                        <div class="col-3"><img width="100%"
-                                                                                src="{{ url("assets/admin/images/Question_Mark.png") }}">
+                                                        <div><img width="100%"
+                                                                  src="{{ url("assets/admin/images/Question_Mark.png") }}">
                                                         </div>
                                                     @else
-                                                        <div class="col-3"><img width="100%"
-                                                                                src="{{ url("products/images/{$product->image_filename}") }}">
+                                                        <div><img width="100%"
+                                                                  src="{{ url("products/images/{$product->image_filename}") }}">
                                                         </div>
                                                     @endif
                                                 </td>
-                                                <td>
+                                                <td style="width: 20%">
                                                     @if ($product->alter_image_filename == null)
-                                                        <div class="col-3"><img width="100%"
-                                                                                src="{{ url("assets/admin/images/Question_Mark.png") }}">
+                                                        <div><img width="100%"
+                                                                  src="{{ url("assets/admin/images/Question_Mark.png") }}">
                                                         </div>
                                                     @else
-                                                        <div class="col-3"><img width="100%"
-                                                                                src="{{ url("products/alterImages/{$product->alter_image_filename}") }}">
+                                                        <div><img width="100%"
+                                                                  src="{{ url("products/alterImages/{$product->alter_image_filename}") }}">
                                                         </div>
                                                     @endif
                                                 </td>
-                                                <td>
-                                                    <a class="btn btn-warning"
-                                                       href="{{ route('products.edit' , $product) }}">Edit</a>
-                                                    <form method="POST"
-                                                          action="{{ route('products.destroy' , $product->id) }}"
-                                                          enctype="multipart/form-data>">
-                                                        @method('delete')
-                                                        @csrf
-                                                        <button type="submit" class="btn btn-danger">Delete
-                                                        </button>
-                                                    </form>
+                                                <td style="width: 25%">
+                                                    <div>
+                                                        <a class="btn btn-warning"
+                                                           href="{{ route('products.show' , $product) }}">Show More
+                                                            Details</a>
+                                                        <a class="btn btn-warning"
+                                                           href="{{ route('products.edit' , $product) }}">Edit</a>
+                                                        <form class="" method="POST"
+                                                              action="{{ route('products.destroy' , $product->id) }}"
+                                                              enctype="multipart/form-data>">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <button type="submit" class="btn btn-danger mt-2">Delete
+                                                            </button>
+                                                        </form>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach

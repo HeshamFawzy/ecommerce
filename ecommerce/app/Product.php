@@ -9,10 +9,19 @@ class Product extends Model
     protected $fillable = [
         'name_en', 'name_ar', 'category_id', 'image_filename', 'image_mime', 'image_original_filename', 'alter_image_filename', 'alter_image_mime', 'alter_image_original_filename', 'colors', 'sizes', 'price', 'discount'
     ];
+    protected $casts = [
+        'colors' => 'array',
+        'sizes' => 'array',
+    ];
 
-    public function category()
+    public function categoryR()
     {
-        return $this->belongsTo('App\Category' , 'category_id');
+        return $this->belongsTo('App\Category', 'category_id');
+    }
+
+    public function discountR()
+    {
+        return $this->hasOne('App\Discount', 'product_id');
     }
 
 }
