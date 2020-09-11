@@ -12,7 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +173,7 @@
       <workItem from="1599725495939" duration="32727000" />
       <workItem from="1599808265745" duration="7450000" />
       <workItem from="1599822565876" duration="3261000" />
-      <workItem from="1599844225994" duration="8899000" />
+      <workItem from="1599844225994" duration="11635000" />
     </task>
     <servers />
   </component>

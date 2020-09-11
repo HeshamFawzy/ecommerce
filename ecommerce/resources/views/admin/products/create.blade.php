@@ -51,6 +51,16 @@
                                         </div>
                                         <div class="container" data-pg-collapsed>
                                             <div class="row">
+                                                <p>Description :</p>
+                                            </div>
+                                            <div class="col-12" data-pg-collapsed>
+                                                <textarea type="text" class="form-control"
+                                                          placeholder="Please Enter a Product Description"
+                                                          name="description" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="container" data-pg-collapsed>
+                                            <div class="row">
                                                 <p>Category :</p>
                                             </div>
                                             <div class="col-12" data-pg-collapsed>
@@ -239,7 +249,7 @@
             });
             $("input[type=checkbox][name^='color']").click(function () {
                 if (this.checked) {
-                    let x = '<div class="'+$(this).val()+'" class="col-6 card card-dark p-3"> <label for="colorImage[]">Image <span class="badge badge-info">' + $(this).val() + '</span> :</label> <input type="file" class="form-control" placeholder="Please Enter Color Image" id="colorImage" name="colorImage[]" required> <label for="colorAlterImage[]">Alter :</label> <input type="file" class="form-control" placeholder="Please Enter Color Alter Image" id="colorAlterImage" name="colorAlterImage[]" required></div>';
+                    let x = '<div class="' + $(this).val() + '" class="col-6 card card-dark p-3"> <label for="colorImage[]">Image <span class="badge badge-info">' + $(this).val() + '</span> :</label> <input type="file" class="form-control" placeholder="Please Enter Color Image" id="colorImage" name="colorImage[]" required> <label for="colorAlterImage[]">Alter :</label> <input type="file" class="form-control" placeholder="Please Enter Color Alter Image" id="colorAlterImage" name="colorAlterImage[]" required></div>';
                     $("#colorImages").append(x);
                 } else {
                     $("." + $(this).val()).remove();

@@ -50,23 +50,24 @@ class ProductController extends Controller
     public function store(StoreProduct $request)
     {
         $image = $request->file('image');
-        $extension = $image->getClientOriginalExtension();
-        Storage::disk('public/products')->put($image->getFilename() . "." . $extension, File::get($image));
+        $imageExtension = $image->getClientOriginalExtension();
+        Storage::disk('public/products/images')->put($image->getFilename() . "." . $imageExtension, File::get($image));
 
         $alterImage = $request->file('alterImage');
-        $extension = $alterImage->getClientOriginalExtension();
-        Storage::disk('public/alterImages')->put($alterImage->getFilename() . "." . $extension, File::get($alterImage));
+        $alterImageExtension = $alterImage->getClientOriginalExtension();
+        Storage::disk('public/products/alterImages')->put($alterImage->getFilename() . "." . $alterImageExtension, File::get($alterImage));
 
         $product = Product::create([
             'name_en' => $request->input('name_en'),
             'name_ar' => $request->input('name_ar'),
+            'description' => $request->description,
             'category_id' => $request->category,
             "image_mime" => $image->getClientMimeType(),
             "image_original_filename" => $image->getClientOriginalName(),
-            "image_filename" => $image->getFilename() . "." . $extension,
+            "image_filename" => $image->getFilename() . "." . $imageExtension,
             "alter_image_mime" => $alterImage->getClientMimeType(),
             "alter_image_original_filename" => $alterImage->getClientOriginalName(),
-            "alter_image_filename" => $alterImage->getFilename() . "." . $extension,
+            "alter_image_filename" => $alterImage->getFilename() . "." . $alterImageExtension,
             'colors' => $request->colors,
             'sizes' => $request->sizes,
             'price' => $request->input('price'),
@@ -84,21 +85,21 @@ class ProductController extends Controller
 
         foreach ($request->colorImage as $key => $colorImage) {
             $colorImg = $request->colorImage[$key];
-            $extension = $colorImg->getClientOriginalExtension();
-            Storage::disk('public/products/colorImages')->put($colorImg->getFilename() . "." . $extension, File::get($colorImg));
+            $colorImgExtension = $colorImg->getClientOriginalExtension();
+            Storage::disk('public/products/colorImages')->put($colorImg->getFilename() . "." . $colorImgExtension, File::get($colorImg));
             $colorAlterImg = $request->colorAlterImage[$key];
-            $extension = $colorAlterImg->getClientOriginalExtension();
-            Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $extension, File::get($colorAlterImg));
+            $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
+            Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
 
             Image::create([
                 'product_id' => $product->id,
                 'color' => $request->colors[$key],
                 "image_mime" => $colorImg->getClientMimeType(),
                 "image_original_filename" => $colorImg->getClientOriginalName(),
-                "image_filename" => $colorImg->getFilename() . "." . $extension,
+                "image_filename" => $colorImg->getFilename() . "." . $colorImgExtension,
                 "alter_image_mime" => $colorAlterImg->getClientMimeType(),
                 "alter_image_original_filename" => $colorAlterImg->getClientOriginalName(),
-                "alter_image_filename" => $colorAlterImg->getFilename() . "." . $extension,
+                "alter_image_filename" => $colorAlterImg->getFilename() . "." . $colorAlterImgExtension,
             ]);
         }
 
@@ -113,7 +114,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Product::with(['categoryR', 'discountR'])->find($id);
+        $product = Product::with(['categoryR', 'discountR', 'ImagesR'])->find($id);
         return view('admin.products.show', compact('product'));
     }
 

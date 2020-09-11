@@ -42,24 +42,24 @@
                                     <tr>
                                         <td class="table-active">Image</td>
                                         @if ($product->image_filename == null)
-                                            <td style="width: 50%"><img width="100%"
-                                                     src="{{ url("assets/admin/images/Question_Mark.png") }}">
+                                            <td style="width: 30%"><img width="100%"
+                                                                        src="{{ url("assets/admin/images/Question_Mark.png") }}">
                                             </td>
                                         @else
-                                            <td style="width: 50%"><img width="100%"
-                                                     src="{{ url("products/images/{$product->image_filename}") }}">
+                                            <td style="width: 30%"><img width="100%"
+                                                                        src="{{ url("products/images/{$product->image_filename}") }}">
                                             </td>
                                         @endif
                                     </tr>
                                     <tr>
                                         <td class="table-active">Alter Image</td>
                                         @if ($product->alter_image_filename == null)
-                                            <td style="width: 50%"><img width="100%"
-                                                     src="{{ url("assets/admin/images/Question_Mark.png") }}">
+                                            <td style="width: 30%"><img width="100%"
+                                                                        src="{{ url("assets/admin/images/Question_Mark.png") }}">
                                             </td>
                                         @else
-                                            <td style="width: 50%"><img width="100%"
-                                                     src="{{ url("products/alterImages/{$product->alter_image_filename}") }}">
+                                            <td style="width: 30%"><img width="100%"
+                                                                        src="{{ url("products/alterImages/{$product->alter_image_filename}") }}">
                                             </td>
                                         @endif
                                     </tr>
@@ -82,6 +82,19 @@
                                         <td>
                                             @foreach ($product->colors as $color)
                                                 <span class="badge badge-info">{{ $color }}</span>
+                                            @endforeach
+                                            <br>
+                                            @foreach ($product->ImagesR as $image)
+                                                <div class="row">
+                                                    <div class="col-3 card card-dark">
+                                                        <img style="width: 100%"
+                                                             src="{{ url("products/colorImages/{$image->image_filename}") }}">
+                                                    </div>
+                                                    <div class="col-3 card card-dark">
+                                                        <img style="width: 100%"
+                                                             src="{{ url("products/colorAlterImages/{$image->alter_image_filename}") }}">
+                                                    </div>
+                                                </div>
                                             @endforeach
                                         </td>
                                     </tr>
