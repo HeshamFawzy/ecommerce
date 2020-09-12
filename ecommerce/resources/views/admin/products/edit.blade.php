@@ -128,14 +128,19 @@
                                         <div id="info3">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Available Colors :*</p>
+                                                    <div>Available Colors :*
+                                                        @foreach ($product->colors as $color)
+                                                            <p class="label label-info d-inline"><span
+                                                                    class="badge badge-info">{{ $color }}</span></p>
+                                                        @endforeach
+                                                    </div>
                                                 </div>
                                                 <div id="colorImages" class="col-12" data-pg-collapsed>
                                                     @foreach ($colors as $key => $color)
                                                         <div class="p-2 d-inline">
                                                             <input name="colors[]" type="checkbox" class="check"
                                                                    value="{{ $color->name }}"
-                                                                   @foreach ($product->colors as $pColor) @if ($pColor == $color->name) checked @endif
+                                                            @foreach ($product->colors as $pColor)
                                                                 @endforeach>
                                                             <label for="colors[]">{{ $color->name }}</label>
                                                         </div>
@@ -288,7 +293,7 @@
                     $("." + $(this).val()).remove();
                 }
             });
-            if ($("input[name='discount']:checked") == "1") {
+            if ($("input[name='discount']:checked").val() == "1") {
                 $('#discount').show();
                 $('#end_date').attr('required');
                 $('#amount').attr('required');

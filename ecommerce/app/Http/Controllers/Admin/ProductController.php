@@ -148,11 +148,19 @@ class ProductController extends Controller
             'name_ar' => $request->name_ar,
             'description' => $request->description,
             'category_id' => $request->category,
-            'colors' => $request->colors,
             'sizes' => $request->sizes,
             'price' => $request->price,
             'discount' => $request->discount,
         ]);
+
+        if ($request->discount == "1") {
+            $discount = Discount::where('product_id', $id)->first();
+            $discount->update([
+                'end_date' => $request->end_date,
+                'amount' => $request->amount,
+                'type' => $request->discountType,
+            ]);
+        }
 
         if ($request->hasFile('image') && $request->hasFile('alterImage')) {
 
@@ -200,6 +208,55 @@ class ProductController extends Controller
                 "alter_image_filename" => $alterImage->getFilename() . "." . $alterImageExtension,
             ]);
         }
+        $colors = Product::where('id', $id)->select('colors')->first();
+        foreach ($request->colors as $key => $color) {
+            $image = Image::where('product_id', $id)->where('color', $color)->first();
+            if ($image != null) {
+                File::delete('products/colorImages/' . $image->image_filename);
+                File::delete('products/colorAlterImages/' . $image->alter_image_filename);
+
+                $array[$key] = $color;
+
+                $colorImg = $request->colorImage[$key];
+                $colorImgExtension = $colorImg->getClientOriginalExtension();
+                Storage::disk('public/products/colorImages')->put($colorImg->getFilename() . "." . $colorImgExtension, File::get($colorImg));
+                $colorAlterImg = $request->colorAlterImage[$key];
+                $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
+                Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
+
+                $image->update([
+                    "image_mime" => $colorImg->getClientMimeType(),
+                    "image_original_filename" => $colorImg->getClientOriginalName(),
+                    "image_filename" => $colorImg->getFilename() . "." . $colorImgExtension,
+                    "alter_image_mime" => $colorAlterImg->getClientMimeType(),
+                    "alter_image_original_filename" => $colorAlterImg->getClientOriginalName(),
+                    "alter_image_filename" => $colorAlterImg->getFilename() . "." . $colorAlterImgExtension,
+                ]);
+            } else {
+                $colorImg = $request->colorImage[$key];
+                $colorImgExtension = $colorImg->getClientOriginalExtension();
+                Storage::disk('public/products/colorImages')->put($colorImg->getFilename() . "." . $colorImgExtension, File::get($colorImg));
+                $colorAlterImg = $request->colorAlterImage[$key];
+                $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
+                Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
+
+                Image::create([
+                    'product_id' => $product->id,
+                    'color' => $request->colors[$key],
+                    "image_mime" => $colorImg->getClientMimeType(),
+                    "image_original_filename" => $colorImg->getClientOriginalName(),
+                    "image_filename" => $colorImg->getFilename() . "." . $colorImgExtension,
+                    "alter_image_mime" => $colorAlterImg->getClientMimeType(),
+                    "alter_image_original_filename" => $colorAlterImg->getClientOriginalName(),
+                    "alter_image_filename" => $colorAlterImg->getFilename() . "." . $colorAlterImgExtension,
+                ]);
+
+                $array[] = $color;
+            }
+            $product->update([
+                'colors' => $array,
+            ]);
+        }
 
         return redirect()->route('products.index');
     }
@@ -210,7 +267,8 @@ class ProductController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public
+    function destroy($id)
     {
         $product = Product::find($id);
         $images = Image::where('product_id', $id)->get();
