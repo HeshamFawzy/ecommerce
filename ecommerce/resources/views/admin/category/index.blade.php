@@ -66,7 +66,8 @@
                                             @endif
                                             <td>
                                                 <div>
-                                                    <a class="btn btn-warning" href="{{ route('categories.edit' , $category) }}">Edit</a>
+                                                    <a class="btn btn-warning"
+                                                       href="{{ route('categories.edit' , $category) }}">Edit</a>
                                                     <form method="POST"
                                                           action="{{ route('categories.destroy' , $category->id) }}"
                                                           enctype="multipart/form-data>">

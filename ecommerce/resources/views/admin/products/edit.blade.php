@@ -25,8 +25,10 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form action="{{ route('products.update' , $product) }}" method="POST"
+                                <form method="POST"
+                                      action="{{ route('products.update' , $product->id) }}"
                                       enctype="multipart/form-data">
+                                    @method('put')
                                     @csrf
                                     <div class="container" id="steps">
                                         <div id="info1">
@@ -69,8 +71,8 @@
                                                     <div class="p-2 d-inline">
                                                         <select id="category" class="form-control" name="category"
                                                                 required>
-                                                            <option value="  {{$product->categoryR->id}}"
-                                                                    disabled="disabled" selected="true">
+                                                            <option value="{{$product->categoryR->id}}"
+                                                                    selected="true">
                                                                 {{$product->categoryR->name_en}}
                                                             </option>
                                                             @if($categories ?? '')
@@ -190,7 +192,9 @@
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input id="end_date" type="date" class="form-control"
                                                            name="end_date"
-                                                           value="{{ date('Y-m-d', strtotime($product->discountR->end_date)) }}">
+                                                           @if ($product->discountR != null)
+                                                           value="{{ date('Y-m-d', strtotime($product->discountR->end_date)) }}"
+                                                        @endif>
                                                 </div>
                                                 <div class="container" data-pg-collapsed>
                                                     <div class="row">
@@ -198,24 +202,30 @@
                                                     </div>
                                                     <input type="number" class="form-control" id="amount"
                                                            placeholder="Please Enter a Product Price in Egyption Pound"
-                                                           name="amount" value="{{ $product->discountR->amount }}">
+                                                           name="amount"
+                                                           @if ($product->discountR != null)
+                                                           value="{{ $product->discountR->amount }}"
+                                                        @endif>
                                                     <div class="col-12" data-pg-collapsed>
                                                         <input id="amount" type="radio" name="discountType"
                                                                value="amount"
-                                                               @if ($product->discountR->type == "amount") checked @endif>
+                                                               @if ($product->discountR != null)
+                                                               @if ($product->discountR->type == "amount") checked @endif @endif>
                                                         <label for="amount">Pound(EGY)</label>
                                                     </div>
                                                     <div class="col-12" data-pg-collapsed>
                                                         <input id="percentage" type="radio" name="discountType"
                                                                value="percentage"
-                                                               @if ($product->discountR->type == "percentage") checked @endif>
+                                                               @if ($product->discountR != null)
+                                                               @if ($product->discountR->type == "percentage") checked @endif @endif>
                                                         <label for="percentage">Percentage</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-success mt-5 float-right">Create</button>
                                         </div>
                                     </div>
+                                    <button type="submit" class="btn btn-warning float-right">Edit
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -232,7 +242,7 @@
 @push('custom-foot')
     <script>
         $(function () {
-            $('#discount').hide();
+            $("#discount").hide();
             $('#uploadImage').change(function () {
                 var input = this;
                 var url = $(this).val();
@@ -278,7 +288,7 @@
                     $("." + $(this).val()).remove();
                 }
             });
-            if ($('input[type=radio][name=discount]').val() == "1") {
+            if ($("input[name='discount']:checked") == "1") {
                 $('#discount').show();
                 $('#end_date').attr('required');
                 $('#amount').attr('required');

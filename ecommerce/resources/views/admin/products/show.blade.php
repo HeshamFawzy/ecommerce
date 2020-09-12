@@ -35,13 +35,17 @@
                                         <td>{{ $product->name_ar }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Description </td>
+                                        <td class="table-active">Description</td>
                                         <td>{{ $product->description }}</td>
                                     </tr>
                                     <tr>
                                         <td class="table-active">Category</td>
                                         <td>{{ $product->categoryR->name_en }} -
                                             {{ $product->categoryR->name_ar }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-active">Price</td>
+                                        <td> <h3>{{ $product->price }}<i class="fa fa-gbp" aria-hidden="true"></i></h3>
                                     </tr>
                                     <tr>
                                         <td class="table-active">Image</td>
@@ -71,21 +75,27 @@
                                         <td class="table-active">Discount</td>
                                         @if ($product->discount == 1)
                                             <td><i class="fa fa-check-circle text-success" aria-hidden="true"></i></td>
-                                            <td>{{ $product->discountR->amount }}</td>
-                                            @if ($product->discountR->type == "amount")
+                                            <td>Amount
+                                                :
+                                                <h3 class="label label-info">{{ $product->discountR->amount }}</h3>@if ($product->discountR->type == "amount")
                                                 <td><i class="fa fa-gbp" aria-hidden="true"></i></td>
                                             @else
                                                 <td><i class="fa fa-percent" aria-hidden="true"></i></td>
-                                            @endif
-                                        @else
-                                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                                        @endif
+                                                @endif</td>
+                                                <td>End Date
+                                                    :
+                                                    <h3 class="label label-info">{{ date('Y-m-d', strtotime($product->discountR->end_date)) }}</h3>
+                                                </td>
+                                                @else
+                                                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                                @endif
                                     </tr>
                                     <tr>
                                         <td class="table-active">Available Colors</td>
                                         <td>
                                             @foreach ($product->colors as $color)
-                                                <span class="badge badge-info">{{ $color }}</span>
+                                                <h3 class="label label-info"><span
+                                                        class="badge badge-info">{{ $color }}</span></h3>
                                             @endforeach
                                             <br>
                                             @foreach ($product->ImagesR as $image)
@@ -106,7 +116,8 @@
                                         <td class="table-active">Available Sizes</td>
                                         <td>
                                             @foreach ($product->sizes as $size)
-                                                <span class="badge badge-info">{{ $size }}</span>
+                                                <h3 class="label label-info"><span
+                                                        class="badge badge-info">{{ $size }}</span></h3>
                                             @endforeach
                                         </td>
                                     </tr>

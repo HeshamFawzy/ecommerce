@@ -42,22 +42,22 @@ class CategoryController extends Controller
     public function store(StoreCategory $request)
     {
         $image = $request->file('image');
-        $extension = $image->getClientOriginalExtension();
-        Storage::disk('public/categories')->put($image->getFilename() . "." . $extension, File::get($image));
+        $imageExtension = $image->getClientOriginalExtension();
+        Storage::disk('public/categories')->put($image->getFilename() . "." . $imageExtension, File::get($image));
 
         $sizeImage = $request->file('sizeImage');
-        $extension = $image->getClientOriginalExtension();
-        Storage::disk('public/sizeImages')->put($sizeImage->getFilename() . "." . $extension, File::get($sizeImage));
+        $sizeImageExtension = $image->getClientOriginalExtension();
+        Storage::disk('public/sizeImages')->put($sizeImage->getFilename() . "." . $sizeImageExtension, File::get($sizeImage));
 
         $category = Category::create([
-            'name_en' => $request->input('name_en'),
-            'name_ar' => $request->input('name_ar'),
+            'name_en' => $request->name_en,
+            'name_ar' => $request->name_ar,
             "image_mime" => $image->getClientMimeType(),
             "image_original_filename" => $image->getClientOriginalName(),
-            "image_filename" => $image->getFilename() . "." . $extension,
+            "image_filename" => $image->getFilename() . "." . $imageExtension,
             "size_mime" => $sizeImage->getClientMimeType(),
             "size_original_filename" => $sizeImage->getClientOriginalName(),
-            "size_filename" => $sizeImage->getFilename() . "." . $extension,
+            "size_filename" => $sizeImage->getFilename() . "." . $sizeImageExtension,
         ]);
 
         return redirect()->route('categories.index');
@@ -105,41 +105,45 @@ class CategoryController extends Controller
             File::delete('categories/images/' . $category->image_filename);
             File::delete('categories/sizeImages/' . $category->size_filename);
             $image = $request->file('image');
-            $extension = $image->getClientOriginalExtension();
-            Storage::disk('public/categories')->put($image->getFilename() . "." . $extension, File::get($image));
+            $imageExtension = $image->getClientOriginalExtension();
+            Storage::disk('public/categories')->put($image->getFilename() . "." . $imageExtension, File::get($image));
 
             $sizeImage = $request->file('sizeImage');
-            $extension = $image->getClientOriginalExtension();
-            Storage::disk('public/sizeImages')->put($sizeImage->getFilename() . "." . $extension, File::get($sizeImage));
+            $sizeImageextension = $image->getClientOriginalExtension();
+            Storage::disk('public/sizeImages')->put($sizeImage->getFilename() . "." . $sizeImageextension, File::get($sizeImage));
 
             $category->update([
                 "image_mime" => $image->getClientMimeType(),
                 "image_original_filename" => $image->getClientOriginalName(),
-                "image_filename" => $image->getFilename() . "." . $extension,
+                "image_filename" => $image->getFilename() . "." . $imageExtension,
                 "size_mime" => $sizeImage->getClientMimeType(),
                 "size_original_filename" => $sizeImage->getClientOriginalName(),
-                "size_filename" => $sizeImage->getFilename() . "." . $extension,
+                "size_filename" => $sizeImage->getFilename() . "." . $sizeImageextension,
             ]);
         } elseif ($request->hasFile('image')) {
+            File::delete('categories/images/' . $category->image_filename);
+
             $image = $request->file('image');
-            $extension = $image->getClientOriginalExtension();
-            Storage::disk('public/categories')->put($image->getFilename() . "." . $extension, File::get($image));
+            $imageExtension = $image->getClientOriginalExtension();
+            Storage::disk('public/categories')->put($image->getFilename() . "." . $imageExtension, File::get($image));
 
             $category->update([
                 "image_mime" => $image->getClientMimeType(),
                 "image_original_filename" => $image->getClientOriginalName(),
-                "image_filename" => $image->getFilename() . "." . $extension,
+                "image_filename" => $image->getFilename() . "." . $imageExtension,
             ]);
 
         } elseif ($request->hasFile('sizeImage')) {
+            File::delete('categories/sizeImages/' . $category->size_filename);
+
             $sizeImage = $request->file('sizeImage');
-            $extension = $sizeImage->getClientOriginalExtension();
-            Storage::disk('public/sizeImages')->put($sizeImage->getFilename() . "." . $extension, File::get($sizeImage));
+            $sizeImageExtension = $sizeImage->getClientOriginalExtension();
+            Storage::disk('public/sizeImages')->put($sizeImage->getFilename() . "." . $sizeImageExtension, File::get($sizeImage));
 
             $category->update([
                 "size_mime" => $sizeImage->getClientMimeType(),
                 "size_original_filename" => $sizeImage->getClientOriginalName(),
-                "size_filename" => $sizeImage->getFilename() . "." . $extension,
+                "size_filename" => $sizeImage->getFilename() . "." . $sizeImageExtension,
             ]);
 
         }

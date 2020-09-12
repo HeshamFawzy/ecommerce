@@ -199,11 +199,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-success mt-5 float-right">Create</button>
                                         </div>
                                     </div>
+                                    <button class="btn btn-success mt-5 float-right">Create</button>
                                 </form>
-                                <button id="next" class="btn btn-success mt-5 float-right">Next</button>
                             </div>
                         </div>
                     </div>

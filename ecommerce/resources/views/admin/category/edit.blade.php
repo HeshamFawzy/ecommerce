@@ -20,9 +20,10 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form action="{{ route('categories.update' , $category) }}" method="POST"
+                                <form action="{{ route('categories.update' , $category->id) }}" method="POST"
                                       enctype="multipart/form-data">
                                     @csrf
+                                    @method('put')
                                     <div class="container">
                                         <div class="container" data-pg-collapsed>
                                             <div class="row">
@@ -53,8 +54,15 @@
                                                     <input type="file" class="form-control"
                                                            placeholder="Please Enter a Category Image" id="uploadImage"
                                                            name="image">
-                                                    <img width="100%"
-                                                         src="{{ url("categories/images/{$category->image_filename}") }}">
+                                                    @if ($category->image_filename == null)
+                                                        <div class="col-3"><img width="100%"
+                                                                                src="{{ url("assets/admin/images/Question_Mark.png") }}">
+                                                        </div>
+                                                    @else
+                                                        <div class="col-3"><img width="100%"
+                                                                                src="{{ url("categories/images/{$category->image_filename}") }}">
+                                                        </div>
+                                                    @endif
                                                 </div>
                                                 <div class="col-3 border">
                                                     <img id="image" alt="Uploaded Image" width="100%"
@@ -71,24 +79,25 @@
                                                     <input type="file" class="form-control"
                                                            placeholder="Please Enter a Category Size Image"
                                                            id="uploadSizeImage" name="sizeImage">
-                                                    <img width="100%"
-                                                         src="{{ url("categories/sizeImages/{$category->size_filename}") }}">
+                                                    @if ($category->size_filename == null)
+                                                        <div class="col-3"><img width="100%"
+                                                                                src="{{ url("assets/admin/images/Question_Mark.png") }}">
+                                                        </div>
+                                                    @else
+                                                        <div class="col-3"><img width="100%"
+                                                                                src="{{ url("categories/sizeImages/{$category->size_filename}") }}">
+                                                        </div>
+                                                    @endif
                                                 </div>
                                                 <div class="col-3 border">
                                                     <img id="sizeImage" alt="Uploaded Image" width="100%"
-                                                         src="}">
+                                                         src="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <form method="POST"
-                                          action="{{ route('categories.update' , $category->id) }}"
-                                          enctype="multipart/form-data>">
-                                        @method('put')
-                                        @csrf
-                                        <button type="submit" class="btn btn-warning float-right">Edit
-                                        </button>
-                                    </form>
+                                    <button type="submit" class="btn btn-warning float-right">Edit
+                                    </button>
                                 </form>
                             </div>
                         </div>
