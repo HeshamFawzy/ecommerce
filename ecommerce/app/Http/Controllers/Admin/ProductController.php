@@ -126,7 +126,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::with(['categoryR', 'discountR', 'ImagesR'])->find($id);
+        $colors = Color::all();
+        $sizes = Size::all();
+        $categories = Category::all();
+        return view('admin.products.edit', compact(['product', 'colors', 'sizes', 'categories']));
     }
 
     /**

@@ -11,13 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpF388.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpF38A.tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpF38C.tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpF389.tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpF38B.tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/phpF377.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,9 +160,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ecommerce/public/assets/admin/jquery-steps/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\css" />
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -173,7 +192,8 @@
       <workItem from="1599725495939" duration="32727000" />
       <workItem from="1599808265745" duration="7450000" />
       <workItem from="1599822565876" duration="3261000" />
-      <workItem from="1599844225994" duration="11635000" />
+      <workItem from="1599844225994" duration="12640000" />
+      <workItem from="1599885841828" duration="8611000" />
     </task>
     <servers />
   </component>
@@ -208,10 +228,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599810042210" />
-    <state x="389" y="97" width="596" height="534" key="find.popup" timestamp="1599813121133">
+    <state x="331" y="194" width="702" height="534" key="find.popup" timestamp="1599891406722">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="596" height="534" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599813121133" />
+    <state x="331" y="194" width="702" height="534" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599891406722" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599746819501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -89,7 +89,7 @@
     </div>
 @endsection
 
-@push('custom-script')
+@push('custom-foot')
     <script>
         $(function () {
             $('#uploadImage').change(function () {
@@ -103,7 +103,7 @@
                     }
                     reader.readAsDataURL(input.files[0]);
                 } else {
-                    $('#image').attr('src', '/assets/no_preview.png');
+                    $('#image').attr('src', '/assets/admin/images/Question_Mark.png');
                 }
             });
             $('#uploadSizeImage').change(function () {
@@ -117,7 +117,7 @@
                     }
                     reader.readAsDataURL(input.files[0]);
                 } else {
-                    $('#sizeImage').attr('src', '/assets/no_preview.png');
+                    $('#sizeImage').attr('src', '/assets/admin/images/Question_Mark.png');
                 }
             });
         });

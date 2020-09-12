@@ -35,6 +35,10 @@
                                         <td>{{ $product->name_ar }}</td>
                                     </tr>
                                     <tr>
+                                        <td class="table-active">Description </td>
+                                        <td>{{ $product->description }}</td>
+                                    </tr>
+                                    <tr>
                                         <td class="table-active">Category</td>
                                         <td>{{ $product->categoryR->name_en }} -
                                             {{ $product->categoryR->name_ar }}</td>
