@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>AdminLTE 3 | Starter</title>
+    <title>Kashmir</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
@@ -29,9 +29,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Content Wrapper. Contains page content -->
 @yield('content')
 <!-- /.content-wrapper -->
-    <!-- Control Sidebar -->
-@include('admin.layouts.includes.controlSidebar')
-<!-- /.control-sidebar -->
     <!-- Main Footer -->
     @include('admin.layouts.includes.footer')
 </div>
