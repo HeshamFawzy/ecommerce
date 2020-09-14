@@ -30,5 +30,10 @@ Route::group(['namespace' => 'Admin'], function () {
 
     Route::resource('categories', 'CategoryController');
     Route::resource('products', 'ProductController');
+    Route::get('slider', 'publicController@slider')->name('public.slider');
+    Route::post('sliderUpload', 'publicController@sliderUpload')->name('public.sliderUpload');
+    Route::get('sliderDelete/{id}', 'publicController@sliderDelete')->name('public.sliderDelete');
+    Route::get('about', 'publicController@about')->name('public.about');
+    Route::get('contact', 'publicController@contact')->name('public.contact');
 
 });
