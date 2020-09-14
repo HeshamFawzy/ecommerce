@@ -30,7 +30,7 @@ class CreateProductsTable extends Migration
             $table->boolean('discount');
             $table->timestamps();
 
-            $table->Integer('category_id')->unsigned();
+            $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
