@@ -11,43 +11,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php54D9.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpD389.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpF1CC.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpFA0F.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php1EE1.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php54EA.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php54FC.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php6888.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php688A.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php6F26.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php6F37.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php9042.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD39B.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD3CC.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpF1CE.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpFA11.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpFA23.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php1EE0.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php54E9.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php54EB.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php6878.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php6889.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php6F25.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php6F27.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php9041.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD38A.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD3AC.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpF1CD.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpFA10.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpFA22.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/php54D8.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/phpD388.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/phpF1CB.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/images/phpFA0E.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/alterImages/php54D9.tmp.png" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpC014.tmp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpAB68.tmp.png" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/products/images/phpBFF4.tmp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpD389.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/alterImages/phpFA0F.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php1ADF.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php1AE1.tmp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpC026.tmp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php1EE1.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php54EA.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php54FC.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php6F26.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php6F37.tmp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpC025.tmp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php9042.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD39B.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD3CC.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpFA11.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpFA23.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php1ADE.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php1AE0.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php1EE0.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php54E9.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php54EB.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php6F25.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php6F27.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php9041.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD38A.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD3AC.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpFA10.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpFA22.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/images/php54D8.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/images/phpAB57.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/images/phpD388.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/images/phpFA0E.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +215,15 @@
       <workItem from="1599822565876" duration="3261000" />
       <workItem from="1599844225994" duration="12640000" />
       <workItem from="1599885841828" duration="25907000" />
+      <workItem from="1599929083293" duration="637000" />
+      <workItem from="1599991918029" duration="26000" />
+      <workItem from="1599991962934" duration="1103000" />
+      <workItem from="1600007966167" duration="27000" />
+      <workItem from="1600072101011" duration="2991000" />
+      <workItem from="1600087389557" duration="662000" />
+      <workItem from="1600088264217" duration="3000" />
+      <workItem from="1600088401340" duration="4000" />
+      <workItem from="1600088567674" duration="130000" />
     </task>
     <servers />
   </component>
@@ -246,6 +254,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599823720421" />
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1600007997061">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1600007997061" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1599810042210">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

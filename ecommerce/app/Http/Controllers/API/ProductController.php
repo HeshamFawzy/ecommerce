@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return Product::with(['categoryR', 'discountR'])->all();
+        return Product::with(['categoryR', 'discountR', 'imagesR'])->all();
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return Product::with(['categoryR', 'discountR', 'imageR'])->find($id);
+        return Product::with(['categoryR', 'discountR', 'imagesR'])->find($id);
     }
 
     /**
@@ -61,5 +61,10 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function productsByCategory($id)
+    {
+        return Product::with(['categoryR', 'discountR', 'imagesR'])->where('category_id', $id)->get();
     }
 }
