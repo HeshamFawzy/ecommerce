@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\About;
 use App\Http\Controllers\Controller;
 use App\Slider;
 use Illuminate\Http\Request;
@@ -18,7 +19,8 @@ class PublicController extends Controller
 
     public function about()
     {
-        return view('admin.publicPages.about');
+        $about = About::latest()->first();
+        return view('admin.publicPages.about', compact('about'));
     }
 
     public function contact()
@@ -47,6 +49,19 @@ class PublicController extends Controller
         $image->delete();
         File::delete('sliders/' . $image->image_filename);
         return redirect()->route('public.slider');
+    }
+
+    public function aboutUpload(Request $request)
+    {
+        $validatedData = $request->validate([
+            'about' => 'required',
+        ]);
+
+        About::create([
+            'about' => $request->about
+        ]);
+
+        return redirect()->route('public.about');
     }
 
 }

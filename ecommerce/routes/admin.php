@@ -34,6 +34,8 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::post('sliderUpload', 'publicController@sliderUpload')->name('public.sliderUpload');
     Route::get('sliderDelete/{id}', 'publicController@sliderDelete')->name('public.sliderDelete');
     Route::get('about', 'publicController@about')->name('public.about');
+    Route::post('aboutUpload', 'publicController@aboutUpload')->name('public.aboutUpload');
     Route::get('contact', 'publicController@contact')->name('public.contact');
+    Route::post('contactUpload', 'publicController@contactUpload')->name('public.contactUpload');
 
 });

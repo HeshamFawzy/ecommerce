@@ -11,19 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/About.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/PublicController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_14_133657_create_sliders_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_14_133753_create_abouts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_14_133807_create_contacts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/about.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/slider.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/assets/admin/lib/trix/trix-core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/assets/admin/lib/trix/trix.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/assets/admin/lib/trix/trix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/PublicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/PublicController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/about.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +195,10 @@
       <workItem from="1600088264217" duration="3000" />
       <workItem from="1600088401340" duration="4000" />
       <workItem from="1600088567674" duration="221000" />
-      <workItem from="1600088825704" duration="6222000" />
+      <workItem from="1600088825704" duration="6309000" />
+      <workItem from="1600115031178" duration="597000" />
+      <workItem from="1600150393290" duration="400000" />
+      <workItem from="1600151385898" duration="3918000" />
     </task>
     <servers />
   </component>
