@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\About;
+use App\Contact;
 use App\Http\Controllers\Controller;
 use App\Slider;
 use Illuminate\Http\Request;
@@ -25,7 +26,8 @@ class PublicController extends Controller
 
     public function contact()
     {
-        return view('admin.publicPages.contact');
+        $contact = Contact::latest()->first();
+        return view('admin.publicPages.contact', compact('contact'));
     }
 
     public function sliderUpload(Request $request)
@@ -62,6 +64,19 @@ class PublicController extends Controller
         ]);
 
         return redirect()->route('public.about');
+    }
+
+    public function contactUpload(Request $request)
+    {
+        $validatedData = $request->validate([
+            'contact' => 'required',
+        ]);
+
+        Contact::create([
+            'contact' => $request->contact
+        ]);
+
+        return redirect()->route('public.contact');
     }
 
 }

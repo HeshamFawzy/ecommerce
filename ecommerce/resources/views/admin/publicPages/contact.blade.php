@@ -1,5 +1,9 @@
 @extends('admin.layouts.app')
 
+@push('custom-head')
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/lib/trix/trix.css') }}">
+    <script type="text/javascript" src="{{ asset('assets/admin/lib/trix/trix.js') }}"></script>
+@endpush
 @section('content')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -25,7 +29,18 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-
+                                <form method="POST" action="{{ route('public.contactUpload') }}"
+                                      enctype="multipart/form-data">
+                                    @csrf
+                                    <input id="about" type="hidden" name="contact" required>
+                                    <trix-editor input="about"></trix-editor>
+                                    <button class="btn btn-success float-right m-2" type="submit">Save</button>
+                                </form>
+                                @if ($contact ?? '')
+                                    <div class="card card-blue p-2 m-1">
+                                        <div class="trix-content">{!! $contact->contact !!}</div>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
