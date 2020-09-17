@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return Product::with(['categoryR', 'discountR', 'imagesR'])->all();
+        return Product::with(['categoryR', 'discountR', 'imagesR'])->paginate(10);
     }
 
     /**
@@ -37,7 +37,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return Product::with(['categoryR', 'discountR', 'imagesR'])->find($id);
+        return Product::with(['categoryR', 'discountR', 'imagesR'])->find($id)->paginate(10);
     }
 
     /**
@@ -65,6 +65,6 @@ class ProductController extends Controller
 
     public function productsByCategory($id)
     {
-        return Product::with(['categoryR', 'discountR', 'imagesR'])->where('category_id', $id)->get();
+        return Product::with(['categoryR', 'discountR', 'imagesR'])->where('category_id', $id)->paginate(10);
     }
 }
