@@ -49,25 +49,11 @@ class ProductController extends Controller
      */
     public function store(StoreProduct $request)
     {
-        $image = $request->file('image');
-        $imageExtension = $image->getClientOriginalExtension();
-        Storage::disk('public/products/images')->put($image->getFilename() . "." . $imageExtension, File::get($image));
-
-        $alterImage = $request->file('alterImage');
-        $alterImageExtension = $alterImage->getClientOriginalExtension();
-        Storage::disk('public/products/alterImages')->put($alterImage->getFilename() . "." . $alterImageExtension, File::get($alterImage));
-
         $product = Product::create([
             'name_en' => $request->name_en,
             'name_ar' => $request->name_ar,
             'description' => $request->description,
             'category_id' => $request->category,
-            "image_mime" => $image->getClientMimeType(),
-            "image_original_filename" => $image->getClientOriginalName(),
-            "image_filename" => $image->getFilename() . "." . $imageExtension,
-            "alter_image_mime" => $alterImage->getClientMimeType(),
-            "alter_image_original_filename" => $alterImage->getClientOriginalName(),
-            "alter_image_filename" => $alterImage->getFilename() . "." . $alterImageExtension,
             'colors' => $request->colors,
             'sizes' => $request->sizes,
             'price' => $request->price,
@@ -162,52 +148,6 @@ class ProductController extends Controller
             ]);
         }
 
-        if ($request->hasFile('image') && $request->hasFile('alterImage')) {
-
-            File::delete('products/images/' . $product->image_filename);
-            File::delete('products/alterImages/' . $product->alter_image_filename);
-            $image = $request->file('image');
-            $imageExtension = $image->getClientOriginalExtension();
-            Storage::disk('public/products/images')->put($image->getFilename() . "." . $imageExtension, File::get($image));
-
-            $alterImage = $request->file('alterImage');
-            $alterImageExtension = $alterImage->getClientOriginalExtension();
-            Storage::disk('public/products/alterImages')->put($alterImage->getFilename() . "." . $alterImageExtension, File::get($alterImage));
-
-            $product->update([
-                "image_mime" => $image->getClientMimeType(),
-                "image_original_filename" => $image->getClientOriginalName(),
-                "image_filename" => $image->getFilename() . "." . $imageExtension,
-                "alter_image_mime" => $alterImage->getClientMimeType(),
-                "alter_image_original_filename" => $alterImage->getClientOriginalName(),
-                "alter_image_filename" => $alterImage->getFilename() . "." . $alterImageExtension,
-            ]);
-        } elseif ($request->hasFile('image')) {
-            File::delete('products/images/' . $product->image_filename);
-
-            $image = $request->file('image');
-            $imageExtension = $image->getClientOriginalExtension();
-            Storage::disk('public/products/images')->put($image->getFilename() . "." . $imageExtension, File::get($image));
-
-            $product->update([
-                "image_mime" => $image->getClientMimeType(),
-                "image_original_filename" => $image->getClientOriginalName(),
-                "image_filename" => $image->getFilename() . "." . $imageExtension,
-            ]);
-
-        } elseif ($request->hasFile('alterImage')) {
-            File::delete('products/alterImages/' . $product->alter_image_filename);
-
-            $alterImage = $request->file('alterImage');
-            $alterImageExtension = $alterImage->getClientOriginalExtension();
-            Storage::disk('public/products/alterImages')->put($alterImage->getFilename() . "." . $alterImageExtension, File::get($alterImage));
-
-            $product->update([
-                "alter_image_mime" => $alterImage->getClientMimeType(),
-                "alter_image_original_filename" => $alterImage->getClientOriginalName(),
-                "alter_image_filename" => $alterImage->getFilename() . "." . $alterImageExtension,
-            ]);
-        }
         $colors = Product::where('id', $id)->select('colors')->first();
         foreach ($request->colors as $key => $color) {
             $image = Image::where('product_id', $id)->where('color', $color)->first();
@@ -273,8 +213,6 @@ class ProductController extends Controller
         $product = Product::find($id);
         $images = Image::where('product_id', $id)->get();
         $product->delete();
-        File::delete('products/images/' . $product->image_filename);
-        File::delete('products/alterImages/' . $product->alter_image_filename);
         foreach ($images as $image) {
             File::delete('products/colorImages/' . $image->image_filename);
             File::delete('products/colorAlterImages/' . $image->alter_image_filename);

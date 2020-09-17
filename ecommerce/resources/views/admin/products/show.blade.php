@@ -48,30 +48,6 @@
                                         <td> <h3>{{ $product->price }}<i class="fa fa-gbp" aria-hidden="true"></i></h3>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Image</td>
-                                        @if ($product->image_filename == null)
-                                            <td style="width: 30%"><img width="100%"
-                                                                        src="{{ url("assets/admin/images/Question_Mark.png") }}">
-                                            </td>
-                                        @else
-                                            <td style="width: 30%"><img width="100%"
-                                                                        src="{{ url("products/images/{$product->image_filename}") }}">
-                                            </td>
-                                        @endif
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">Alter Image</td>
-                                        @if ($product->alter_image_filename == null)
-                                            <td style="width: 30%"><img width="100%"
-                                                                        src="{{ url("assets/admin/images/Question_Mark.png") }}">
-                                            </td>
-                                        @else
-                                            <td style="width: 30%"><img width="100%"
-                                                                        src="{{ url("products/alterImages/{$product->alter_image_filename}") }}">
-                                            </td>
-                                        @endif
-                                    </tr>
-                                    <tr>
                                         <td class="table-active">Discount</td>
                                         @if ($product->discount == 1)
                                             <td><i class="fa fa-check-circle text-success" aria-hidden="true"></i></td>

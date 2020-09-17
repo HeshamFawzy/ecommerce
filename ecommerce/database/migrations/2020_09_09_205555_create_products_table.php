@@ -18,12 +18,6 @@ class CreateProductsTable extends Migration
             $table->string('name_en', 100);
             $table->string('name_ar', 100);
             $table->text('description');
-            $table->string('image_filename')->nullable();
-            $table->string('image_mime')->nullable();
-            $table->string('image_original_filename')->nullable();
-            $table->string('alter_image_filename')->nullable();
-            $table->string('alter_image_mime')->nullable();
-            $table->string('alter_image_original_filename')->nullable();
             $table->json('colors');
             $table->json('sizes');
             $table->float('price');

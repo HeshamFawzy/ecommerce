@@ -27,8 +27,6 @@
                                         <th>Name_en</th>
                                         <th>Name_ar</th>
                                         <th>Category Name</th>
-                                        <th>Image</th>
-                                        <th>Alter Image</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -48,28 +46,6 @@
                                                 <td>
                                                     <div>{{ $product->categoryR->name_en }}
                                                         - {{ $product->categoryR->name_ar }}</div>
-                                                </td>
-                                                <td style="width: 20%">
-                                                    @if ($product->image_filename == null)
-                                                        <div><img width="100%"
-                                                                  src="{{ url("assets/admin/images/Question_Mark.png") }}">
-                                                        </div>
-                                                    @else
-                                                        <div><img width="100%"
-                                                                  src="{{ url("products/images/{$product->image_filename}") }}">
-                                                        </div>
-                                                    @endif
-                                                </td>
-                                                <td style="width: 20%">
-                                                    @if ($product->alter_image_filename == null)
-                                                        <div><img width="100%"
-                                                                  src="{{ url("assets/admin/images/Question_Mark.png") }}">
-                                                        </div>
-                                                    @else
-                                                        <div><img width="100%"
-                                                                  src="{{ url("products/alterImages/{$product->alter_image_filename}") }}">
-                                                        </div>
-                                                    @endif
                                                 </td>
                                                 <td style="width: 25%">
                                                     <div>

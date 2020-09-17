@@ -84,39 +84,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="info2">
-                                            <div class="container" data-pg-collapsed>
-                                                <div class="row">
-                                                    <p>Product Image :</p>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-6" data-pg-collapsed>
-                                                        <input type="file" class="form-control"
-                                                               placeholder="Please Enter a Product Image"
-                                                               id="uploadImage"
-                                                               name="image">
-                                                    </div>
-                                                    <div class="col-3 border">
-                                                        <img id="image" src="#" alt="Uploaded Image" width="100%"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="container" data-pg-collapsed>
-                                                <div class="row">
-                                                    <p>Product AlterImage :</p>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-6" data-pg-collapsed>
-                                                        <input type="file" class="form-control"
-                                                               placeholder="Please Enter a Product Alter Image"
-                                                               id="uploadAlterImage" name="alterImage">
-                                                    </div>
-                                                    <div class="col-3 border">
-                                                        <img id="alterImage" src="#" alt="Uploaded Image" width="100%"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div id="info3">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
@@ -219,34 +186,6 @@
     <script>
         $(function () {
             $('#discount').hide();
-            $('#uploadImage').change(function () {
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg" || ext == "jfif")) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $('#image').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    $('#image').attr('src', '/assets/admin/images/Question_Mark.png');
-                }
-            });
-            $('#uploadAlterImage').change(function () {
-                var input = this;
-                var url = $(this).val();
-                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-                if (input.files && input.files[0] && (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg" || ext == "jfif")) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $('#alterImage').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    $('#alterImage').attr('src', '/assets/admin/images/Question_Mark.png');
-                }
-            });
             $('input[type=radio][name=discount]').change(function () {
                 if (this.value == '1') {
                     $('#discount').show();

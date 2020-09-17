@@ -37,7 +37,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return Product::with(['categoryR', 'discountR', 'imagesR'])->find($id)->paginate(10);
+        return Product::with(['categoryR', 'discountR', 'imagesR'])->find($id);
     }
 
     /**
