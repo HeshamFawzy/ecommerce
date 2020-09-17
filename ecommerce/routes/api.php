@@ -18,4 +18,7 @@ Route::group(['namespace' => 'API'], function () {
     Route::resource('categories', 'CategoryController');
     Route::get('productsByCategory/{id}', 'ProductController@productsByCategory');
     Route::resource('products', 'ProductController');
+    Route::get('slider', 'PublicController@slider');
+    Route::get('about', 'PublicController@about');
+    Route::get('contact', 'PublicController@contact');
 });
