@@ -30,12 +30,14 @@ Route::group(['namespace' => 'Admin'], function () {
 
     Route::resource('categories', 'CategoryController');
     Route::resource('products', 'ProductController');
-    Route::get('slider', 'publicController@slider')->name('public.slider');
-    Route::post('sliderUpload', 'publicController@sliderUpload')->name('public.sliderUpload');
-    Route::get('sliderDelete/{id}', 'publicController@sliderDelete')->name('public.sliderDelete');
-    Route::get('about', 'publicController@about')->name('public.about');
-    Route::post('aboutUpload', 'publicController@aboutUpload')->name('public.aboutUpload');
-    Route::get('contact', 'publicController@contact')->name('public.contact');
-    Route::post('contactUpload', 'publicController@contactUpload')->name('public.contactUpload');
+    Route::get('slider', 'PublicController@slider')->name('public.slider');
+    Route::post('sliderUpload', 'PublicController@sliderUpload')->name('public.sliderUpload');
+    Route::get('sliderDelete/{id}', 'PublicController@sliderDelete')->name('public.sliderDelete');
+    Route::get('about', 'PublicController@about')->name('public.about');
+    Route::post('aboutUpload', 'PublicController@aboutUpload')->name('public.aboutUpload');
+    Route::get('contact', 'PublicController@contact')->name('public.contact');
+    Route::post('contactUpload', 'PublicController@contactUpload')->name('public.contactUpload');
+    Route::resource('systemRoles', 'SystemRolesController');
+    Route::resource('systemUsers', 'SystemUsersController');
 
 });

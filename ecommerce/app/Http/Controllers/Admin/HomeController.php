@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $systemUsers = Admin::role('superAdmin')->paginate(10);
+        $systemUsers = Admin::paginate(10);
         return view('admin.home', compact('systemUsers'));
     }
 }
