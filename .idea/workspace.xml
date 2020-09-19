@@ -6,16 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/SystemRolesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/SystemUsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/roles/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/roles/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/systemUsers/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/systemUsers/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/systemUsers/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/SystemUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/SystemUsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/systemUsers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/systemUsers/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/systemUsers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/systemUsers/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +199,7 @@
       <workItem from="1600351253264" duration="22000" />
       <workItem from="1600365275234" duration="1497000" />
       <workItem from="1600369471837" duration="2755000" />
-      <workItem from="1600503267226" duration="9640000" />
+      <workItem from="1600503267226" duration="19270000" />
     </task>
     <servers />
   </component>
@@ -259,10 +256,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599851024959" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600518321725">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600519271420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1600518321725" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1600519271420" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600508991020" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1600007997061">
       <screen x="0" y="0" width="1366" height="728" />

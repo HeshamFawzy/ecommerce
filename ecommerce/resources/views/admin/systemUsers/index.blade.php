@@ -9,12 +9,6 @@
                     <div class="col-sm-6">
                         <h1 class="m-0 text-dark">System Users</h1>
                     </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Starter Page</li>
-                        </ol>
-                    </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
         </div>
@@ -32,17 +26,28 @@
                                         <th scope="col">#Id</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
+                                        <th scope="col">Roles</th>
                                         <th scope="col">Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($systemUsers as $systemUser)
+                                    @foreach ($systemUsers as $key => $systemUser)
                                         <tr>
                                             <th scope="row">{{ $systemUser->id }}</th>
                                             <td>{{ $systemUser->name }}</td>
                                             <td>{{ $systemUser->email }}</td>
+                                            <td>{{ $systemUser->roles->pluck('name') }}</td>
                                             <td>
-
+                                                <a class="btn btn-warning"
+                                                   href="{{ route('systemUsers.edit' , $systemUser) }}">Edit</a>
+                                                <form class="" method="POST"
+                                                      action="{{ route('systemUsers.destroy' , $systemUser->id) }}"
+                                                      enctype="multipart/form-data>">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-danger mt-2">Delete
+                                                    </button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

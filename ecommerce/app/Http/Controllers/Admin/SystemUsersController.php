@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Admin;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class SystemUsersController extends Controller
 {
@@ -15,7 +18,7 @@ class SystemUsersController extends Controller
      */
     public function index()
     {
-        $systemUsers = Admin::paginate(10);
+        $systemUsers = Admin::orderBy('created_at', 'DESC')->where('email', '!=', 'Admin@test.com')->paginate(10);
         return view('admin.systemUsers.index', compact('systemUsers'));
     }
 
@@ -26,7 +29,8 @@ class SystemUsersController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::all()->where('name', '!=', 'superAdmin');
+        return view('admin.systemUsers.create', compact('roles'));
     }
 
     /**
@@ -35,9 +39,19 @@ class SystemUsersController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUser $request)
     {
-        //
+        $user = Admin::create([
+            'name' => $request->userName,
+            'email' => $request->userEmail,
+            'password' => Hash::make($request->userPassword)
+        ]);
+
+        foreach ($request->userRoles as $userRole) {
+            $user->assignRole($userRole);
+        }
+
+        return redirect()->route('systemUsers.index');
     }
 
     /**
@@ -59,7 +73,9 @@ class SystemUsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = Admin::find($id);
+        $roles = Role::all()->where('name', '!=', 'superAdmin');
+        return view('admin.systemUsers.edit', compact(['user', 'roles']));
     }
 
     /**
@@ -71,7 +87,26 @@ class SystemUsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = Admin::find($id);
+        $user->update([
+            'name' => $request->userName,
+            'email' => $request->userEmail,
+            'password' => Hash::make($request->userPassword)
+        ]);
+
+        if ($user->roles->pluck('name') != null) {
+            foreach ($user->roles->pluck('name') as $userRole) {
+                $user->removeRole($userRole);
+            }
+        }
+
+        if ($request->userRoles != null) {
+            foreach ($request->userRoles as $userRole) {
+                $user->assignRole($userRole);
+            }
+        }
+
+        return redirect()->route('systemUsers.index');
     }
 
     /**
@@ -82,6 +117,8 @@ class SystemUsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = Admin::find($id);
+        $user->delete();
+        return redirect()->route('systemUsers.index');
     }
 }

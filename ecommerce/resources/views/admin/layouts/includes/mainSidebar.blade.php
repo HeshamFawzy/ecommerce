@@ -24,6 +24,7 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
+                @hasrole('superAdmin' , 'admin')
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -45,8 +46,21 @@
                                 <p>Create Role</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('systemUsers.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Show Users</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('systemUsers.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create User</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
+                @endhasrole
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
