@@ -6,10 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ResetPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Notifications/PasswordResetNotification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/AuthController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,20 +152,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ecommerce/public/assets/admin/jquery-steps/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
-      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ecommerce\ecommerce\ecommerce\app\Http\Controllers\API" />
       <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
       <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\css" />
       <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -258,10 +262,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599851024959" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600519271420">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600594994688">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1600519271420" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1600594994688" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600508991020" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1600007997061">
       <screen x="0" y="0" width="1366" height="728" />

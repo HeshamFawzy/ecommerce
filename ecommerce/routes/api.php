@@ -31,6 +31,9 @@ Route::group(['namespace' => 'API'], function () {
         Route::post('logout', 'AuthController@logout');
         Route::post('refresh', 'AuthController@refresh');
         Route::get('user-profile', 'AuthController@userProfile');
+
+        Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail');
+        Route::post('/password/reset', 'ResetPasswordController@reset');
     });
 });
 
