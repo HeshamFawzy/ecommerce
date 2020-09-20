@@ -63,4 +63,9 @@ class User extends Authenticatable implements JWTSubject
     {
         $this->notify(new PasswordResetNotification($token));
     }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

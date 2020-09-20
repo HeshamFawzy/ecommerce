@@ -28,12 +28,19 @@ Route::group(['namespace' => 'API'], function () {
     ], function ($router) {
         Route::post('login', 'AuthController@login');
         Route::post('register', 'AuthController@register');
-        Route::post('logout', 'AuthController@logout');
         Route::post('refresh', 'AuthController@refresh');
         Route::get('user-profile', 'AuthController@userProfile');
 
         Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail');
         Route::post('/password/reset', 'ResetPasswordController@reset');
+    });
+
+    Route::group([
+        'middleware' => 'api',
+    ], function ($router) {
+        Route::post('logout', 'AuthController@logout');
+
+        Route::post('order', 'OrderController@store');
     });
 });
 
