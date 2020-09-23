@@ -39,5 +39,6 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::post('contactUpload', 'PublicController@contactUpload')->name('public.contactUpload');
     Route::resource('systemRoles', 'SystemRolesController');
     Route::resource('systemUsers', 'SystemUsersController');
-
+    Route::get('orders/done/{id}', 'OrderController@done')->name('orders.done');
+    Route::resource('orders', 'OrderController');
 });

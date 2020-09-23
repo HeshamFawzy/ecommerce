@@ -49,7 +49,7 @@
                                                 <input type="password" class="form-control"
                                                        placeholder="Please Enter a User Password"
                                                        name="userPassword"
-                                                       required>
+                                                >
                                             </div>
                                             <div class="row">
                                                 <h6>User Roles:</h6>

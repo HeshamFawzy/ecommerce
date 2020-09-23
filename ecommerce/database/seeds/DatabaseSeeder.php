@@ -22,6 +22,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $superAdminRole = Role::create(['guard_name' => 'admin', 'name' => 'superAdmin']);
+        $Ordered = Role::create(['guard_name' => 'admin', 'name' => 'Ordered']);
+        $Chopping = Role::create(['guard_name' => 'admin', 'name' => 'Chopping']);
+        $Finishing = Role::create(['guard_name' => 'admin', 'name' => 'Finishing']);
+        $Delivered = Role::create(['guard_name' => 'admin', 'name' => 'Delivered']);
+        $Done = Role::create(['guard_name' => 'admin', 'name' => 'Done']);
         $superAdmin->assignRole($superAdminRole);
 
         //seed colors
