@@ -78,10 +78,10 @@ class ProductController extends Controller
             $colorAlterImg = $request->colorAlterImage[$key];
             $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
             Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
-
+            $color = Color::where('id' , $request->colors[$key])->select('id', 'name')->get();
             Image::create([
                 'product_id' => $product->id,
-                'color' => $request->colors[$key],
+                'color' => $color,
                 "image_mime" => $colorImg->getClientMimeType(),
                 "image_original_filename" => $colorImg->getClientOriginalName(),
                 "image_filename" => $colorImg->getFilename() . "." . $colorImgExtension,
@@ -165,10 +165,10 @@ class ProductController extends Controller
                 $colorAlterImg = $request->colorAlterImage[$key];
                 $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
                 Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
-
+                $color = Color::where('id' , $request->colors[$key])->select('id', 'name')->get();
                 Image::create([
                     'product_id' => $product->id,
-                    'color' => $request->colors[$key],
+                    'color' => $color,
                     "image_mime" => $colorImg->getClientMimeType(),
                     "image_original_filename" => $colorImg->getClientOriginalName(),
                     "image_filename" => $colorImg->getFilename() . "." . $colorImgExtension,

@@ -21,7 +21,7 @@ class CreateImagesTable extends Migration
             $table->string('alter_image_filename')->nullable();
             $table->string('alter_image_mime')->nullable();
             $table->string('alter_image_original_filename')->nullable();
-            $table->string('color');
+            $table->json('color');
             $table->timestamps();
 
             $table->bigInteger('product_id')->unsigned();
