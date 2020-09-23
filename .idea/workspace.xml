@@ -6,13 +6,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/OrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreOrder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_20_115825_create_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php23B0.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php23C1.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php3879.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php48D.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php4B1E.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php69B1.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php69C2.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php77D7.tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php86F4.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php88A0.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php88A2.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpBEDE.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpDD30.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpDD32.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php239F.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php23C0.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php3869.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php45D.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php4B1D.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php69B0.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php69C1.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php77D6.tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php86A4.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php888F.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php88A1.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpBEDD.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpDD2F.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpDD31.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

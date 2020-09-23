@@ -71,7 +71,7 @@
                                         <td>
                                             @foreach ($product->colors as $color)
                                                 <h3 class="label label-info"><span
-                                                        class="badge badge-info">{{ $color }}</span></h3>
+                                                        class="badge badge-info">{{ $color['name'] }}</span></h3>
                                             @endforeach
                                             <br>
                                             @foreach ($product->ImagesR as $image)
@@ -93,7 +93,7 @@
                                         <td>
                                             @foreach ($product->sizes as $size)
                                                 <h3 class="label label-info"><span
-                                                        class="badge badge-info">{{ $size }}</span></h3>
+                                                        class="badge badge-info">{{ $size['name'] }}</span></h3>
                                             @endforeach
                                         </td>
                                     </tr>

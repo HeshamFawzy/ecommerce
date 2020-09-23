@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         //seed systemUsers
         $this->call(AdminsTableSeeder::class);
         //seed users
-        $this->call(UsersTableSeeder::class);
+        //$this->call(UsersTableSeeder::class);
 
         //seed categories
         $this->call(CategoriesTableSeeder::class);

@@ -93,7 +93,7 @@
                                                     @foreach ($colors as $color)
                                                         <div class="p-2 d-inline">
                                                             <input name="colors[]" type="checkbox" class="check"
-                                                                   value="{{ $color->name }}">
+                                                                   value="{{ $color->id }}">
                                                             <label for="colors[]">{{ $color->name }}</label>
                                                         </div>
                                                     @endforeach
@@ -107,7 +107,7 @@
                                                     @foreach ($sizes as $size)
                                                         <div class="p-2 d-inline">
                                                             <input name="sizes[]" type="checkbox"
-                                                                   value="{{ $size->name }}">
+                                                                   value="{{ $size->id }}">
                                                             <label for="white">{{ $size->name }}</label>
                                                         </div>
                                                     @endforeach

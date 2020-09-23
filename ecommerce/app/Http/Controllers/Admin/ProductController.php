@@ -49,13 +49,15 @@ class ProductController extends Controller
      */
     public function store(StoreProduct $request)
     {
+        $colors = Color::whereIn('id', $request->colors)->select('id', 'name')->get();
+        $sizes = Size::whereIn('id', $request->sizes)->select('id', 'name')->get();
         $product = Product::create([
             'name_en' => $request->name_en,
             'name_ar' => $request->name_ar,
             'description' => $request->description,
             'category_id' => $request->category,
-            'colors' => $request->colors,
-            'sizes' => $request->sizes,
+            'colors' => $colors,
+            'sizes' => $sizes,
             'price' => $request->price,
             'discount' => $request->discount,
         ]);
@@ -129,12 +131,13 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::find($id);
+        $sizes = Size::whereIn('id', $request->sizes)->select('id', 'name')->get();
         $product->update([
             'name_en' => $request->name_en,
             'name_ar' => $request->name_ar,
             'description' => $request->description,
             'category_id' => $request->category,
-            'sizes' => $request->sizes,
+            'sizes' => $sizes,
             'price' => $request->price,
             'discount' => $request->discount,
         ]);
@@ -147,32 +150,15 @@ class ProductController extends Controller
                 'type' => $request->discountType,
             ]);
         }
-
-        $colors = Product::where('id', $id)->select('colors')->first();
-        foreach ($request->colors as $key => $color) {
-            $image = Image::where('product_id', $id)->where('color', $color)->first();
-            if ($image != null) {
+        if ($request->hasFile('colorImage') && $request->hasFile('colorAlterImage')) {
+            $images = Image::where('product_id', $product->id)->get();
+            foreach ($images as $image) {
                 File::delete('products/colorImages/' . $image->image_filename);
                 File::delete('products/colorAlterImages/' . $image->alter_image_filename);
-
-                $array[$key] = $color;
-
-                $colorImg = $request->colorImage[$key];
-                $colorImgExtension = $colorImg->getClientOriginalExtension();
-                Storage::disk('public/products/colorImages')->put($colorImg->getFilename() . "." . $colorImgExtension, File::get($colorImg));
-                $colorAlterImg = $request->colorAlterImage[$key];
-                $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
-                Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
-
-                $image->update([
-                    "image_mime" => $colorImg->getClientMimeType(),
-                    "image_original_filename" => $colorImg->getClientOriginalName(),
-                    "image_filename" => $colorImg->getFilename() . "." . $colorImgExtension,
-                    "alter_image_mime" => $colorAlterImg->getClientMimeType(),
-                    "alter_image_original_filename" => $colorAlterImg->getClientOriginalName(),
-                    "alter_image_filename" => $colorAlterImg->getFilename() . "." . $colorAlterImgExtension,
-                ]);
-            } else {
+                $img = Image::find($image->id);
+                $img->delete();
+            }
+            foreach ($request->colors as $key => $color) {
                 $colorImg = $request->colorImage[$key];
                 $colorImgExtension = $colorImg->getClientOriginalExtension();
                 Storage::disk('public/products/colorImages')->put($colorImg->getFilename() . "." . $colorImgExtension, File::get($colorImg));
@@ -190,11 +176,11 @@ class ProductController extends Controller
                     "alter_image_original_filename" => $colorAlterImg->getClientOriginalName(),
                     "alter_image_filename" => $colorAlterImg->getFilename() . "." . $colorAlterImgExtension,
                 ]);
-
-                $array[] = $color;
             }
+
+            $colors = Color::whereIn('id', $request->colors)->select('id', 'name')->get();
             $product->update([
-                'colors' => $array,
+                'colors' => $colors,
             ]);
         }
 

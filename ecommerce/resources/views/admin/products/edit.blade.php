@@ -92,19 +92,16 @@
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
                                                     <div>Available Colors :*
-                                                        @foreach ($product->colors as $color)
-                                                            <p class="label label-info d-inline"><span
-                                                                    class="badge badge-info">{{ $color }}</span></p>
-                                                        @endforeach
+                                                        <span class="badge badge-info">Please Upload All Available Colors if there is any edit in colors</span>
                                                     </div>
                                                 </div>
                                                 <div id="colorImages" class="col-12" data-pg-collapsed>
                                                     @foreach ($colors as $key => $color)
                                                         <div class="p-2 d-inline">
                                                             <input name="colors[]" type="checkbox" class="check"
-                                                                   value="{{ $color->name }}"
-                                                            @foreach ($product->colors as $pColor)
-                                                                @endforeach>
+                                                                   value="{{ $color->id }}"
+                                                                   @foreach ($product->colors as $pColor) @if ($pColor['name'] == $color->name) checked @endif
+                                                                @endforeach >
                                                             <label for="colors[]">{{ $color->name }}</label>
                                                         </div>
                                                     @endforeach
@@ -118,8 +115,8 @@
                                                     @foreach ($sizes as $size)
                                                         <div class="p-2 d-inline">
                                                             <input name="sizes[]" type="checkbox"
-                                                                   value="{{ $size->name }}"
-                                                                   @foreach ($product->sizes as $pSize) @if ($pSize == $size->name) checked @endif
+                                                                   value="{{ $size->id }}"
+                                                                   @foreach ($product->sizes as $pSize) @if ($pSize['name'] == $size->name) checked @endif
                                                                 @endforeach>
                                                             <label for="white">{{ $size->name }}</label>
                                                         </div>
