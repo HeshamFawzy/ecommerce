@@ -24,12 +24,11 @@ class StoreOrder extends FormRequest
     public function rules()
     {
         return [
-            'code' => 'required',
-            'quantity' => 'required',
-            'color' => 'required',
-            'size' => 'required',
-            'product_id' => 'required',
-            'user_id' => 'required'
+            'orderProducts.*.quantity' => 'required',
+            'orderProducts.*.color' => 'required',
+            'orderProducts.*.size' => 'required',
+            'orderProducts.*.product_id' => 'required',
+            'orderProducts.*.user_id' => 'required'
         ];
     }
 }

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreOrder;
 use App\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 class OrderController extends Controller
@@ -31,20 +33,25 @@ class OrderController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreOrder $request)
+    public function store(Request $request)
     {
-        $Order = new Order();
-        $Order->code = $request->code;
-        $Order->quantity = $request->quantity;
-        $Order->color = $request->color;
-        $Order->size = $request->size;
-        $Order->product_id = $request->product_id;
-        $Order->user_id = $request->user_id;
+        $code = Str::random();
+        foreach ($request->orderProducts as $orderProduct) {
+            $Order = new Order();
+            $Order->code = $code;
+            $Order->status = $request->status;
+            $Order->quantity = $orderProduct['quantity'];
+            $Order->color_id = $orderProduct['color_id'];
+            $Order->size_id = $orderProduct['size_id'];
+            $Order->product_id = $orderProduct['product_id'];
+            $Order->user_id = Auth::user()->id;
+            $this->user->orders()->save($Order);
+        }
 
         if ($this->user->orders()->save($Order))
             return response()->json([
                 'success' => true,
-                'product' => $Order
+                'products' => $request->orderProducts
             ]);
         else
             return response()->json([
