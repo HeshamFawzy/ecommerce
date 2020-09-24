@@ -18,9 +18,14 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::where('status', Auth::guard('admin')->user()->roles->pluck('id')->first() - 1)
-            ->with(['userR', 'orderProductsR'])
-            ->get();
+        if (Auth::guard('admin')->user()->roles->pluck('name')->first() == "superAdmin") {
+            $orders = Order::all();
+        } else {
+            $orders = Order::where('status', Auth::guard('admin')->user()->roles->pluck('id')->first() - 1)
+                ->with(['userR', 'orderProductsR'])
+                ->get();
+        }
+
 
         return view('admin.orders.index', compact('orders'));
     }
