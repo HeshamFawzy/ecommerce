@@ -7,13 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/About.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/About.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/PublicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/PublicController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_14_133753_create_abouts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_14_133753_create_abouts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_14_133807_create_contacts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_14_133807_create_contacts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/publicPages/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/CategoryController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +207,7 @@
       <workItem from="1600939760766" duration="1409000" />
       <workItem from="1601014916526" duration="15000" />
       <workItem from="1601014958672" duration="22000" />
-      <workItem from="1601022203633" duration="2536000" />
+      <workItem from="1601022203633" duration="3485000" />
     </task>
     <servers />
   </component>
