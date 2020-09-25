@@ -56,11 +56,13 @@ class PublicController extends Controller
     public function aboutUpload(Request $request)
     {
         $validatedData = $request->validate([
-            'about' => 'required',
+            'about_en' => 'required',
+            'about_ar' => 'required',
         ]);
 
         About::create([
-            'about' => $request->about
+            'about_en' => $request->about_en,
+            'about_ar' => $request->about_ar,
         ]);
 
         return redirect()->route('public.about');
@@ -69,11 +71,13 @@ class PublicController extends Controller
     public function contactUpload(Request $request)
     {
         $validatedData = $request->validate([
-            'contact' => 'required',
+            'contact_en' => 'required',
+            'contact_ar' => 'required',
         ]);
 
         Contact::create([
-            'contact' => $request->contact
+            'contact_en' => $request->contact_en,
+            'contact_ar' => $request->contact_ar,
         ]);
 
         return redirect()->route('public.contact');

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     protected $fillable = [
-        'contact'
+        'contact_en', 'contact_ar'
     ];
 }

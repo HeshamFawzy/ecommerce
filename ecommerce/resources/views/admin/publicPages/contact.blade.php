@@ -32,13 +32,22 @@
                                 <form method="POST" action="{{ route('public.contactUpload') }}"
                                       enctype="multipart/form-data">
                                     @csrf
-                                    <input id="about" type="hidden" name="contact" required>
-                                    <trix-editor input="about"></trix-editor>
+                                    <p>English</p>
+                                    <input id="contact_en" type="hidden" name="contact_en" required>
+                                    <trix-editor input="contact_en"></trix-editor>
+                                    <p>Arabic</p>
+                                    <input id="contact_ar" type="hidden" name="contact_ar" required>
+                                    <trix-editor input="contact_ar"></trix-editor>
                                     <button class="btn btn-success float-right m-2" type="submit">Save</button>
                                 </form>
                                 @if ($contact ?? '')
+                                    <p>English</p>
                                     <div class="card card-blue p-2 m-1">
-                                        <div class="trix-content">{!! $contact->contact !!}</div>
+                                        <div class="trix-content">{!! $contact->contact_en !!}</div>
+                                    </div>
+                                    <p>Arabic</p>
+                                    <div class="card card-blue p-2 m-1">
+                                        <div class="trix-content">{!! $contact->contact_ar !!}</div>
                                     </div>
                                 @endif
                             </div>
