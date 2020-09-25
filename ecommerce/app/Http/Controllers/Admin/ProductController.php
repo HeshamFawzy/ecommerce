@@ -78,7 +78,7 @@ class ProductController extends Controller
             $colorAlterImg = $request->colorAlterImage[$key];
             $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
             Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
-            $color = Color::where('id' , $request->colors[$key])->select('id', 'name')->get();
+            $color = Color::where('id', $request->colors[$key])->select('id', 'name')->get();
             Image::create([
                 'product_id' => $product->id,
                 'color' => $color,
@@ -141,14 +141,22 @@ class ProductController extends Controller
             'price' => $request->price,
             'discount' => $request->discount,
         ]);
-
         if ($request->discount == "1") {
             $discount = Discount::where('product_id', $id)->first();
-            $discount->update([
-                'end_date' => $request->end_date,
-                'amount' => $request->amount,
-                'type' => $request->discountType,
-            ]);
+            if ($discount != null) {
+                $discount->update([
+                    'end_date' => $request->end_date,
+                    'amount' => $request->amount,
+                    'type' => $request->discountType,
+                ]);
+            } else {
+                Discount::create([
+                    'end_date' => $request->end_date,
+                    'amount' => $request->amount,
+                    'type' => $request->discountType,
+                    'product_id' => $product->id
+                ]);
+            }
         }
         if ($request->hasFile('colorImage') && $request->hasFile('colorAlterImage')) {
             $images = Image::where('product_id', $product->id)->get();
@@ -165,7 +173,7 @@ class ProductController extends Controller
                 $colorAlterImg = $request->colorAlterImage[$key];
                 $colorAlterImgExtension = $colorAlterImg->getClientOriginalExtension();
                 Storage::disk('public/products/colorAlterImages')->put($colorAlterImg->getFilename() . "." . $colorAlterImgExtension, File::get($colorAlterImg));
-                $color = Color::where('id' , $request->colors[$key])->select('id', 'name')->get();
+                $color = Color::where('id', $request->colors[$key])->select('id', 'name')->get();
                 Image::create([
                     'product_id' => $product->id,
                     'color' => $color,
