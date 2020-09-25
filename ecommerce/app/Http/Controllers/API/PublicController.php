@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\About;
 use App\Contact;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\SliderResource;
 use App\Slider;
 use Illuminate\Http\Request;
 
@@ -67,7 +68,7 @@ class PublicController extends Controller
 
     public function slider()
     {
-        return Slider::all();
+        return SliderResource::collection(Slider::all());
     }
 
     public function about()
