@@ -6,22 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/categories/sizeImages/php71B4.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php2CB0.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php86F2.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php8704.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD3BC.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php2CAF.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php86F1.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php8703.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD204.tmp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD3BB.tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Http/Resources/ProductByIdResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php7C48.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php7C38.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Resources/ProductResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/php85F7.tmp.png" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/categories/images/php71A3.tmp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/phpAF69.tmp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD3AA.tmp.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +211,7 @@
       <workItem from="1600939760766" duration="1409000" />
       <workItem from="1601014916526" duration="15000" />
       <workItem from="1601014958672" duration="22000" />
-      <workItem from="1601022203633" duration="8972000" />
+      <workItem from="1601022203633" duration="9709000" />
     </task>
     <servers />
   </component>

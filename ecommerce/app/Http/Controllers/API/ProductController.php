@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\ProductByIdResource;
 use App\Http\Resources\ProductResource;
 use App\Product;
 use Illuminate\Http\Request;
@@ -38,7 +39,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return Product::with('ImagesR')->find($id);
+        return ProductResource::make(Product::find($id));
     }
 
     /**
@@ -66,6 +67,6 @@ class ProductController extends Controller
 
     public function productsByCategory($id)
     {
-        return Product::with(['categoryR', 'discountR', 'imagesR'])->where('category_id', $id)->paginate(10);
+        return ProductResource::collection(Product::where('category_id', $id)->paginate(10));
     }
 }

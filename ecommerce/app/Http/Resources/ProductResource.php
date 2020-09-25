@@ -38,6 +38,17 @@ class ProductResource extends JsonResource
             }
         }
 
+        if ($this->discountR != null) {
+            $end_date = $this->discountR->end_date;
+            $amount = $this->discountR->amount;
+            $type = $this->discountR->type;
+        } else {
+            $end_date = null;
+            $amount = null;
+            $type = null;
+        }
+
+
         return [
             'id' => $this->id,
             'name_en' => $this->name_en,
@@ -55,9 +66,9 @@ class ProductResource extends JsonResource
                 "size_filename" => $sizeImage,
             ],
             "discount_r" => [
-                "end_date" => $this->discountR->end_date,
-                "amount" => $this->discountR->amount,
-                "type" => $this->discountR->type,
+                "end_date" => $end_date,
+                "amount" => $amount,
+                "type" => $type,
             ],
             "images_r" => [
                 "image_filename" => $colorImages,
