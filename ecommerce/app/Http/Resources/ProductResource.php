@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use phpDocumentor\Reflection\Types\Array_;
+use phpDocumentor\Reflection\Types\Collection;
 
 class ProductResource extends JsonResource
 {
@@ -37,6 +39,14 @@ class ProductResource extends JsonResource
                 $colorAlterImages = asset('assets/admin/images/Question_Mark.png');
             }
         }
+        foreach ($this->colors as $key => $color) {
+            $data[] = array(
+                'name' => $color['name'],
+                'image' => $colorImages[$key],
+                'alter' => $colorAlterImages[$key]
+            );
+        }
+
 
         if ($this->discountR != null) {
             $end_date = $this->discountR->end_date;
@@ -71,8 +81,7 @@ class ProductResource extends JsonResource
                 "type" => $type,
             ],
             "images_r" => [
-                "image_filename" => $colorImages,
-                "alter_image_filename" => $colorAlterImages,
+                "color" => $data
             ]
         ];
     }
