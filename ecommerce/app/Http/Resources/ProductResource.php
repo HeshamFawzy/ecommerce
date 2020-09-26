@@ -41,6 +41,7 @@ class ProductResource extends JsonResource
         }
         foreach ($this->colors as $key => $color) {
             $data[] = array(
+                'id' => $color['id'],
                 'name' => $color['name'],
                 'image' => $colorImages[$key],
                 'alter' => $colorAlterImages[$key]

@@ -6,10 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php7282.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php7293.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php71E4.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php7283.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Resources/ProductResource.php" afterDir="false" />
     </list>
@@ -212,7 +208,7 @@
       <workItem from="1601014916526" duration="15000" />
       <workItem from="1601014958672" duration="22000" />
       <workItem from="1601022203633" duration="10466000" />
-      <workItem from="1601122821720" duration="1692000" />
+      <workItem from="1601122821720" duration="2419000" />
     </task>
     <servers />
   </component>
