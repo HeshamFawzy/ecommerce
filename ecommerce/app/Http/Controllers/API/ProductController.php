@@ -7,6 +7,7 @@ use App\Http\Resources\ProductByIdResource;
 use App\Http\Resources\ProductResource;
 use App\Product;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
 class ProductController extends Controller
@@ -74,7 +75,7 @@ class ProductController extends Controller
     public function productsFilter()
     {
         $products = QueryBuilder::for(Product::class)
-            ->allowedFilters(['name_en', 'name_ar', 'category_id', 'colors', 'sizes', 'price', 'discount'])
+            ->allowedFilters('name_en', 'name_ar', 'category_id', 'colors', 'sizes', 'discount', AllowedFilter::exact('price'))
             ->paginate(10);
         return ProductResource::collection($products);
     }

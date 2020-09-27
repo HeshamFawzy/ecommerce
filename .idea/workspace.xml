@@ -6,16 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/config/query-builder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpAE0E.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpAD71.tmp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +210,7 @@
       <workItem from="1601014958672" duration="22000" />
       <workItem from="1601022203633" duration="10466000" />
       <workItem from="1601122821720" duration="2419000" />
-      <workItem from="1601180644423" duration="1501000" />
+      <workItem from="1601180644423" duration="2535000" />
     </task>
     <servers />
   </component>
