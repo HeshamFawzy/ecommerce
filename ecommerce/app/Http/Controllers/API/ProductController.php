@@ -7,6 +7,7 @@ use App\Http\Resources\ProductByIdResource;
 use App\Http\Resources\ProductResource;
 use App\Product;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class ProductController extends Controller
 {
@@ -68,5 +69,13 @@ class ProductController extends Controller
     public function productsByCategory($id)
     {
         return ProductResource::collection(Product::where('category_id', $id)->paginate(10));
+    }
+
+    public function productsFilter()
+    {
+        $products = QueryBuilder::for(Product::class)
+            ->allowedFilters(['name_en', 'name_ar', 'category_id', 'colors', 'sizes', 'price', 'discount'])
+            ->paginate(10);
+        return ProductResource::collection($products);
     }
 }

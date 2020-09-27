@@ -111,6 +111,8 @@
       <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/polyfill-php56" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/polyfill-util" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/classiebit/addchat-laravel" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/spatie/laravel-query-builder" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
