@@ -35,18 +35,6 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('systemRoles.index') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Show Roles</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('systemRoles.create') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Create Role</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="{{ route('systemUsers.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Show Users</p>
@@ -135,6 +123,12 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('orders.index') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Orders</p>
+                    </a>
                 </li>
             </ul>
         </nav>
