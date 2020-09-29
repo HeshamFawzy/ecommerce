@@ -130,6 +130,14 @@
                         <p>Orders</p>
                     </a>
                 </li>
+                @hasrole('superAdmin' , 'admin')
+                <li class="nav-item">
+                    <a href="{{ route('store.index') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Store</p>
+                    </a>
+                </li>
+                @endhasrole
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
