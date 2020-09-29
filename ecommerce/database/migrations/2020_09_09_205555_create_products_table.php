@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name_en', 100);
             $table->string('name_ar', 100);
             $table->text('description');
+            $table->integer('quantity');
             $table->json('colors');
             $table->json('sizes');
             $table->float('price');
@@ -26,6 +27,9 @@ class CreateProductsTable extends Migration
 
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+            $table->bigInteger('materail_id')->unsigned();
+            $table->foreign('materail_id')->references('id')->on('materails');
         });
     }
 

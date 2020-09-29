@@ -54,7 +54,7 @@
                                             <tbody>
                                             @foreach ($materails as $materail)
                                                 <tr>
-                                                    <td>{{ $materail->materail_name }}</td>
+                                                    <td>{{ $materail->name }}</td>
                                                     <td>{{ $materail->quantity }}</td>
                                                     <td>
                                                         <form class="" method="POST"

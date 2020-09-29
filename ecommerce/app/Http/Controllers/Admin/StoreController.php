@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Materail;
 use App\Store;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $materails = Store::all();
+        $materails = Materail::all();
         return view('admin.store.index', compact('materails'));
     }
 
@@ -42,8 +43,8 @@ class StoreController extends Controller
             'quantity' => 'required',
         ]);
 
-        Store::create([
-            'materail_name' => $request->materialName,
+        Materail::create([
+            'name' => $request->materialName,
             'quantity' => $request->quantity,
         ]);
 
@@ -92,7 +93,7 @@ class StoreController extends Controller
      */
     public function destroy($id)
     {
-        $materail = Store::find($id);
+        $materail = Materail::find($id);
         $materail->delete();
         return redirect()->route('store.index');
     }

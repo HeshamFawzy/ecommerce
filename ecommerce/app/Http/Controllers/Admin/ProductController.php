@@ -8,8 +8,10 @@ use App\Discount;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProduct;
 use App\Image;
+use App\Materail;
 use App\Product;
 use App\Size;
+use App\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use File;
@@ -38,7 +40,8 @@ class ProductController extends Controller
         $colors = Color::all();
         $sizes = Size::all();
         $categories = Category::all();
-        return view('admin.products.create', compact(['colors', 'sizes', 'categories']));
+        $materails = Materail::all();
+        return view('admin.products.create', compact(['colors', 'sizes', 'categories', 'materails']));
     }
 
     /**
@@ -55,6 +58,8 @@ class ProductController extends Controller
             'name_en' => $request->name_en,
             'name_ar' => $request->name_ar,
             'description' => $request->description,
+            'materail_id' => $request->materail,
+            'quantity' => $request->quantity,
             'category_id' => $request->category,
             'colors' => $colors,
             'sizes' => $sizes,
@@ -118,7 +123,8 @@ class ProductController extends Controller
         $colors = Color::all();
         $sizes = Size::all();
         $categories = Category::all();
-        return view('admin.products.edit', compact(['product', 'colors', 'sizes', 'categories']));
+        $materails = Materail::all();
+        return view('admin.products.edit', compact(['product', 'colors', 'sizes', 'categories', 'materails']));
     }
 
     /**
@@ -136,6 +142,8 @@ class ProductController extends Controller
             'name_en' => $request->name_en,
             'name_ar' => $request->name_ar,
             'description' => $request->description,
+            'materail_id' => $request->materail,
+            'quantity' => $request->quantity,
             'category_id' => $request->category,
             'sizes' => $sizes,
             'price' => $request->price,

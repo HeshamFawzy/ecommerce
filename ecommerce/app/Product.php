@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-        'name_en', 'name_ar', 'description', 'category_id', 'colors', 'sizes', 'price', 'discount'
+        'name_en', 'name_ar', 'description', 'materail_id', 'quantity', 'category_id', 'colors', 'sizes', 'price', 'discount'
     ];
     protected $casts = [
         'colors' => 'array',
@@ -27,5 +27,10 @@ class Product extends Model
     public function imagesR()
     {
         return $this->hasMany('App\Image', 'product_id');
+    }
+
+    public function materailR()
+    {
+        return $this->belongsTo('App\Materail', 'materail_id');
     }
 }

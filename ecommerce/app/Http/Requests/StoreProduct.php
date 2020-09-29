@@ -27,6 +27,8 @@ class StoreProduct extends FormRequest
             'name_en' => 'required|max:100',
             'name_ar' => 'required|max:100',
             'description' => 'required',
+            'materail' => 'required',
+            'quantity' => 'required',
             'colors' => 'required',
             'sizes' => 'required',
             'price' => 'required',

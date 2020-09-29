@@ -83,6 +83,35 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="container" data-pg-collapsed>
+                                                <div class="row">
+                                                    <p>Materail :</p>
+                                                </div>
+                                                <div class="col-12" data-pg-collapsed>
+                                                    <div class="p-2 d-inline">
+                                                        <select id="materail" class="form-control" name="materail"
+                                                                required>
+                                                            <option value="" disabled="disabled" selected="true">Select
+                                                                Materail
+                                                            </option>
+                                                            @if($materails ?? '')
+                                                                @foreach($materails as $materail)
+                                                                    <option
+                                                                        value="{{$materail->id}}">name
+                                                                        : {{$materail->name}},
+                                                                        store quantity : {{$materail->quantity}}M
+                                                                    </option>
+                                                                @endforeach
+                                                            @endif
+                                                        </select>
+                                                        <div>
+                                                            <input type="number" class="form-control"
+                                                                   placeholder="Please Enter a Material Quantity"
+                                                                   name="quantity" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div id="info3">
                                             <div class="container" data-pg-collapsed>

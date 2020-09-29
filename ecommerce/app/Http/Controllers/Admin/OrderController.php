@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Materail;
 use App\Order;
 use App\OrderProducts;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
@@ -105,6 +107,17 @@ class OrderController extends Controller
             $order->update([
                 'status' => "2"
             ]);
+            $quantity = 0;
+            foreach ($order->orderProductsR as $pro) {
+                $product = Product::where('id', $pro->product_id)->first();
+                $quantityPro = ($pro->quantity * $product->quantity);
+                $quantity = Materail::where('id', $product->materail_id)->select('quantity')->first();
+                Materail::where('id', $product->materail_id)->update([
+                    'quantity' => $quantity['quantity'] - $quantityPro,
+                ]);
+            }
+
+
         } else if (Auth::guard('admin')->user()->roles->pluck('id')->first() - 1 == 2) {
             $order->update([
                 'status' => "3"
