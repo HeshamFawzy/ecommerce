@@ -113,6 +113,16 @@
       <path value="$PROJECT_DIR$/ecommerce/vendor/tymon/jwt-auth" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/classiebit/addchat-laravel" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/spatie/laravel-query-builder" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

@@ -6,28 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Materail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php418.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php5993.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpC2AF.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpEDA5.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php408.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php5983.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpC2AE.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpEDA4.tmp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/StoreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Requests/StoreProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Store.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_09_205555_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_29_053638_create_stores_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_29_091940_create_materails_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/products/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/store/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/store/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/orders/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +138,15 @@
       <path value="$PROJECT_DIR$/ecommerce/vendor/tymon/jwt-auth" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/classiebit/addchat-laravel" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/spatie/laravel-query-builder" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/ecommerce/vendor/justinrainbow/json-schema" />
       <path value="$PROJECT_DIR$/ecommerce/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
@@ -300,10 +292,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1601312984543" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1600939845450">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1601450381204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1600939845450" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1601450381204" />
     <state x="331" y="194" width="702" height="534" key="find.popup" timestamp="1601371033397">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -39,8 +39,10 @@
                                                 <a class="btn btn-warning"
                                                    href="{{ route('orders.show' , $order->id ) }}">Show More
                                                     Order Details</a>
+                                                @hasanyrole('Ordered|Chopping|Finishing|Delivered|Done' , 'admin')
                                                 <a class="btn btn-success"
                                                    href="{{ route('orders.done' , $order->id ) }}">Done</a>
+                                                @endhasanyrole
                                             </td>
                                         </tr>
                                     @endforeach
