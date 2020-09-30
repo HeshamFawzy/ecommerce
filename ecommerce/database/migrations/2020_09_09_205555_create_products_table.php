@@ -27,9 +27,6 @@ class CreateProductsTable extends Migration
 
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-
-            $table->bigInteger('materail_id')->unsigned();
-            $table->foreign('materail_id')->references('id')->on('materails');
         });
     }
 
