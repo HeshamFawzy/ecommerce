@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\userOrder;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreOrder;
 use App\Order;
 use App\OrderProducts;
 use Illuminate\Http\Request;
@@ -36,6 +36,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        event(new userOrder("There is a new Order"));
         $code = Str::random();
         $Order = new Order();
         $Order->code = $code;

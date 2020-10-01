@@ -40,7 +40,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('assets/admin/dist/js/adminlte.min.js') }}"></script>
+<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+<script>
 
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('78fc63d6195d47513ffa', {
+        cluster: 'mt1'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function (data) {
+        alert(JSON.stringify(data));
+    });
+</script>
 @stack('custom-foot')
 </body>
 </html>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Admin;
+use App\Events\MyEvent;
+use App\Events\Order;
 use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 

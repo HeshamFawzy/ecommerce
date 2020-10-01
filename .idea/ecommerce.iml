@@ -43,6 +43,7 @@
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/nunomaduro/collision" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/opis/closure" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/paragonie/sodium_compat" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/phar-io/version" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/phpdocumentor/reflection-common" />
@@ -62,6 +63,7 @@
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/pusher/pusher-php-server" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/ramsey/collection" />
       <excludeFolder url="file://$MODULE_DIR$/ecommerce/vendor/ramsey/uuid" />
