@@ -14,6 +14,8 @@ class userOrder implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $message;
+
     public function __construct($message)
     {
         $this->message = $message;
@@ -21,7 +23,7 @@ class userOrder implements ShouldBroadcast
 
     public function broadcastOn()
     {
-        return ['my-channel'];
+        return ['Ordered'];
     }
 
     public function broadcastAs()

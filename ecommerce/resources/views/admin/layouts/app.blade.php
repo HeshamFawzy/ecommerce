@@ -50,10 +50,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         cluster: 'mt1'
     });
 
-    var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function (data) {
-        alert(JSON.stringify(data));
-    });
+    var role = "{{ \Illuminate\Support\Facades\Auth::guard('admin')->user()->roles->pluck('name')->first() }}";
+
+    if (role == "Ordered") {
+        var channel = pusher.subscribe('Ordered');
+        channel.bind('my-event', function (data) {
+            alert(JSON.stringify(data));
+        });
+    }
+
 </script>
 @stack('custom-foot')
 </body>

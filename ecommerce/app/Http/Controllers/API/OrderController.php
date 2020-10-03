@@ -36,7 +36,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        event(new userOrder("There is a new Order"));
+        event(new userOrder("يوجد لديك طلب جديد"));
         $code = Str::random();
         $Order = new Order();
         $Order->code = $code;
