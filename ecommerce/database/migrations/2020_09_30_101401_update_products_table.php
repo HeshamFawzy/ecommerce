@@ -13,20 +13,10 @@ class UpdateProductsTable extends Migration
      */
     public function up()
     {
-        if (Schema::hasColumn('products', 'materail_id'))
-
-        {
-
-            Schema::table('products', function (Blueprint $table)
-
-            {
-
-                $table->foreign('materail_id')->references('id')->on('materails')->onDelete('cascade');
-
-            });
-
-        }
-        
+        Schema::table('products', function (Blueprint $table) {
+            $table->bigInteger('materail_id')->unsigned();
+            $table->foreign('materail_id')->references('id')->on('materails')->onDelete('cascade');
+        });
     }
 
     /**
@@ -36,18 +26,8 @@ class UpdateProductsTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('products', 'materail_id'))
-
-        {
-
-            Schema::table('products', function (Blueprint $table)
-
-            {
-
-                $table->dropColumn('nmaterail_idame');
-
-            });
-
-        }
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('materail_id');
+        });
     }
 }

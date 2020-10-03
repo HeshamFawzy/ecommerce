@@ -6,18 +6,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/userOrder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_30_101401_update_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/database/migrations/2020_09_30_101401_update_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/categories/images/php1892.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/categories/images/php897E.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/categories/images/phpCADB.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/categories/sizeImages/php1893.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/categories/sizeImages/php898F.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/categories/sizeImages/phpCADC.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php3149.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php43EC.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/php43FE.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpB706.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpB708.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpFA7E.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php3148.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php43EB.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/php43FD.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpB705.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpB707.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpFA7D.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/php4E09.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/php6C40.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/php85F7.tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/php91D0.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/phpAEA0.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/sliders/phpAF69.tmp.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +252,11 @@
       <workItem from="1601369973584" duration="6718000" />
       <workItem from="1601460203142" duration="785000" />
       <workItem from="1601555448700" duration="5985000" />
+      <workItem from="1601577923246" duration="8000" />
+      <workItem from="1601588221110" duration="3599000" />
+      <workItem from="1601626873951" duration="1232000" />
+      <workItem from="1601643836918" duration="413000" />
+      <workItem from="1601644264175" duration="4443000" />
     </task>
     <servers />
   </component>
@@ -303,10 +322,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1601312984543" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1601450381204">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1601643773890">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1601450381204" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.768/4.-768.1360.768@0.0.1366.768" timestamp="1601643773890" />
     <state x="288" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601547866755">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
