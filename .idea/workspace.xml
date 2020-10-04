@@ -6,10 +6,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Chopping.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Delivered.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Finishing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Ordered.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD7E6.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD7B6.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Events/userOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Events/userOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Events/userOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Events/Done.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,15 +178,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
+      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ecommerce\ecommerce\ecommerce\app\Http\Controllers\API" />
       <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
       <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\css" />
       <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps" />
-      <recent name="D:\ecommerce\ecommerce\ecommerce\public\assets\admin\jquery-steps\js" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -235,6 +244,7 @@
       <workItem from="1601626873951" duration="1232000" />
       <workItem from="1601643836918" duration="413000" />
       <workItem from="1601644264175" duration="4443000" />
+      <workItem from="1601805587120" duration="2802000" />
     </task>
     <servers />
   </component>
@@ -291,11 +301,12 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="421" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1599851024959" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601545882547">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601805982266">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1601545882547" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600508991020" />
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768/4.-768.1360.768@0.0.1366.768" timestamp="1601805982266" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1601312984543">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

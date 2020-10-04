@@ -54,10 +54,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     if (role == "Ordered") {
         var channel = pusher.subscribe('Ordered');
-        channel.bind('my-event', function (data) {
-            alert(JSON.stringify(data));
-        });
+    } else if (role == "Chopping") {
+        var channel = pusher.subscribe('Chopping');
+    } else if (role == "Finishing") {
+        var channel = pusher.subscribe('Finishing');
+    } else if (role == "Delivered") {
+        var channel = pusher.subscribe('Delivered');
+    } else if (role == "Done") {
+        var channel = pusher.subscribe('Done');
     }
+    var orders = document.getElementById('orders').innerText;
+    channel.bind('order', function (data) {
+        orders = parseInt(orders) + 1;
+        document.getElementById('orders').innerText = orders;
+        alert(JSON.stringify(data));
+    });
 
 </script>
 @stack('custom-foot')

@@ -134,6 +134,7 @@
                     <a href="{{ route('orders.index') }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Orders</p>
+                        <p class="badge badge-info" id="orders">{{ \App\Order::where('status' , \Illuminate\Support\Facades\Auth::guard('admin')->user()->roles->pluck('id')->first() - 1)->count() }}</p>
                     </a>
                 </li>
             </ul>

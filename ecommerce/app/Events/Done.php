@@ -10,7 +10,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class userOrder implements ShouldBroadcast
+class Done implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -23,11 +23,11 @@ class userOrder implements ShouldBroadcast
 
     public function broadcastOn()
     {
-        return ['Ordered'];
+        return ['Done'];
     }
 
     public function broadcastAs()
     {
-        return 'my-event';
+        return 'order';
     }
 }

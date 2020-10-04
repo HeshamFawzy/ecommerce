@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Events\Chopping;
+use App\Events\Delivered;
+use App\Events\Done;
+use App\Events\Finishing;
 use App\Http\Controllers\Controller;
 use App\Materail;
 use App\Order;
@@ -108,7 +112,7 @@ class OrderController extends Controller
                 'status' => "2"
             ]);
             $quantity = 0;
-            foreach ($order->orderProductsR as $pro) {
+            foreach ($order->orderProductsR as $key => $pro) {
                 $product = Product::where('id', $pro->product_id)->first();
                 $quantityPro = ($pro->quantity * $product->quantity);
                 $quantity = Materail::where('id', $product->materail_id)->select('quantity')->first();
@@ -116,20 +120,23 @@ class OrderController extends Controller
                     'quantity' => $quantity['quantity'] - $quantityPro,
                 ]);
             }
-
+            event(new Chopping("يوجد لديك طلب جديد"));
 
         } else if (Auth::guard('admin')->user()->roles->pluck('id')->first() - 1 == 2) {
             $order->update([
                 'status' => "3"
             ]);
+            event(new Finishing("يوجد لديك طلب جديد"));
         } else if (Auth::guard('admin')->user()->roles->pluck('id')->first() - 1 == 3) {
             $order->update([
                 'status' => "4"
             ]);
+            event(new Delivered("يوجد لديك طلب جديد"));
         } else {
             $order->update([
                 'status' => "5"
             ]);
+            event(new Done("يوجد لديك طلب جديد"));
         }
 
         return redirect()->back();
