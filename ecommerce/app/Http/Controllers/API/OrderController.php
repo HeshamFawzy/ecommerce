@@ -107,7 +107,7 @@ class OrderController extends Controller
             } elseif ($order->status == 3) {
                 $order->status = "Finishing";
             } elseif ($order->status == 4) {
-                $order->status = "Delevied";
+                $order->status = "Delivered";
             } else {
                 $order->status = "Done";
             }
