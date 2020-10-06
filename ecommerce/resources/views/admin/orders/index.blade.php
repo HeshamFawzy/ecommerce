@@ -25,6 +25,7 @@
                                     <tr>
                                         <th scope="col">Code</th>
                                         <th scope="col">User</th>
+                                        <th scope="col">User Phone</th>
                                         <th scope="col">Created At</th>
                                         <th scope="col">View Order Details</th>
                                     </tr>
@@ -34,7 +35,8 @@
                                         <tr>
                                             <td>{{ $order->code }}</td>
                                             <td>{{ $order->userR->email }}</td>
-                                            <td>{{ $order->created_at }}</td>
+                                            <td>{{ $order->userR->phoneNumber }}</td>
+                                            <td>{{ date('d-m-Y h:m A', strtotime($order->created_at)) }}</td>
                                             <td>
                                                 <a class="btn btn-warning"
                                                    href="{{ route('orders.show' , $order->id ) }}">Show More
