@@ -6,19 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="465b9da8-177a-4142-8e9a-c71094f64bec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Chopping.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Delivered.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Finishing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/app/Events/Ordered.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorAlterImages/phpD7E6.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecommerce/public/products/colorImages/phpD7B6.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Events/userOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Events/Done.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/API/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/app/Http/Controllers/Admin/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +232,8 @@
       <workItem from="1601626873951" duration="1232000" />
       <workItem from="1601643836918" duration="413000" />
       <workItem from="1601644264175" duration="4443000" />
-      <workItem from="1601805587120" duration="2802000" />
+      <workItem from="1601805587120" duration="2903000" />
+      <workItem from="1601810890880" duration="5000" />
     </task>
     <servers />
   </component>

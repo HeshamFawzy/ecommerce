@@ -19,7 +19,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ProductResource::collection(Product::paginate(10));
+        $products = QueryBuilder::for(Product::class)
+            ->allowedFilters('name_en', 'name_ar', 'category_id', 'colors', 'sizes', 'discount', AllowedFilter::exact('price'))
+            ->paginate(10);
+        return ProductResource::collection($products);
     }
 
     /**
@@ -70,13 +73,5 @@ class ProductController extends Controller
     public function productsByCategory($id)
     {
         return ProductResource::collection(Product::where('category_id', $id)->paginate(10));
-    }
-
-    public function productsFilter()
-    {
-        $products = QueryBuilder::for(Product::class)
-            ->allowedFilters('name_en', 'name_ar', 'category_id', 'colors', 'sizes', 'discount', AllowedFilter::exact('price'))
-            ->paginate(10);
-        return ProductResource::collection($products);
     }
 }
