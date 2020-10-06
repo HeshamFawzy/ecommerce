@@ -42,7 +42,9 @@
                                                 @hasanyrole('Ordered|Chopping|Finishing|Delivered|Done' , 'admin')
                                                 <a class="btn btn-success"
                                                    href="{{ route('orders.done' , $order->id ) }}">Done</a>
-                                                @endhasanyrole
+                                                @else
+                                                    <p class="badge badge-info">{{$order->getStatus($order)}}</p>
+                                                    @endhasanyrole
                                             </td>
                                         </tr>
                                     @endforeach

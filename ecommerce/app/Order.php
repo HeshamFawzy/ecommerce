@@ -35,4 +35,19 @@ class Order extends Model
         return $this->hasMany(OrderProducts::class, 'order_id')->with('productR', 'colorR', 'sizeR');
     }
 
+    public static function getStatus($order)
+    {
+        if ($order->status == 1) {
+            return "Ordered";
+        } elseif ($order->status == 2) {
+            return "Chopping";
+        } elseif ($order->status == 3) {
+            return "Finishing";
+        } elseif ($order->status == 4) {
+            return "Delivered";
+        } else {
+            return "Done";
+        }
+    }
+
 }
