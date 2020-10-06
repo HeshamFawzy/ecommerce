@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Color;
 use App\Events\Ordered;
 use App\Events\userOrder;
 use App\Http\Controllers\Controller;
@@ -93,5 +94,27 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function my_orders()
+    {
+        $orders = Order::where('user_id', Auth::user()->id)->with('orderProductsR')->get();
+        $orders = $orders->map(function ($order) {
+            if ($order->status == 1) {
+                $order->status = "Ordered";
+            } elseif ($order->status == 2) {
+                $order->status = "Chopping";
+            } elseif ($order->status == 3) {
+                $order->status = "Finishing";
+            } elseif ($order->status == 4) {
+                $order->status = "Delevied";
+            } else {
+                $order->status = "Done";
+            }
+            return $order;
+        });
+        return response()->json([
+            'orders' => $orders
+        ]);
     }
 }

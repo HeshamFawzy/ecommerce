@@ -12,27 +12,27 @@ class Order extends Model
 
     public function productR()
     {
-        return $this->belongsTo('App\Product', 'product_id');
+        return $this->belongsTo(Product::class, 'product_id');
     }
 
     public function userR()
     {
-        return $this->belongsTo('App\User', 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function colorR()
     {
-        return $this->belongsTo('App\Color', 'color_id');
+        return $this->belongsTo(Color::class, 'color_id');
     }
 
     public function sizeR()
     {
-        return $this->belongsTo('App\Size', 'size_id');
+        return $this->belongsTo(Size::class, 'size_id');
     }
 
     public function orderProductsR()
     {
-        return $this->hasMany(OrderProducts::class , 'order_id');
+        return $this->hasMany(OrderProducts::class, 'order_id')->with('productR', 'colorR', 'sizeR');
     }
 
 }

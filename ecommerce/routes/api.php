@@ -30,7 +30,7 @@ Route::group(['namespace' => 'API'], function () {
         Route::post('register', 'AuthController@register');
         Route::post('refresh', 'AuthController@refresh');
         Route::get('user-profile', 'AuthController@userProfile');
-
+        Route::post('logout', 'AuthController@logout');
         Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail');
         Route::post('/password/reset', 'ResetPasswordController@reset');
     });
@@ -38,9 +38,8 @@ Route::group(['namespace' => 'API'], function () {
     Route::group([
         'middleware' => 'api',
     ], function ($router) {
-        Route::post('logout', 'AuthController@logout');
-
         Route::post('order', 'OrderController@store');
+        Route::get('my-orders', 'OrderController@my_orders');
     });
 });
 
