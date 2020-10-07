@@ -33,6 +33,8 @@ Route::group(['namespace' => 'API'], function () {
         Route::post('logout', 'AuthController@logout');
         Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail');
         Route::post('/password/reset', 'ResetPasswordController@reset');
+        Route::get('email/verify/{id}', 'VerificationController@verify')->name('verification.verify');
+        Route::get('email/resend', 'VerificationController@resend')->name('verification.resend');
     });
 
     Route::group([

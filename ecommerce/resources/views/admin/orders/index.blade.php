@@ -38,7 +38,7 @@
                                             <td>{{ $order->userR->phoneNumber }}</td>
                                             <td>{{ date('d-m-Y h:m A', strtotime($order->created_at)) }}</td>
                                             <td>
-                                                <a class="btn btn-warning"
+                                                <a class="btn btn-info"
                                                    href="{{ route('orders.show' , $order->id ) }}">Show More
                                                     Order Details</a>
                                                 @hasanyrole('Ordered|Chopping|Finishing|Delivered|Done' , 'admin')

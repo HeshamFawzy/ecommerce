@@ -68,10 +68,10 @@ class AuthController extends Controller
         $user = User::create(array_merge(
             $validator->validated(),
             ['password' => bcrypt($request->password)]
-        ));
+        ))->sendEmailVerificationNotification();
 
         return response()->json([
-            'message' => 'User successfully registered',
+            'message' => 'User successfully registered Please Verify Your Email',
             'user' => $user
         ], 201);
     }
