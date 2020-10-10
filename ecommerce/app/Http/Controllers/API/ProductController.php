@@ -20,7 +20,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = QueryBuilder::for(Product::class)
-            ->allowedFilters('name_en', 'name_ar', 'category_id', 'colors', 'sizes', 'discount', AllowedFilter::exact('price'))
+            ->allowedFilters('name_en', 'name_ar', 'category_id', 'colors', 'sizes', 'discount', AllowedFilter::scope('price'))
             ->paginate(10);
         return ProductResource::collection($products);
     }
