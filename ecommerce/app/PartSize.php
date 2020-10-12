@@ -10,4 +10,14 @@ class PartSize extends Model
     protected $fillable = [
         'value', 'category_id', 'size_id', 'part_id'
     ];
+
+    public function sizeR()
+    {
+        return $this->belongsTo(Size::class, 'size_id');
+    }
+
+    public function partR()
+    {
+        return $this->belongsTo(Part::class, 'part_id');
+    }
 }

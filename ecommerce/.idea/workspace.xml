@@ -20,36 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770cbcd0-a237-4385-b1d4-c1f52a268881" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Part.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/PartSize.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_132821_create_parts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_140015_create_parts_sizes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/SuperAdminSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/images/php16A9.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/images/php171D.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/images/php5B0D.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/images/php663A.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/images/phpDCF1.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/images/phpDD46.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php16B9.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php171E.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php5B1D.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php663B.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/phpDD01.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/phpDD47.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/AdminFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ColorFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/SizeFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AdminsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PartsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/SizesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SizesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/PartSize.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/PartSize.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +203,8 @@
       <workItem from="1602323325102" duration="51000" />
       <workItem from="1602424293906" duration="1975000" />
       <workItem from="1602428314167" duration="11000" />
-      <workItem from="1602507262323" duration="10850000" />
+      <workItem from="1602507262323" duration="12825000" />
+      <workItem from="1602532394255" duration="1088000" />
     </task>
     <servers />
   </component>
