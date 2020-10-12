@@ -6,6 +6,9 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategory;
 use App\Http\Requests\UpdateCategory;
+use App\Part;
+use App\PartSize;
+use App\Size;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use File;
@@ -30,7 +33,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
+        $parts = Part::all();
+        return view('admin.category.create', compact(['parts']));
     }
 
     /**
@@ -60,6 +64,17 @@ class CategoryController extends Controller
             "size_filename" => $sizeImage->getFilename() . "." . $sizeImageExtension,
         ]);
 
+        foreach ($request->value as $pkey => $part) {
+            foreach ($part as $skey => $size) {
+                PartSize::create([
+                    'value' => $size,
+                    'category_id' => $category->id,
+                    'size_id' => $skey + 1,
+                    'part_id' => Part::where('name', $pkey)->first()->id,
+                ]);
+            }
+        }
+
         return redirect()->route('categories.index');
     }
 
@@ -83,7 +98,13 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
-        return view('admin.category.edit', compact('category'));
+        $sizes = PartSize::where('category_id', $id)->get();
+        $parts = Part::all();
+
+        foreach ($parts as $key => $part) {
+            $part['sizes'] = PartSize::where('category_id', $id)->where('part_id', $part->id)->get();
+        }
+        return view('admin.category.edit', compact(['category', 'sizes', 'parts']));
     }
 
     /**

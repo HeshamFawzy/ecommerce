@@ -74,6 +74,104 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="container pt-4">
+                                            <div class="row">
+                                                <div class="table-responsive">
+                                                    <table id="sizesTable" class="table table-active">
+                                                        <tbody>
+                                                        <tr>
+                                                            <th>Size</th>
+                                                            <th>Chest</th>
+                                                            <th>Waist</th>
+                                                            <th>Regular</th>
+                                                            <th>Inseam</th>
+                                                            <th>Long(Tall) Inseam</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                           id="formInputXs" value="">
+                                                                    <label class="form-check-label"
+                                                                           for="formInput56">XS</label>
+                                                                </div>
+                                                            </td>
+                                                            @foreach ($parts as $part)
+                                                                <td>
+                                                                    <input type="text" class="form-control Xs"
+                                                                           name="value[{{ $part->name }}][]">
+                                                                </td>
+                                                            @endforeach
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                           id="formInputS" value="">
+                                                                    <label class="form-check-label"
+                                                                           for="formInput56">S</label>
+                                                                </div>
+                                                            </td>
+                                                            @foreach ($parts as $part)
+                                                                <td>
+                                                                    <input type="text" class="form-control S"
+                                                                           name="value[{{ $part->name }}][]">
+                                                                </td>
+                                                            @endforeach
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                           id="formInputM" value="">
+                                                                    <label class="form-check-label"
+                                                                           for="formInput56">M</label>
+                                                                </div>
+                                                            </td>
+                                                            @foreach ($parts as $part)
+                                                                <td>
+                                                                    <input type="text" class="form-control M"
+                                                                           name="value[{{ $part->name }}][]">
+                                                                </td>
+                                                            @endforeach
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                           id="formInputL" value="">
+                                                                    <label class="form-check-label"
+                                                                           for="formInput56">L</label>
+                                                                </div>
+                                                            </td>
+                                                            @foreach ($parts as $part)
+                                                                <td>
+                                                                    <input type="text" class="form-control L"
+                                                                           name="value[{{ $part->name }}][]">
+                                                                </td>
+                                                            @endforeach
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                           id="formInputXl" value="">
+                                                                    <label class="form-check-label"
+                                                                           for="formInput56">XL</label>
+                                                                </div>
+                                                            </td>
+                                                            @foreach ($parts as $part)
+                                                                <td>
+                                                                    <input type="text" class="form-control Xl"
+                                                                           name="value[{{ $part->name }}][]">
+                                                                </td>
+                                                            @endforeach
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <button class="btn btn-success mt-5 float-right">Create</button>
                                 </form>
@@ -92,6 +190,54 @@
 @push('custom-foot')
     <script>
         $(function () {
+            $('.Xs, .S, .M, .L, .Xl').hide();
+            $(function () {
+                $("#formInputXs").click(function () {
+                    if ($(this).is(":checked")) {
+                        $(".Xs").show();
+                        $(".Xs").prop('required', true);
+                    } else {
+                        $(".Xs").hide();
+                        $(".Xs").prop('required', false);
+                    }
+                });
+                $("#formInputS").click(function () {
+                    if ($(this).is(":checked")) {
+                        $(".S").show();
+                        $(".S").prop('required', true);
+                    } else {
+                        $(".S").hide();
+                        $(".S").prop('required', false);
+                    }
+                });
+                $("#formInputM").click(function () {
+                    if ($(this).is(":checked")) {
+                        $(".M").show();
+                        $(".M").prop('required', true);
+                    } else {
+                        $(".M").hide();
+                        $(".M").prop('required', false);
+                    }
+                });
+                $("#formInputL").click(function () {
+                    if ($(this).is(":checked")) {
+                        $(".L").show();
+                        $(".L").prop('required', true);
+                    } else {
+                        $(".L").hide();
+                        $(".L").prop('required', false);
+                    }
+                });
+                $("#formInputXl").click(function () {
+                    if ($(this).is(":checked")) {
+                        $(".Xl").show();
+                        $(".Xl").prop('required', true);
+                    } else {
+                        $(".Xl").hide();
+                        $(".Xl").prop('required', false);
+                    }
+                });
+            });
             $('#uploadImage').change(function () {
                 var input = this;
                 var url = $(this).val();

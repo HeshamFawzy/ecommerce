@@ -14,6 +14,9 @@ class SizesSeeder extends Seeder
     {
         $sizes = [
             [
+                'name' => 'Xs',
+            ],
+            [
                 'name' => 'S',
             ],
             [
@@ -23,10 +26,7 @@ class SizesSeeder extends Seeder
                 'name' => 'L',
             ],
             [
-                'name' => 'XL',
-            ],
-            [
-                'name' => 'XXL',
+                'name' => 'Xl',
             ],
         ];
 

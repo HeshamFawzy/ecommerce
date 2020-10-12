@@ -20,10 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770cbcd0-a237-4385-b1d4-c1f52a268881" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Part.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/PartSize.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_132821_create_parts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_140015_create_parts_sizes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/RolesSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SuperAdminSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/images/php16A9.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/images/php171D.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/images/php5B0D.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/images/php663A.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/images/phpDCF1.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/images/phpDD46.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php16B9.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php171E.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php5B1D.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php663B.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/phpDD01.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/phpDD47.tmp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AdminFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ColorFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/SizeFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/AdminsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PartsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategoriesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/SizesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SizesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,16 +190,20 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iQWHKwkC8bOMLHxZcNyJKEia3h" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -195,6 +225,11 @@
       <workItem from="1601992803080" duration="4064000" />
       <workItem from="1601998323042" duration="2138000" />
       <workItem from="1602054762787" duration="1277000" />
+      <workItem from="1602176122017" duration="9000" />
+      <workItem from="1602323325102" duration="51000" />
+      <workItem from="1602424293906" duration="1975000" />
+      <workItem from="1602428314167" duration="11000" />
+      <workItem from="1602507262323" duration="10850000" />
     </task>
     <servers />
   </component>
@@ -213,10 +248,25 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601982052680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1601982052680" />
+    <state x="453" y="86" key="NewPhpClassDialog" timestamp="1602509372976">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="453" y="86" key="NewPhpClassDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602509372976" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1602323344792">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602323344792" />
+    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1602509011942">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602509011942" />
   </component>
 </project>
