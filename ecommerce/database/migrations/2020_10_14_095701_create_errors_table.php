@@ -15,7 +15,10 @@ class CreateErrorsTable extends Migration
     {
         Schema::create('errors', function (Blueprint $table) {
             $table->id();
-            $table->text('error');
+            $table->integer('code');
+            $table->string('file');
+            $table->integer('line');
+            $table->string('error');
             $table->timestamps();
         });
     }

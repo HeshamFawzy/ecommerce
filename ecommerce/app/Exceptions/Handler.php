@@ -54,7 +54,10 @@ class Handler extends ExceptionHandler
         if ($exception) {
             // log the error
             Error::create([
-                'error' => $exception
+                'code' => $exception->getCode(),
+                'file' => $exception->getFile(),
+                'line' => $exception->getLine(),
+                'error' => $exception->getMessage()
             ]);
         }
         return parent::render($request, $exception);
