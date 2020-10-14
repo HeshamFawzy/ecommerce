@@ -74,7 +74,7 @@ class CategoryController extends Controller
                 ]);
             }
         }
-
+        toastr()->info('Saved Successfully', 'Save');
         return redirect()->route('categories.index');
     }
 
@@ -168,7 +168,7 @@ class CategoryController extends Controller
             ]);
 
         }
-
+        toastr()->warning('Edited Successfully', 'Edit');
         return redirect()->route('categories.index');
     }
 
@@ -184,6 +184,7 @@ class CategoryController extends Controller
         $category->delete();
         File::delete('categories/images/' . $category->image_filename);
         File::delete('categories/sizeImages/' . $category->size_filename);
+        toastr()->error('Deleted Successfully', 'Delete');
         return redirect()->route('categories.index');
     }
 }

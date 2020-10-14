@@ -96,7 +96,7 @@ class ProductController extends Controller
                 "alter_image_filename" => $colorAlterImg->getFilename() . "." . $colorAlterImgExtension,
             ]);
         }
-
+        toastr()->info('Saved Successfully', 'Save');
         return redirect()->route('products.index');
     }
 
@@ -201,7 +201,7 @@ class ProductController extends Controller
                 'colors' => $colors,
             ]);
         }
-
+        toastr()->warning('Edited Successfully', 'Edit');
         return redirect()->route('products.index');
     }
 
@@ -221,6 +221,7 @@ class ProductController extends Controller
             File::delete('products/colorImages/' . $image->image_filename);
             File::delete('products/colorAlterImages/' . $image->alter_image_filename);
         }
+        toastr()->error('Deleted Successfully', 'Delete');
         return redirect()->route('products.index');
     }
 }

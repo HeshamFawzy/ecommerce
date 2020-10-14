@@ -47,7 +47,7 @@ class StoreController extends Controller
             'name' => $request->materialName,
             'quantity' => $request->quantity,
         ]);
-
+        toastr()->info('Saved Successfully', 'Save');
         return redirect()->route('store.index');
     }
 
@@ -95,6 +95,7 @@ class StoreController extends Controller
     {
         $materail = Materail::find($id);
         $materail->delete();
+        toastr()->error('Deleted Successfully', 'Delete');
         return redirect()->route('store.index');
     }
 }

@@ -21,6 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    @toastr_css
     @stack('custom-head')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -84,4 +85,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         crossorigin="anonymous"></script>
 @stack('custom-foot')
 </body>
+@toastr_js
+@toastr_render
 </html>
