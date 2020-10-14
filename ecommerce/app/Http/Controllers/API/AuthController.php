@@ -109,6 +109,35 @@ class AuthController extends Controller
         return response()->json(auth()->user());
     }
 
+    public function editProfile(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'firstName' => 'required|string|between:2,100',
+            'lastName' => 'required|string|between:2,100',
+            'phoneNumber' => 'required|regex:/(01)[0-9]{9}/',
+            'address' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors()->toJson(), 400);
+        }
+
+        $user = User::findOrFail(Auth::user()->id);
+
+        $user->firstName = $request->firstName;
+        $user->lastName = $request->lastName;
+        $user->phoneNumber = $request->phoneNumber;
+        $user->address = $request->address;
+
+        $user->save();
+
+        return response()->json([
+            'message' => 'User successfully Updated his Profile',
+            'user' => $user
+        ], 201);
+
+    }
+
     /**
      * Get the token array structure.
      *

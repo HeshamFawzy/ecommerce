@@ -30,6 +30,7 @@ Route::group(['namespace' => 'API'], function () {
         Route::post('register', 'AuthController@register');
         Route::post('refresh', 'AuthController@refresh');
         Route::get('user-profile', 'AuthController@userProfile');
+        Route::post('edit-profile', 'AuthController@editProfile');
         Route::post('logout', 'AuthController@logout');
         Route::post('/password/email', 'ForgotPasswordController@sendResetLinkEmail');
         Route::post('/password/reset', 'ResetPasswordController@reset');
