@@ -26,6 +26,8 @@ class StoreCategory extends FormRequest
         return [
             'name_en' => 'required|max:100',
             'name_ar' => 'required|max:100',
+            'image' => 'required',
+            'sizeImage' => 'required'
         ];
     }
 }

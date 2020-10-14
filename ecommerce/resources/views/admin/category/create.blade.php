@@ -52,7 +52,7 @@
                                                 <div class="col-6" data-pg-collapsed>
                                                     <input type="file" class="form-control"
                                                            placeholder="Please Enter a Category Image" id="uploadImage"
-                                                           name="image">
+                                                           name="image" required>
                                                 </div>
                                                 <div class="col-3 border">
                                                     <img id="image" src="#" alt="Uploaded Image" width="100%"/>
@@ -67,7 +67,7 @@
                                                 <div class="col-6" data-pg-collapsed>
                                                     <input type="file" class="form-control"
                                                            placeholder="Please Enter a Category Size Image"
-                                                           id="uploadSizeImage" name="sizeImage">
+                                                           id="uploadSizeImage" name="sizeImage" required>
                                                 </div>
                                                 <div class="col-3 border">
                                                     <img id="sizeImage" src="#" alt="Uploaded Image" width="100%"/>
