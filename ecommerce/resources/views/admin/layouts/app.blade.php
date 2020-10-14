@@ -68,6 +68,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         var channel = pusher.subscribe('Delivered');
     } else if (role == "Done") {
         var channel = pusher.subscribe('Done');
+    } else {
+        var channel = pusher.subscribe('Ordered');
     }
     var orders = document.getElementById('orders').innerText;
     channel.bind('order', function (data) {
