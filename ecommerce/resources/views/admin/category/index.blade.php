@@ -20,7 +20,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <table class="table table-striped table-responsive">
+                                <table class="table table-striped table-responsive" id="Table">
                                     <thead>
                                     <tr>
                                         <th>#Id</th>
@@ -95,3 +95,11 @@
         <!-- /.content -->
     </div>
 @endsection
+
+@push('custom-foot')
+    <script>
+        $(document).ready(function () {
+            $('#Table').DataTable();
+        });
+    </script>
+@endpush

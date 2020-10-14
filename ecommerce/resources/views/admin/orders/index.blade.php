@@ -20,7 +20,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <table class="table table-striped">
+                                <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
                                         <th scope="col">Code</th>
@@ -63,3 +63,11 @@
         <!-- /.content -->
     </div>
 @endsection
+
+@push('custom-foot')
+    <script>
+        $(document).ready(function () {
+            $('#Table').DataTable();
+        });
+    </script>
+@endpush

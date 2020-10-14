@@ -44,7 +44,7 @@
                                     </div>
                                     <div style="clear: both"></div>
                                     <div class="pt-5">
-                                        <table class="table table-striped">
+                                        <table class="table table-striped" id="Table">
                                             <thead>
                                             <tr>
                                                 <th scope="col">Name</th>
@@ -83,3 +83,11 @@
         <!-- /.content -->
     </div>
 @endsection
+
+@push('custom-foot')
+    <script>
+        $(document).ready(function () {
+            $('#Table').DataTable();
+        });
+    </script>
+@endpush

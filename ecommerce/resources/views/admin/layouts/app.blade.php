@@ -20,6 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     @stack('custom-head')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -76,6 +77,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"
+        integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg=="
+        crossorigin="anonymous"></script>
 @stack('custom-foot')
 </body>
 </html>

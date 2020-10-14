@@ -13,7 +13,6 @@ use App\OrderProducts;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Spatie\Permission\Models\Role;
 
 class OrderController extends Controller
 {
