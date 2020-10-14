@@ -1,9 +1,9 @@
 @extends('admin.layouts.loginLayout')
 
 @section('content')
-    <div class="login-box">
+    <div class="login-box animate__animated animate__bounce">
         <div class="login-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
+            <p><b>Admin</b>LTE</p>
         </div>
         <!-- /.login-logo -->
         <div class="card">

@@ -52,12 +52,22 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Description :</p>
+                                                    <p>Description (En):</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                 <textarea type="text" class="form-control"
-                                                          placeholder="Please Enter a Product Description"
-                                                          name="description" required></textarea>
+                                                          placeholder="Please Enter a Product Description in English"
+                                                          name="description_en" required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="container" data-pg-collapsed>
+                                                <div class="row">
+                                                    <p>Description (Ar):</p>
+                                                </div>
+                                                <div class="col-12" data-pg-collapsed>
+                                                <textarea type="text" class="form-control"
+                                                          placeholder="Please Enter a Product Description in Arabic"
+                                                          name="description_ar" required></textarea>
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>

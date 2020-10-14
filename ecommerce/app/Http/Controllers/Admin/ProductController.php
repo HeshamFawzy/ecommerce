@@ -57,7 +57,8 @@ class ProductController extends Controller
         $product = Product::create([
             'name_en' => $request->name_en,
             'name_ar' => $request->name_ar,
-            'description' => $request->description,
+            'description_en' => $request->description_en,
+            'description_ar' => $request->description_ar,
             'materail_id' => $request->materail,
             'quantity' => $request->quantity,
             'category_id' => $request->category,
@@ -141,7 +142,8 @@ class ProductController extends Controller
         $product->update([
             'name_en' => $request->name_en,
             'name_ar' => $request->name_ar,
-            'description' => $request->description,
+            'description_en' => $request->description_en,
+            'description_ar' => $request->description_ar,
             'materail_id' => $request->materail,
             'quantity' => $request->quantity,
             'category_id' => $request->category,

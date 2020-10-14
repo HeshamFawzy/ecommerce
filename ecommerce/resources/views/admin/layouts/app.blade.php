@@ -17,6 +17,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     @stack('custom-head')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -27,8 +30,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
 @include('admin.layouts.includes.mainSidebar')
 <!-- Content Wrapper. Contains page content -->
-@yield('content')
-<!-- /.content-wrapper -->
+    <div class="animate__animated animate__zoomIn">
+        @yield('content')
+    </div>
+    <!-- /.content-wrapper -->
     <!-- Main Footer -->
     @include('admin.layouts.includes.footer')
 </div>
