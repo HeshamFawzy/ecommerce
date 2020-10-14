@@ -25,7 +25,8 @@
                                     <tr>
                                         <th scope="col">Name_en</th>
                                         <th scope="col">Name_ar</th>
-                                        <th scope="col">Name Description</th>
+                                        <th scope="col">Description_en</th>
+                                        <th scope="col">Description_ar</th>
                                         <th scope="col">Quantity</th>
                                         <th scope="col">Color</th>
                                         <th scope="col">Size</th>
@@ -36,7 +37,8 @@
                                         <tr>
                                             <td>{{ $orderProduct->productR->name_en }}</td>
                                             <td>{{ $orderProduct->productR->name_ar }}</td>
-                                            <td>{{ $orderProduct->productR->description }}</td>
+                                            <td>{{ $orderProduct->productR->description_en }}</td>
+                                            <td>{{ $orderProduct->productR->description_ar }}</td>
                                             <td>{{ $orderProduct->quantity }}</td>
                                             <td>{{ $orderProduct->colorR->name }}</td>
                                             <td>{{ $orderProduct->sizeR->name }}</td>
