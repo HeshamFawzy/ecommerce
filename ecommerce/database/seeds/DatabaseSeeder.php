@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         //seed roles
-        $this->call(RolesSeeder::class);
+        /*$this->call(RolesSeeder::class);
         //seed superAdmin
         $this->call(SuperAdminSeeder::class);
         //seed colors
@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
         //seed parts
         $this->call(PartsSeeder::class);
         //seed categories
-        $this->call(CategoriesTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);*/
+
+        $this->call(UsersTableSeeder::class);
     }
 }

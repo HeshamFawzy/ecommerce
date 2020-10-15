@@ -6,6 +6,9 @@ use App\Admin;
 use App\Events\MyEvent;
 use App\Events\Order;
 use App\Http\Controllers\Controller;
+use App\User;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 
 class HomeController extends Controller
@@ -27,7 +30,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $systemUsers = Admin::paginate(10);
-        return view('admin.home', compact('systemUsers'));
+        $users = User::paginate(10);
+
+        return view('admin.home', compact(['users']));
     }
 }

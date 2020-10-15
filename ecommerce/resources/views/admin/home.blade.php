@@ -35,18 +35,18 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($systemUsers as $systemUser)
+                                    @foreach ($users as $user)
                                         <tr>
-                                            <th scope="row">{{ $systemUser->id }}</th>
-                                            <td>{{ $systemUser->name }}</td>
-                                            <td>{{ $systemUser->email }}</td>
+                                            <th scope="row">{{ $user->id }}</th>
+                                            <td>{{ $user->firstName }} {{ $user->lastName }}</td>
+                                            <td>{{ $user->email }}</td>
                                         </tr>
                                     @endforeach
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        {!! $systemUsers->render() !!}
+                        {!! $users->render() !!}
                     </div>
                     <!-- /.col-md-6 -->
                 </div>
