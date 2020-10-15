@@ -32,14 +32,15 @@ class HomeController extends Controller
     {
         $users = User::paginate(10);
 
-        for ($i = 0 ; $i <= 12; $i++) {
+        for ($i = 0; $i <= 12; $i++) {
             $usersG[$i] = DB::table('Users')
+                ->whereMonth('created_at', '=', $i)
+                ->count();
+            $ordersG[$i] = DB::table('orders')
                 ->whereMonth('created_at', '=', $i)
                 ->count();
         }
 
-
-
-        return view('admin.home', compact(['users', 'usersG']));
+        return view('admin.home', compact(['users', 'usersG', 'ordersG']));
     }
 }
