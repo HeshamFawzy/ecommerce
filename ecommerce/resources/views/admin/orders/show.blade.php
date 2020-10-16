@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Order Detail</h1>
+                        <h1 class="m-0 text-dark">@lang('orders.details')</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,22 +23,16 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Name_en</th>
-                                        <th scope="col">Name_ar</th>
-                                        <th scope="col">Description_en</th>
-                                        <th scope="col">Description_ar</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col">Color</th>
-                                        <th scope="col">Size</th>
+                                        <th scope="col">@lang('orders.details-name')</th>
+                                        <th scope="col">@lang('orders.details-qty')</th>
+                                        <th scope="col">@lang('orders.details-color')</th>
+                                        <th scope="col">@lang('orders.details-size')</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach ($orderProducts as $orderProduct)
                                         <tr>
-                                            <td>{{ $orderProduct->productR->name_en }}</td>
-                                            <td>{{ $orderProduct->productR->name_ar }}</td>
-                                            <td>{{ $orderProduct->productR->description_en }}</td>
-                                            <td>{{ $orderProduct->productR->description_ar }}</td>
+                                            <td>{{ Config::get('app.locale') == 'en' ? $orderProduct->productR->name_en : $orderProduct->productR->name_ar }}</td>
                                             <td>{{ $orderProduct->quantity }}</td>
                                             <td>{{ $orderProduct->colorR->name }}</td>
                                             <td>{{ $orderProduct->sizeR->name }}</td>

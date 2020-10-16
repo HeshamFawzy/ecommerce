@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Orders</h1>
+                        <h1 class="m-0 text-dark">@lang('orders.title')</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,11 +23,11 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">Code</th>
-                                        <th scope="col">User</th>
-                                        <th scope="col">User Phone</th>
-                                        <th scope="col">Created At</th>
-                                        <th scope="col">View Order Details</th>
+                                        <th scope="col">@lang('orders.order-code')</th>
+                                        <th scope="col">@lang('orders.order-user')</th>
+                                        <th scope="col">@lang('orders.order-phone')</th>
+                                        <th scope="col">@lang('orders.order-date')</th>
+                                        <th scope="col"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -39,13 +39,12 @@
                                             <td>{{ date('d-m-Y h:m A', strtotime($order->created_at)) }}</td>
                                             <td>
                                                 <a class="btn btn-info"
-                                                   href="{{ route('orders.show' , $order->id ) }}">Show More
-                                                    Order Details</a>
+                                                   href="{{ route('orders.show' , $order->id ) }}">@lang('orders.order-details-btn')</a>
                                                 @hasanyrole('Ordered|Chopping|Finishing|Delivered|Done' , 'admin')
                                                 <a class="btn btn-success"
-                                                   href="{{ route('orders.done' , $order->id ) }}">Done</a>
+                                                   href="{{ route('orders.done' , $order->id ) }}">@lang('orders.order-done-btn')</a>
                                                 @else
-                                                    <p class="badge badge-info">{{$order->getStatus($order)}}</p>
+                                                    <p class="badge badge-info">@lang('orders.order-status-'.$order->getStatus($order))</p>
                                                     @endhasanyrole
                                             </td>
                                         </tr>

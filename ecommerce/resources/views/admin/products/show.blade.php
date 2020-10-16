@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ $product->name_en }}</h1>
+                        <h1 class="m-0 text-dark">{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,46 +23,44 @@
                                 <table class="table table-bordered table-responsive">
                                     <tbody>
                                     <tr>
-                                        <td class="table-active">#Id</td>
-                                        <td>{{ $product->id }}</td>
+                                        <td class="table-active">@lang('products.name')</td>
+                                        <td>{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Name En</td>
-                                        <td>{{ $product->name_en }}</td>
+                                        <td class="table-active">@lang('products.name-alt')</td>
+                                        <td>{{ Config::get('app.locale') == 'en' ? $product->name_ar : $product->name_en  }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Name Ar</td>
-                                        <td>{{ $product->name_ar }}</td>
+                                        <td class="table-active">@lang('products.desc')</td>
+                                        <td>{{ Config::get('app.locale') == 'en' ? $product->description_en : $product->description_ar }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Description EN</td>
-                                        <td>{{ $product->description_en }}</td>
+                                        <td class="table-active">@lang('products.desc-alt')</td>
+                                        <td>{{ Config::get('app.locale') == 'en' ? $product->description_ar : $product->description_en }}</td>
+                                    </tr>                                    <tr>
+                                        <td class="table-active">@lang('products.cat-name')</td>
+                                        <td>{{ Config::get('app.locale') == 'en' ? $product->categoryR->name_en : $product->categoryR->name_ar }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Description AR</td>
-                                        <td>{{ $product->description_ar }}</td>
+                                        <td class="table-active">@lang('products.material')</td>
+                                        <td>{{ $product->materailR->name .' - '. $product->quantity.'m' }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Category</td>
-                                        <td>{{ $product->categoryR->name_en }} -
-                                            {{ $product->categoryR->name_ar }}</td>
+                                        <td class="table-active">@lang('products.price')</td>
+                                        <td> <h3>{{ $product->price}} {{Config::get('app.locale') == 'en' ? 'EGP' : 'جم' }}</h3>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Price</td>
-                                        <td> <h3>{{ $product->price }}<i class="fa fa-gbp" aria-hidden="true"></i></h3>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-active">Discount</td>
+                                        <td class="table-active">@lang('products.has-discount')</td>
                                         @if ($product->discount == 1)
                                             <td><i class="fa fa-check-circle text-success" aria-hidden="true"></i></td>
-                                            <td>Amount
+                                            <td>@lang('products.has-discount-amount')
                                                 :
                                                 <h3 class="label label-info">{{ $product->discountR->amount }}</h3>@if ($product->discountR->type == "amount")
                                                 <td><i class="fa fa-gbp" aria-hidden="true"></i></td>
                                             @else
                                                 <td><i class="fa fa-percent" aria-hidden="true"></i></td>
                                                 @endif</td>
-                                                <td>End Date
+                                                <td>@lang('products.has-discount-end-date')
                                                     :
                                                     <h3 class="label label-info">{{ date('Y-m-d', strtotime($product->discountR->end_date)) }}</h3>
                                                 </td>
@@ -71,7 +69,7 @@
                                                 @endif
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Available Colors</td>
+                                        <td class="table-active">@lang('products.available-colors')</td>
                                         <td>
                                             @foreach ($product->colors as $color)
                                                 <h3 class="label label-info"><span
@@ -93,7 +91,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-active">Available Sizes</td>
+                                        <td class="table-active">@lang('products.available-sizes')</td>
                                         <td>
                                             @foreach ($product->sizes as $size)
                                                 <h3 class="label label-info"><span

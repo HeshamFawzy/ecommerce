@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'previous' => '&laquo; Previous',
-    'next' => 'Next &raquo;',
+    'profile' => 'Account',
+    'sign_out' => 'Sign Out',
 
 ];
