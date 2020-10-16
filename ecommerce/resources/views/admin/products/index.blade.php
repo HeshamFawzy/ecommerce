@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Products</h1>
+                        <h1 class="m-0 text-dark">@lang('products.title')</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,11 +23,10 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th>#Id</th>
-                                        <th>Name_en</th>
-                                        <th>Name_ar</th>
-                                        <th>Category Name</th>
-                                        <th>Actions</th>
+                                        <th>@lang('products.name')</th>
+                                        <th>@lang('products.desc')</th>
+                                        <th>@lang('products.cat-name')</th>
+                                        <th></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -35,31 +34,26 @@
                                         @foreach ($products as $product)
                                             <tr>
                                                 <td>
-                                                    <div>{{ $product->id }}</div>
+                                                    <div>{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}</div>
                                                 </td>
                                                 <td>
-                                                    <div>{{ $product->name_en }}</div>
+                                                    <div>{{ Config::get('app.locale') == 'en' ? $product->description_en : $product->description_ar }}</div>
                                                 </td>
                                                 <td>
-                                                    <div>{{ $product->name_ar }}</div>
-                                                </td>
-                                                <td>
-                                                    <div>{{ $product->categoryR->name_en }}
-                                                        - {{ $product->categoryR->name_ar }}</div>
+                                                    <div>{{ Config::get('app.locale') == 'en' ? $product->categoryR->name_en : $product->categoryR->name_ar }}</div>
                                                 </td>
                                                 <td style="width: 25%">
-                                                    <div>
+                                                    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
+                                                        <a class="btn btn-primary"
+                                                           href="{{ route('products.show' , $product) }}"><span class="fas fa-eye">&nbsp;</span></a>
                                                         <a class="btn btn-warning"
-                                                           href="{{ route('products.show' , $product) }}">Show More
-                                                            Details</a>
-                                                        <a class="btn btn-warning"
-                                                           href="{{ route('products.edit' , $product) }}">Edit</a>
+                                                           href="{{ route('products.edit' , $product) }}"><span class="fas fa-pen">&nbsp;</span></a>
                                                         <form class="" method="POST"
                                                               action="{{ route('products.destroy' , $product->id) }}"
                                                               enctype="multipart/form-data>">
                                                             @method('delete')
                                                             @csrf
-                                                            <button type="submit" class="btn btn-danger mt-2">Delete
+                                                            <button type="submit" class="btn btn-danger"><span class="fas fa-trash">&nbsp;</span>
                                                             </button>
                                                         </form>
                                                     </div>

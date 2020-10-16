@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ $product->name_en }}</h1>
+                        <h1 class="m-0 text-dark">{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -34,49 +34,49 @@
                                         <div id="info1">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Name (En) :</p>
+                                                    <p>@lang('products.name'):</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
-                                                           placeholder="Please Enter a Product Name in English"
-                                                           name="name_en" required value="{{ $product->name_en }}">
+                                                           placeholder="@lang('products.name')"
+                                                           name="{{Config::get('app.locale') == 'en' ? 'name_en' : 'name_ar'}}" required value="{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}">
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Name (Ar) :</p>
+                                                    <p>@lang('products.name-alt'):</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
-                                                           placeholder="Please Enter a Product Name in Arabic"
-                                                           name="name_ar" required value="{{ $product->name_ar }}">
+                                                           placeholder="@lang('products.name-alt')"
+                                                           name="{{Config::get('app.locale') == 'en' ? 'name_ar' : 'name_en'}}" required value="{{ Config::get('app.locale') == 'en' ? $product->name_ar : $product->name_en }}">
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Description (En):</p>
+                                                    <p>@lang('products.desc'):</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                 <textarea type="text" class="form-control"
-                                                          placeholder="Please Enter a Product Description in English"
-                                                          name="description_en"
-                                                          required>{{ $product->description_en }}</textarea>
+                                                          placeholder="@lang('products.desc')"
+                                                          name="{{Config::get('app.locale') == 'en' ? 'description_en' : 'description_ar'}}"
+                                                          required>{{ Config::get('app.locale') == 'en' ? $product->description_en : $product->description_ar }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Description (Ar):</p>
+                                                    <p>@lang('products.desc-alt'):</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                 <textarea type="text" class="form-control"
-                                                          placeholder="Please Enter a Product  in Arabic"
-                                                          name="description_ar"
-                                                          required>{{ $product->description_ar }}</textarea>
+                                                          placeholder="@lang('products.desc-alt')"
+                                                          name="{{Config::get('app.locale') == 'en' ? 'description_ar' : 'description_en'}}"
+                                                          required>{{ Config::get('app.locale') == 'en' ? $product->description_ar : $product->description_en }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Category :</p>
+                                                    <p>@lang('products.cat-name') :</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <div class="p-2 d-inline">
@@ -84,13 +84,13 @@
                                                                 required>
                                                             <option value="{{$product->categoryR->id}}"
                                                                     selected="true">
-                                                                {{$product->categoryR->name_en}}
+                                                                {{$product->categoryR->name_en .'-'. $product->categoryR->name_ar}}
                                                             </option>
                                                             @if($categories ?? '')
                                                                 @foreach($categories as $category)
                                                                     <option
                                                                         value="{{$category->id}}">{{$category->name_en}}
-                                                                        -{{$category->name_ar}}
+                                                                        - {{$category->name_ar}}
                                                                     </option>
                                                                 @endforeach
                                                             @endif
@@ -100,7 +100,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Materail :</p>
+                                                    <p>@lang('products.material') :</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <div class="p-2 d-inline">
@@ -133,8 +133,8 @@
                                         <div id="info3">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <div>Available Colors :*
-                                                        <span class="badge badge-info">Please Upload All Available Colors if there is any edit in colors</span>
+                                                    <div>@lang('products.available-colors') :*
+                                                        <!-- <span class="badge badge-info">Please Upload All Available Colors if there is any edit in colors</span> -->
                                                     </div>
                                                 </div>
                                                 <div id="colorImages" class="col-12" data-pg-collapsed>
@@ -151,7 +151,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Available Sizes :*</p>
+                                                    <p>@lang('products.available-sizes') :*</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     @foreach ($sizes as $size)
@@ -169,7 +169,7 @@
                                         <div id="info4">
                                             <div class="container pt-4" data-pg-collapsed>
                                                 <div class="row">
-                                                    <h4 class="text text-danger" style="color: white">Price (EGY) :</h4>
+                                                    <h4 class="text text-danger" style="color: white">@lang('products.price'):</h4>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="number" step="0.01" class="form-control"
@@ -179,7 +179,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Discount :</p>
+                                                    <p>@lang('products.has-discount') :</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input id="trueDiscount" type="radio" name="discount" value="1"
@@ -194,7 +194,7 @@
                                             </div>
                                             <div id="discount" class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>End Date Of Discount :</p>
+                                                    <p>@lang('products.has-discount-end-date') :</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input id="end_date" type="date" class="form-control"
@@ -205,7 +205,7 @@
                                                 </div>
                                                 <div class="container" data-pg-collapsed>
                                                     <div class="row">
-                                                        <p>Discount Amount :</p>
+                                                        <p>@lang('products.has-discount-amount') :</p>
                                                     </div>
                                                     <input type="number" class="form-control" id="amount"
                                                            placeholder="Please Enter a Product Price in Egyption Pound"
@@ -218,20 +218,20 @@
                                                                value="amount"
                                                                @if ($product->discountR != null)
                                                                @if ($product->discountR->type == "amount") checked @endif @endif>
-                                                        <label for="amount">Pound(EGY)</label>
+                                                        <label for="amount">@lang('products.has-discount-val')</label>
                                                     </div>
                                                     <div class="col-12" data-pg-collapsed>
                                                         <input id="percentage" type="radio" name="discountType"
                                                                value="percentage"
                                                                @if ($product->discountR != null)
                                                                @if ($product->discountR->type == "percentage") checked @endif @endif>
-                                                        <label for="percentage">Percentage</label>
+                                                        <label for="percentage">@lang('products.has-discount-perc')</label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-warning float-right">Edit
+                                    <button type="submit" class="btn btn-warning float-right">@lang('products.edit-btn')
                                     </button>
                                 </form>
                             </div>
