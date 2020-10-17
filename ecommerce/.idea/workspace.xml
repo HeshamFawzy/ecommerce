@@ -21,11 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="770cbcd0-a237-4385-b1d4-c1f52a268881" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_09_205555_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_09_205555_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_171753_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_171753_create_images_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/products/colorAlterImages/phpBD1A.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/products/colorImages/php29BD.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/products/colorImages/php4E4B.tmp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/products/colorImages/phpBD19.tmp.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +214,7 @@
       <workItem from="1602532394255" duration="1088000" />
       <workItem from="1602664277121" duration="16534000" />
       <workItem from="1602752579587" duration="4235000" />
+      <workItem from="1602874223607" duration="5214000" />
     </task>
     <servers />
   </component>
@@ -253,9 +257,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="288" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602719126570" />
-    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1602719146766">
+    <state x="29" y="14" width="1326" height="658" key="find.popup" timestamp="1602879468331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602719146766" />
+    <state x="29" y="14" width="1326" height="658" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602879468331" />
   </component>
 </project>

@@ -19,8 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('name_ar', 100);
             $table->text('description');
             $table->integer('quantity');
-            $table->json('colors');
-            $table->json('sizes');
+            $table->text('colors');
+            $table->text('sizes');
             $table->float('price');
             $table->boolean('discount');
             $table->timestamps();
