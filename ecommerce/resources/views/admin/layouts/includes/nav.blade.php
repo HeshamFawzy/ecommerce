@@ -4,7 +4,20 @@
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
-       <!--  <li class="nav-item d-none d-sm-inline-block">
+        <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false" v-pre>
+                    Language <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="lang/en">English</a>
+                    <a class="dropdown-item" href="lang/ar">عربى</a>
+                </div>
+            </li>
+        </ul>
+    <!--  <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ route('admin.home') }}" class="nav-link">Home</a>
         </li> -->
         <!-- <li class="nav-item d-none d-sm-inline-block">
@@ -17,7 +30,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <!-- Messages Dropdown Menu -->
-        <!-- <li class="nav-item dropdown">
+    <!-- <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
                 <i class="far fa-comments"></i>
                 <span class="badge badge-danger navbar-badge">3</span>
@@ -131,8 +144,8 @@
                 </li> -->
                 <!-- Menu Footer-->
                 <li class="user-footer">
-                    <a href="#" class="btn btn-default btn-flat">@lang('auth.account')</a>
-                    <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat float-right">@lang('auth.sign_out')</a>
+                    <a href="{{ route('admin.logout') }}"
+                       class="btn btn-default btn-flat float-right">@lang('home.sign_out')</a>
                 </li>
             </ul>
         </li>

@@ -23,10 +23,15 @@ return [
     'categories' => 'الأصناف',
     'categories-list' => "قائمة الاصناف",
     'categories-create' => "أضافة صنف",
+    'colors' => 'الالوان',
+    'colors-list' => 'قائمه الالوان',
+    'colors-create' => 'أضافه لون',
+    'sizes' => 'المقاسات',
+    'sizes-list' => 'قائمه المقاسات',
+    'sizes-create' => 'أضافه مقاس',
     'products' => "المنتجات",
     'products-material' => "خامات المنتجات",
     'products-list' => "قائمة المنتجات",
     'products-create' => "أضافه منتج",
     'orders' => "الطلبات",
-
 ];

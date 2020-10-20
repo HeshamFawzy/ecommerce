@@ -53,7 +53,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
-                        @lang('side-bar.public_pages')
+                            @lang('side-bar.public_pages')
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -82,7 +82,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
-                        @lang('side-bar.categories')
+                            @lang('side-bar.categories')
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -105,17 +105,63 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
-                        @lang('side-bar.products')
+                            @lang('side-bar.colors')
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                    <a href="{{ route('store.index') }}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>@lang('side-bar.products-material')</p>
-                    </a>
+                        <li class="nav-item">
+                            <a href="{{ route('colors.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>@lang('side-bar.colors-list')</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('colors.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>@lang('side-bar.colors-create')</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            {{ __('side-bar.sizes') }}
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('sizes.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('side-bar.sizes-list') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('sizes.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('side-bar.sizes-create') }}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            @lang('side-bar.products')
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('store.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>@lang('side-bar.products-material')</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{{ route('products.index') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>

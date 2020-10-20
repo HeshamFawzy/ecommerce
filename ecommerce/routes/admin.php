@@ -29,6 +29,8 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::post('email/resend', 'Auth\VerificationController@resend')->name('admin.verification.resend');*/
 
     Route::resource('categories', 'CategoryController');
+    Route::resource('colors', 'ColorController');
+    Route::resource('sizes', 'SizeController');
     Route::resource('products', 'ProductController');
     Route::get('slider', 'PublicController@slider')->name('public.slider');
     Route::post('sliderUpload', 'PublicController@sliderUpload')->name('public.sliderUpload');
