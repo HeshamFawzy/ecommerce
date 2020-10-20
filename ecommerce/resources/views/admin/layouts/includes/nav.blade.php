@@ -12,8 +12,8 @@
                     Language <span class="caret"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="lang/en">English</a>
-                    <a class="dropdown-item" href="lang/ar">عربى</a>
+                    <a class="dropdown-item" href="{{ route('lang' , 'en') }}" value="en">English</a>
+                    <a class="dropdown-item" href="{{ route('lang' , 'ar') }}" value="ar">عربى</a>
                 </div>
             </li>
         </ul>

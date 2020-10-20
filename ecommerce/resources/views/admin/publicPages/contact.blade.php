@@ -11,7 +11,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Create Contact Us</h1>
+                        <h1 class="m-0 text-dark">{{ __('publicPages.create-contact-us') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -32,20 +32,20 @@
                                 <form method="POST" action="{{ route('public.contactUpload') }}"
                                       enctype="multipart/form-data">
                                     @csrf
-                                    <p>English</p>
+                                    <p>{{ __('publicPages.english') }}</p>
                                     <input id="contact_en" type="hidden" name="contact_en" required>
                                     <trix-editor input="contact_en"></trix-editor>
-                                    <p>Arabic</p>
+                                    <p>{{ __('publicPages.arabic') }}</p>
                                     <input id="contact_ar" type="hidden" name="contact_ar" required>
                                     <trix-editor input="contact_ar"></trix-editor>
                                     <button class="btn btn-success float-right m-2" type="submit">Save</button>
                                 </form>
                                 @if ($contact ?? '')
-                                    <p>English</p>
+                                    <p>{{ __('publicPages.english') }}</p>
                                     <div class="card card-blue p-2 m-1">
                                         <div class="trix-content">{!! $contact->contact_en !!}</div>
                                     </div>
-                                    <p>Arabic</p>
+                                    <p>{{ __('publicPages.arabic') }}</p>
                                     <div class="card card-blue p-2 m-1">
                                         <div class="trix-content">{!! $contact->contact_ar !!}</div>
                                     </div>

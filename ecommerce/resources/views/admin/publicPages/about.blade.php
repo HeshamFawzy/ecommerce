@@ -11,7 +11,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Create About Us</h1>
+                        <h1 class="m-0 text-dark">{{ __('publicPages.create-about-us') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -32,20 +32,20 @@
                                 <form method="POST" action="{{ route('public.aboutUpload') }}"
                                       enctype="multipart/form-data">
                                     @csrf
-                                    <p>English</p>
+                                    <p>{{ __('publicPages.english') }}</p>
                                     <input id="about_en" type="hidden" name="about_en" required>
                                     <trix-editor input="about_en"></trix-editor>
-                                    <p>Arabic</p>
+                                    <p>{{ __('publicPages.arabic') }}</p>
                                     <input id="about_ar" type="hidden" name="about_ar" required>
                                     <trix-editor input="about_ar"></trix-editor>
                                     <button class="btn btn-success float-right m-2" type="submit">Save</button>
                                 </form>
                                 @if ($about ?? '')
-                                    <p>English</p>
+                                    <p>{{ __('publicPages.english') }}</p>
                                     <div class="card card-blue p-2 m-1">
                                         <div class="trix-content">{!! $about->about_en !!}</div>
                                     </div>
-                                    <p>Arabic</p>
+                                    <p>{{ __('publicPages.arabic') }}</p>
                                     <div class="card card-blue p-2 m-1">
                                         <div class="trix-content">{!! $about->about_ar !!}</div>
                                     </div>

@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Create Slider</h1>
+                        <h1 class="m-0 text-dark">{{ __('publicPages.create-slider') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -28,32 +28,31 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <h3>Upload Image :</h3>
+                                            <h3>{{ __('publicPages.upload-image') }}</h3>
                                         </div>
                                         <form class="col-8" method="POST" action="{{ route('public.sliderUpload') }}"
                                               enctype="multipart/form-data">
                                             @csrf
                                             <div class="col-12">
                                                 <input name="image" type="file" class="form-control-file" required>
-                                                <button type="submit" class="btn btn-success float-right">Upload
+                                                <button type="submit" class="btn btn-success float-right"><span
+                                                        class="fas fa-upload">&nbsp;</span>
                                                 </button>
                                             </div>
                                         </form>
                                     </div>
-                                    <h1>Slider Images :</h1>
+                                    <h1>{{ __('publicPages.slider-images') }}</h1>
                                     <table class="table table-bordered table-light">
                                         <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Image</th>
-                                            <th>Delete</th>
+                                            <th>{{ __('publicPages.image') }}</th>
+                                            <th>{{ __('publicPages.delete') }}</th>
                                         </tr>
                                         </thead>
 
                                         <tbody>
                                         @foreach ($images as $image)
                                             <tr>
-                                                <td>{{ $image->id }}</td>
                                                 <td>
                                                     <div class="col-3 card card-dark">
                                                         <img style="width: 100%"
@@ -62,7 +61,8 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn btn-danger"
-                                                       href="{{ route('public.sliderDelete' , $image->id) }}">Delete</a>
+                                                       href="{{ route('public.sliderDelete' , $image->id) }}"><span
+                                                            class="fas fa-trash">&nbsp;</span></a>
                                                 </td>
                                             </tr>
                                         @endforeach

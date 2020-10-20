@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">System Users</h1>
+                        <h1 class="m-0 text-dark">{{ __('users.title') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,17 +23,15 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">#Id</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Roles</th>
-                                        <th scope="col">Actions</th>
+                                        <th scope="col">{{ __('users.name') }}</th>
+                                        <th scope="col">{{ __('users.email') }}</th>
+                                        <th scope="col">{{ __('users.roles') }}</th>
+                                        <th scope="col">{{ __('users.actions') }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach ($systemUsers as $key => $systemUser)
                                         <tr>
-                                            <th scope="row">{{ $systemUser->id }}</th>
                                             <td>{{ $systemUser->name }}</td>
                                             <td>{{ $systemUser->email }}</td>
                                             <td>{{ $systemUser->roles->pluck('name') }}</td>

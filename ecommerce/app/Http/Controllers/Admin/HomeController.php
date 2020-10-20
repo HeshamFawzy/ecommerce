@@ -8,7 +8,9 @@ use App\Events\Order;
 use App\Http\Controllers\Controller;
 use App\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Spatie\Permission\Models\Role;
 
 class HomeController extends Controller
@@ -42,5 +44,12 @@ class HomeController extends Controller
         }
 
         return view('admin.home', compact(['users', 'usersG', 'ordersG']));
+    }
+
+    public function lang($lang)
+    {
+        App::setLocale($lang);
+
+        return Redirect::route('admin.home');
     }
 }

@@ -20,20 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770cbcd0-a237-4385-b1d4-c1f52a268881" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ColorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SizeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/colors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/sizes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/colors/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/colors/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/sizes/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/sizes/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/publicPages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/side-bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/side-bar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/publicPages/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/publicPages/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/publicPages/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/publicPages/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/publicPages/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/publicPages/slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/systemUsers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/systemUsers/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/systemUsers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/systemUsers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +220,8 @@
       <workItem from="1602874223607" duration="5214000" />
       <workItem from="1603125212111" duration="2799000" />
       <workItem from="1603131273249" duration="6287000" />
-      <workItem from="1603172963277" duration="4073000" />
+      <workItem from="1603172963277" duration="10478000" />
+      <workItem from="1603196712166" duration="2404000" />
     </task>
     <servers />
   </component>
@@ -263,10 +260,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="453" y="86" key="NewPhpClassDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602509372976" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1603174551132">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1603202702580">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1603174551132" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1603202702580" />
     <state x="487" y="66" key="RollbackChangesDialog" timestamp="1602779530901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -283,10 +280,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="29" y="14" width="1326" height="658" key="find.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1603175981100" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603176024374">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603203598392">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1603176024374" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1603203598392" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

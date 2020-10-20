@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Create System User</h1>
+                        <h1 class="m-0 text-dark">{{ __('users.user-add') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -31,24 +31,24 @@
                                               enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
-                                                <h6>User Name :</h6>
+                                                <h6>{{ __('users.name') }}</h6>
                                                 <input type="text" class="form-control"
                                                        placeholder="Please Enter a User Name" name="userName" required>
                                             </div>
                                             <div class="row">
-                                                <h6>User Email:</h6>
+                                                <h6>{{ __('users.email') }}</h6>
                                                 <input type="email" class="form-control"
                                                        placeholder="Please Enter a User Email" name="userEmail"
                                                        required>
                                             </div>
                                             <div class="row">
-                                                <h6>User Password:</h6>
+                                                <h6>{{ __('users.user-password') }}</h6>
                                                 <input type="password" class="form-control"
                                                        placeholder="Please Enter a User Password" name="userPassword"
                                                        required>
                                             </div>
                                             <div class="row">
-                                                <h6>User Roles:</h6>
+                                                <h6>{{ __('users.roles') }}</h6>
                                             </div>
                                             <div class="row">
                                                 @foreach ($roles as $role)
