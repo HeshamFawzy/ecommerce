@@ -12,16 +12,16 @@ class OrderProducts extends Model
 
     public function productR()
     {
-        return $this->belongsTo('App\Product', 'product_id');
+        return $this->belongsTo(Product::class, 'product_id')->with('imagesR');
     }
 
     public function colorR()
     {
-        return $this->belongsTo('App\Color', 'color_id');
+        return $this->belongsTo(Color::class, 'color_id');
     }
 
     public function sizeR()
     {
-        return $this->belongsTo('App\Size', 'size_id');
+        return $this->belongsTo(Size::class, 'size_id');
     }
 }

@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770cbcd0-a237-4385-b1d4-c1f52a268881" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_21_165245_add_color_name_ar_to_colors_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Color.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ColorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ColorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/colors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/colors/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/colors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/colors/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/OrderProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/OrderProducts.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
