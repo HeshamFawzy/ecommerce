@@ -33,4 +33,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Materail', 'materail_id');
     }
+
+    public function orderproductsR()
+    {
+        return $this->hasMany(OrderProducts::class, 'product_id');
+    }
 }

@@ -74,4 +74,18 @@ class ProductController extends Controller
     {
         return ProductResource::collection(Product::where('category_id', $id)->paginate(10));
     }
+
+    public function latestProducts()
+    {
+        return Product::orderBy('created_at', 'desc')->take(6)->get();
+    }
+
+    public function ratedProducts()
+    {
+        $ratedProducts = Product::withCount('orderproductsR')->orderBy('orderproducts_r_count', 'desc')->take(6)->get();
+        if ($ratedProducts->count() == 0) {
+            $ratedProducts = Product::all()->random(6);
+        }
+        return $ratedProducts;
+    }
 }

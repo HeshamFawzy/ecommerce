@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'API'], function () {
     Route::resource('categories', 'CategoryController');
     Route::get('productsByCategory/{id}', 'ProductController@productsByCategory');
+    Route::get('latestProducts', 'ProductController@latestProducts');
+    Route::get('ratedProducts', 'ProductController@ratedProducts');
     Route::resource('products', 'ProductController');
     Route::get('slider', 'PublicController@slider');
     Route::get('about', 'PublicController@about');

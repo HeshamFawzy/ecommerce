@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true;
 
-    var pusher = new Pusher('78fc63d6195d47513ffa', {
+    var pusher = new Pusher('f4d77a16a157763dc2fe', {
         cluster: 'mt1'
     });
 
