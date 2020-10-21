@@ -24,6 +24,7 @@
                                     <thead>
                                     <tr>
                                         <th scope="col">@lang('colors.name')</th>
+                                        <th scope="col">@lang('colors.name')</th>
                                         <th scope="col">@lang('colors.delete')</th>
                                     </tr>
                                     </thead>
@@ -31,6 +32,7 @@
                                     @foreach ($colors as $color)
                                         <tr>
                                             <td>{{ $color->name }}</td>
+                                            <td>{{ $color->name_ar }}</td>
                                             <td>
                                                 <form class="" method="POST"
                                                       action="{{ route('colors.destroy' , $color->id) }}"

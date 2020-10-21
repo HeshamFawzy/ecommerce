@@ -20,15 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770cbcd0-a237-4385-b1d4-c1f52a268881" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/categories/images/php7726.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/sizeImages/php7794.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/colorAlterImages/php46BD.tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/products/colorImages/php46BC.tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_21_165245_add_color_name_ar_to_colors_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ColorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ColorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/colors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/colors/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/colors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/colors/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +220,7 @@
       <workItem from="1603196712166" duration="4939000" />
       <workItem from="1603220468673" duration="88000" />
       <workItem from="1603223882432" duration="448000" />
-      <workItem from="1603280492118" duration="2817000" />
+      <workItem from="1603280492118" duration="4219000" />
     </task>
     <servers />
   </component>

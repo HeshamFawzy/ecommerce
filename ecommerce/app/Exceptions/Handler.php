@@ -51,7 +51,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-        if ($exception) {
+        /*if ($exception) {
             // log the error
             Error::create([
                 'code' => $exception->getCode(),
@@ -59,7 +59,7 @@ class Handler extends ExceptionHandler
                 'line' => $exception->getLine(),
                 'error' => $exception->getMessage()
             ]);
-        }
+        }*/
         return parent::render($request, $exception);
     }
 }

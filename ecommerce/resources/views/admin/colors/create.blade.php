@@ -32,6 +32,9 @@
                                         @csrf
                                         <input type="text" class="form-control" placeholder="Please Enter a Color Name"
                                                name="colorName" required>
+                                        <input type="text" class="form-control"
+                                               placeholder="Please Enter a Color Name In Arabic"
+                                               name="colorName_ar" required>
                                         <button type="submit" class="btn btn-success float-right mt-3">Save Color
                                         </button>
                                     </form>

@@ -40,12 +40,16 @@ class ColorController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'colorName' => 'required',
+            'colorName_ar' => 'required',
         ]);
 
         if (Color::where('name', ucfirst(strtolower($request->colorName)))->first() != null) {
             return redirect()->back()->withErrors(['Color Exists']);
         } else {
-            $color = Color::create(['name' => ucfirst(strtolower($request->colorName))]);
+            $color = Color::create([
+                'name' => ucfirst(strtolower($request->colorName)),
+                'name_ar' => $request->colorName_ar
+            ]);
         }
         toastr()->info('Saved Successfully', 'Save');
         return redirect()->route('colors.index');
