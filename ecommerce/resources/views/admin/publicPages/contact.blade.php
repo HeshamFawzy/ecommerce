@@ -38,7 +38,9 @@
                                     <p>{{ __('publicPages.arabic') }}</p>
                                     <input id="contact_ar" type="hidden" name="contact_ar" required>
                                     <trix-editor input="contact_ar"></trix-editor>
-                                    <button class="btn btn-success float-right m-2" type="submit">Save</button>
+                                    <button class="btn btn-success float-right m-2" type="submit"><span
+                                            class="fas fa-upload"></span></button>
+                                    <br>
                                 </form>
                                 @if ($contact ?? '')
                                     <p>{{ __('publicPages.english') }}</p>

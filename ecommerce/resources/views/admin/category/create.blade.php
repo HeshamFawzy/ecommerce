@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Create Category</h1>
+                        <h1 class="m-0 text-dark">{{ __('categories.create-category') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -26,7 +26,7 @@
                                     <div class="container">
                                         <div class="container" data-pg-collapsed>
                                             <div class="row">
-                                                <p>Name (En) :</p>
+                                                <p>{{ __('categories.name_ar') }}</p>
                                             </div>
                                             <div class="col-12" data-pg-collapsed>
                                                 <input type="text" class="form-control"
@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="container" data-pg-collapsed>
                                             <div class="row">
-                                                <p>Name (Ar) :</p>
+                                                <p>{{ __('categories.name_en') }}</p>
                                             </div>
                                             <div class="col-12" data-pg-collapsed>
                                                 <input type="text" class="form-control"
@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="container" data-pg-collapsed>
                                             <div class="row">
-                                                <p>Category Image :</p>
+                                                <p>{{ __('categories.image') }}</p>
                                             </div>
                                             <div class="row">
                                                 <div class="col-6" data-pg-collapsed>
@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="container" data-pg-collapsed>
                                             <div class="row">
-                                                <p>Category SizeImage :</p>
+                                                <p>{{ __('categories.size-image') }}</p>
                                             </div>
                                             <div class="row">
                                                 <div class="col-6" data-pg-collapsed>

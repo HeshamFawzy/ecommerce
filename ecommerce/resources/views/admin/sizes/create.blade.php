@@ -26,13 +26,14 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="container">
-                                    <h6>Size Name :</h6>
+                                    <h6>{{ __('sizes.colors-add') }}</h6>
                                     <form action="{{ route('sizes.store') }}" method="POST"
                                           enctype="multipart/form-data">
                                         @csrf
                                         <input type="text" class="form-control" placeholder="Please Enter a Size Name"
                                                name="sizeName">
-                                        <button type="submit" class="btn btn-success float-right mt-3">Save Size
+                                        <button type="submit" class="btn btn-success float-right mt-3"><span
+                                                class="fas fa-upload"></span>
                                         </button>
                                     </form>
                                 </div>

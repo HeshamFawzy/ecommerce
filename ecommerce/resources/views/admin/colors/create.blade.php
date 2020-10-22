@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ __('colors.colors-add') }}</h1>
+                        <h1 class="m-0 text-dark">{{ __('colors.create-color') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -26,16 +26,18 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="container">
-                                    <h6>Color Name :</h6>
+                                    <h6>{{ __('colors.name') }}</h6>
                                     <form action="{{ route('colors.store') }}" method="POST"
                                           enctype="multipart/form-data">
                                         @csrf
                                         <input type="text" class="form-control" placeholder="Please Enter a Color Name"
                                                name="colorName" required>
+                                        <h6>{{ __('colors.name_ar') }}</h6>
                                         <input type="text" class="form-control"
                                                placeholder="Please Enter a Color Name In Arabic"
                                                name="colorName_ar" required>
-                                        <button type="submit" class="btn btn-success float-right mt-3">Save Color
+                                        <button type="submit" class="btn btn-success float-right mt-3"><span
+                                                class="fas fa-upload"></span>
                                         </button>
                                     </form>
                                 </div>

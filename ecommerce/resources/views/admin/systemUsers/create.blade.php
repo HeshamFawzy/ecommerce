@@ -61,7 +61,8 @@
                                                     </div>
                                                 @endforeach
                                             </div>
-                                            <button class="btn btn-success float-right mt-3" type="submit">Save User
+                                            <button class="btn btn-success float-right mt-3" type="submit"><span
+                                                    class="fas fa-user-plus"></span>
                                             </button>
                                         </form>
                                     </div>

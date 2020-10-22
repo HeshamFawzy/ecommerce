@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Create Product</h1>
+                        <h1 class="m-0 text-dark">{{ __('products.create-product') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -32,7 +32,7 @@
                                         <div id="info1">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Name (En) :</p>
+                                                    <p>{{ __('products.name_en') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
@@ -42,7 +42,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Name (Ar) :</p>
+                                                    <p>{{ __('products.name_ar') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
@@ -52,7 +52,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Description (En):</p>
+                                                    <p>{{ __('products.desc_en') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                 <textarea type="text" class="form-control"
@@ -62,7 +62,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Description (Ar):</p>
+                                                    <p>{{ __('products.desc_ar') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                 <textarea type="text" class="form-control"
@@ -72,7 +72,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Category :</p>
+                                                    <p>{{ __('products.cat-name') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <div class="p-2 d-inline">
@@ -95,7 +95,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Materail :</p>
+                                                    <p>{{ __('products.material') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <div class="p-2 d-inline">
@@ -126,7 +126,7 @@
                                         <div id="info3">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Available Colors :*</p>
+                                                    <p>{{ __('products.available-colors') }}</p>
                                                 </div>
                                                 <div id="colorImages" class="col-12" data-pg-collapsed>
                                                     @foreach ($colors as $color)
@@ -140,7 +140,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Available Sizes :*</p>
+                                                    <p>{{ __('products.available-sizes') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     @foreach ($sizes as $size)
@@ -156,7 +156,8 @@
                                         <div id="info4">
                                             <div class="container pt-4" data-pg-collapsed>
                                                 <div class="row">
-                                                    <h4 class="text text-danger" style="color: white">Price (EGY) :</h4>
+                                                    <h4 class="text text-danger"
+                                                        style="color: white">{{ __('products.price') }}</h4>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="number" step="0.01" class="form-control"
@@ -166,7 +167,7 @@
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>Discount :</p>
+                                                    <p>{{ __('products.has-discount') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input id="trueDiscount" type="radio" name="discount" value="1">
@@ -180,7 +181,7 @@
                                             </div>
                                             <div id="discount" class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>End Date Of Discount :</p>
+                                                    <p>{{ __('products.has-discount-end-date') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input id="end_date" type="date" class="form-control"
@@ -188,7 +189,7 @@
                                                 </div>
                                                 <div class="container" data-pg-collapsed>
                                                     <div class="row">
-                                                        <p>Discount Amount :</p>
+                                                        <p>{{ __('products.has-discount-amount') }}</p>
                                                     </div>
                                                     <input type="number" class="form-control" id="amount"
                                                            placeholder="Please Enter a Product Price in Egyption Pound"
@@ -196,12 +197,14 @@
                                                     <div class="col-12" data-pg-collapsed>
                                                         <input id="amount" type="radio" name="discountType"
                                                                value="amount" checked>
-                                                        <label for="amount">Pound(EGY)</label>
+                                                        <label
+                                                            for="amount">{{ __('products.has-discount-val') }}</label>
                                                     </div>
                                                     <div class="col-12" data-pg-collapsed>
                                                         <input id="percentage" type="radio" name="discountType"
                                                                value="percentage">
-                                                        <label for="percentage">Percentage</label>
+                                                        <label
+                                                            for="percentage">{{ __('products.has-discount-perc') }}</label>
                                                     </div>
                                                 </div>
                                             </div>

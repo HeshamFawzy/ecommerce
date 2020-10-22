@@ -14,14 +14,15 @@ return [
     */
 
     'title' => 'المنتجات',
-    'name' => 'اسم المنتج',
-    'name-alt' => "اسم المنتج بالانجليزية",
-    'desc-alt' => "وصف المنتج بالانجليزية",
-    'desc' => "وصف المنتج",
+    'create-product' => 'أضافه منتج',
+    'name_en' => "اسم المنتج بالانجليزية",
+    'name_ar' => 'اسم المنتج',
+    'desc_en' => "وصف المنتج بالانجليزية",
+    'desc_ar' => "وصف المنتج",
     'cat-name' => "صنف المنتج",
-    'price'=> "سعر المنتج",
+    'price' => "سعر المنتج",
     'material' => 'خامه المنتج',
-    "has-discount"=> "تخفيض على المنتج",
+    "has-discount" => "تخفيض على المنتج",
     "has-discount-amount" => "كم التخفيض",
     "has-discount-perc" => "نسبة",
     "has-discount-val" => "مبلغ",
@@ -29,5 +30,4 @@ return [
     "has-discount-end-date" => "تاريخ انتهاء التخفيض",
     "available-colors" => "الالوان المتاحه",
     "available-sizes" => "المقاسات المتاحه",
-    'edit-btn' => "تعديل"
 ];

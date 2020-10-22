@@ -38,8 +38,10 @@
                                     <p>{{ __('publicPages.arabic') }}</p>
                                     <input id="about_ar" type="hidden" name="about_ar" required>
                                     <trix-editor input="about_ar"></trix-editor>
-                                    <button class="btn btn-success float-right m-2" type="submit">Save</button>
+                                    <button class="btn btn-success float-right m-2" type="submit"><span
+                                            class="fas fa-upload"></span></button>
                                 </form>
+                                <br>
                                 @if ($about ?? '')
                                     <p>{{ __('publicPages.english') }}</p>
                                     <div class="card card-blue p-2 m-1">
@@ -62,13 +64,4 @@
     </div>
 @endsection
 
-@push('custom-foot')
-    <script>
-        $('#summernote').summernote({
-            placeholder: 'Hello Bootstrap 4',
-            tabsize: 2,
-            height: 100
-        });
-    </script>
-@endpush
 

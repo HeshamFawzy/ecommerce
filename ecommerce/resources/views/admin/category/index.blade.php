@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Categories</h1>
+                        <h1 class="m-0 text-dark">{{ __('categories.title') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -20,23 +20,19 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <table class="table table-striped table-responsive" id="Table">
+                                <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th>#Id</th>
-                                        <th>Name_en</th>
-                                        <th>Name_ar</th>
-                                        <th>Image</th>
-                                        <th>Size Image</th>
-                                        <th>Actions</th>
+                                        <th>{{ __('categories.name_en') }}</th>
+                                        <th>{{ __('categories.name_ar') }}</th>
+                                        <th>{{ __('categories.image') }}</th>
+                                        <th>{{ __('categories.size-image') }}</th>
+                                        <th>{{ __('categories.actions') }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach ($categories as $category)
                                         <tr>
-                                            <td>
-                                                <div>{{ $category->id }}</div>
-                                            </td>
                                             <td>
                                                 <div>{{ $category->name_en }}</div>
                                             </td>

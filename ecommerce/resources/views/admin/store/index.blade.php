@@ -30,15 +30,16 @@
                                         <form action="" method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
-                                            <h6>Material Name :</h6>
+                                            <h6>{{ __('materials.name') }}</h6>
                                             <input type="text" class="form-control"
                                                    placeholder="Please Enter a Material Name"
                                                    name="materialName" required>
-                                            <h6>Quantity :</h6>
+                                            <h6>{{ __('materials.quantity') }}</h6>
                                             <input type="number" class="form-control"
                                                    placeholder="Please Enter a Material Quantity"
                                                    name="quantity" required>
-                                            <button type="submit" class="btn btn-success float-right mt-3">Save Material
+                                            <button type="submit" class="btn btn-success float-right mt-3"><span
+                                                    class="fas fa-upload"></span>
                                             </button>
                                         </form>
                                     </div>
@@ -47,8 +48,8 @@
                                         <table class="table table-striped" id="Table">
                                             <thead>
                                             <tr>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Quantity</th>
+                                                <th scope="col">{{ __('materials.name') }}</th>
+                                                <th scope="col">{{ __('materials.quantity') }}</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -62,7 +63,8 @@
                                                               enctype="multipart/form-data>">
                                                             @method('delete')
                                                             @csrf
-                                                            <button type="submit" class="btn btn-danger mt-2">Delete
+                                                            <button type="submit" class="btn btn-danger mt-2"><span
+                                                                    class="fas fa-trash"></span>
                                                             </button>
                                                         </form>
                                                     </td>

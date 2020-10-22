@@ -19,5 +19,5 @@ return [
     'roles' => 'الصلاحيات',
     'actions' => 'العمليات',
     'user-add' => 'أضافه مدير',
-    'user-password' => 'الرقم السرى'
+    'user-password' => 'الرقم السرى',
 ];
