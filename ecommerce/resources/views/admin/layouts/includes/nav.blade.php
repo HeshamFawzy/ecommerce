@@ -4,19 +4,6 @@
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
-        <ul class="navbar-nav ml-auto">
-            <!-- Authentication Links -->
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false" v-pre>
-                    Language <span class="caret"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('lang' , 'en') }}" value="en">English</a>
-                    <a class="dropdown-item" href="{{ route('lang' , 'ar') }}" value="ar">عربى</a>
-                </div>
-            </li>
-        </ul>
     <!--  <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ route('admin.home') }}" class="nav-link">Home</a>
         </li> -->

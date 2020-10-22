@@ -29,33 +29,14 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-6">
-                                        <canvas id="usersG" width="400" height="200"></canvas>
+                                        <canvas id="usersG" width="400" height="350"></canvas>
                                     </div>
                                     <div class="col-6">
-                                        <canvas id="ordersG" width="400" height="200"></canvas>
+                                        <canvas id="ordersG" width="400" height="350"></canvas>
                                     </div>
                                 </div>
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">#Id</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Email</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach ($users as $user)
-                                        <tr>
-                                            <th scope="row">{{ $user->id }}</th>
-                                            <td>{{ $user->firstName }} {{ $user->lastName }}</td>
-                                            <td>{{ $user->email }}</td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
-                        {!! $users->render() !!}
                     </div>
                     <!-- /.col-md-6 -->
                 </div>
@@ -75,7 +56,7 @@
             data: {
                 labels: ["0", "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                 datasets: [{
-                    label: '# of Users',
+                    label: 'عدد الاعضاء الجدد',
                     data: @json($usersG),
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
@@ -112,7 +93,7 @@
             data: {
                 labels: ["0", "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                 datasets: [{
-                    label: '# of Orders',
+                    label: 'عدد الطلبات الجديده',
                     data: @json($ordersG),
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',

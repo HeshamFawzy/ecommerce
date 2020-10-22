@@ -32,8 +32,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(10);
-
         for ($i = 0; $i <= 12; $i++) {
             $usersG[$i] = DB::table('Users')
                 ->whereMonth('created_at', '=', $i)
@@ -43,13 +41,13 @@ class HomeController extends Controller
                 ->count();
         }
 
-        return view('admin.home', compact(['users', 'usersG', 'ordersG']));
+        return view('admin.home', compact(['usersG', 'ordersG']));
     }
 
-    public function lang($lang)
+    public function members()
     {
-        App::setLocale($lang);
+        $users = User::paginate(10);
 
-        return Redirect::route('admin.home');
+        return view('admin.users.index', compact('users'));
     }
 }

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'Admin'], function () {
     // Dashboard
     Route::get('/', 'HomeController@index')->name('admin.home');
-    Route::get('lang/{lang}', 'HomeController@lang')->name('lang');
+    Route::get('members', 'HomeController@members')->name('members');
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('admin.login');
     Route::post('login', 'Auth\LoginController@login')->name('admin.plogin');
