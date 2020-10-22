@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}</h1>
+                        <h1 class="m-0 text-dark">{{ $product->name_en }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -34,12 +34,14 @@
                                         <div id="info1">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>@lang('products.name'):</p>
+                                                    <p>{{ __('products.name') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
                                                            placeholder="@lang('products.name')"
-                                                           name="{{Config::get('app.locale') == 'en' ? 'name_en' : 'name_ar'}}" required value="{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}">
+                                                           name="{{Config::get('app.locale') == 'en' ? 'name_en' : 'name_ar'}}"
+                                                           required
+                                                           value="{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}">
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
@@ -49,7 +51,9 @@
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
                                                            placeholder="@lang('products.name-alt')"
-                                                           name="{{Config::get('app.locale') == 'en' ? 'name_ar' : 'name_en'}}" required value="{{ Config::get('app.locale') == 'en' ? $product->name_ar : $product->name_en }}">
+                                                           name="{{Config::get('app.locale') == 'en' ? 'name_ar' : 'name_en'}}"
+                                                           required
+                                                           value="{{ Config::get('app.locale') == 'en' ? $product->name_ar : $product->name_en }}">
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
@@ -169,7 +173,8 @@
                                         <div id="info4">
                                             <div class="container pt-4" data-pg-collapsed>
                                                 <div class="row">
-                                                    <h4 class="text text-danger" style="color: white">@lang('products.price'):</h4>
+                                                    <h4 class="text text-danger"
+                                                        style="color: white">@lang('products.price'):</h4>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="number" step="0.01" class="form-control"
@@ -225,7 +230,8 @@
                                                                value="percentage"
                                                                @if ($product->discountR != null)
                                                                @if ($product->discountR->type == "percentage") checked @endif @endif>
-                                                        <label for="percentage">@lang('products.has-discount-perc')</label>
+                                                        <label
+                                                            for="percentage">@lang('products.has-discount-perc')</label>
                                                     </div>
                                                 </div>
                                             </div>

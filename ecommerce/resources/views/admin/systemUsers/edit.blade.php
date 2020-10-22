@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Edit System User</h1>
+                        <h1 class="m-0 text-dark">{{ __('users.edit-user') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -32,27 +32,27 @@
                                             @csrf
                                             @method('PUT')
                                             <div class="row">
-                                                <h6>User Name :</h6>
+                                                <h6>{{ __('users.name') }}</h6>
                                                 <input type="text" class="form-control"
                                                        placeholder="Please Enter a User Name" name="userName"
                                                        value="{{ $user->name }}" required>
                                             </div>
                                             <div class="row">
-                                                <h6>User Email:</h6>
+                                                <h6>{{ __('users.email') }}</h6>
                                                 <input type="email" class="form-control"
                                                        placeholder="Please Enter a User Email"
                                                        value="{{ $user->email }}" name="userEmail"
                                                        required>
                                             </div>
                                             <div class="row">
-                                                <h6>User Password:</h6>
+                                                <h6>{{ __('users.user-password') }}</h6>
                                                 <input type="password" class="form-control"
                                                        placeholder="Please Enter a User Password"
                                                        name="userPassword"
                                                 >
                                             </div>
                                             <div class="row">
-                                                <h6>User Roles:</h6>
+                                                <h6>{{ __('users.roles') }}</h6>
                                             </div>
                                             <div class="row">
                                                 @foreach ($roles as $role)

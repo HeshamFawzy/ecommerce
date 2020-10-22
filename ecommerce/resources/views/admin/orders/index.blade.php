@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">@lang('orders.title')</h1>
+                        <h1 class="m-0 text-dark">{{ __('orders.title') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,10 +23,10 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">@lang('orders.order-code')</th>
-                                        <th scope="col">@lang('orders.order-user')</th>
-                                        <th scope="col">@lang('orders.order-phone')</th>
-                                        <th scope="col">@lang('orders.order-date')</th>
+                                        <th scope="col">{{ __('orders.order-code') }}</th>
+                                        <th scope="col">{{ __('orders.order-user') }}</th>
+                                        <th scope="col">{{ __('orders.order-phone') }}</th>
+                                        <th scope="col">{{ __('orders.order-date') }}</th>
                                         <th scope="col"></th>
                                     </tr>
                                     </thead>

@@ -23,8 +23,8 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th>@lang('products.name')</th>
-                                        <th>@lang('products.desc')</th>
+                                        <th>{{ __('products.name_en') }}</th>
+                                        <th>{{ __('products.desc_en') }}</th>
                                         <th>@lang('products.cat-name')</th>
                                         <th></th>
                                     </tr>
@@ -34,26 +34,30 @@
                                         @foreach ($products as $product)
                                             <tr>
                                                 <td>
-                                                    <div>{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}</div>
+                                                    <div>{{ $product->name_en }}</div>
                                                 </td>
                                                 <td>
-                                                    <div>{{ Config::get('app.locale') == 'en' ? $product->description_en : $product->description_ar }}</div>
+                                                    <div>{{ $product->description_en }}</div>
                                                 </td>
                                                 <td>
-                                                    <div>{{ Config::get('app.locale') == 'en' ? $product->categoryR->name_en : $product->categoryR->name_ar }}</div>
+                                                    <div>{{ $product->categoryR->name_en }}</div>
                                                 </td>
                                                 <td style="width: 25%">
-                                                    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
+                                                    <div
+                                                        style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
                                                         <a class="btn btn-primary"
-                                                           href="{{ route('products.show' , $product) }}"><span class="fas fa-eye">&nbsp;</span></a>
+                                                           href="{{ route('products.show' , $product) }}"><span
+                                                                class="fas fa-eye">&nbsp;</span></a>
                                                         <a class="btn btn-warning"
-                                                           href="{{ route('products.edit' , $product) }}"><span class="fas fa-pen">&nbsp;</span></a>
+                                                           href="{{ route('products.edit' , $product) }}"><span
+                                                                class="fas fa-pen">&nbsp;</span></a>
                                                         <form class="" method="POST"
                                                               action="{{ route('products.destroy' , $product->id) }}"
                                                               enctype="multipart/form-data>">
                                                             @method('delete')
                                                             @csrf
-                                                            <button type="submit" class="btn btn-danger"><span class="fas fa-trash">&nbsp;</span>
+                                                            <button type="submit" class="btn btn-danger"><span
+                                                                    class="fas fa-trash">&nbsp;</span>
                                                             </button>
                                                         </form>
                                                     </div>

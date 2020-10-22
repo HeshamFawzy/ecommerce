@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">@lang('colors.title')</h1>
+                        <h1 class="m-0 text-dark">{{ __('colors.title') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,9 +23,9 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">@lang('colors.name')</th>
-                                        <th scope="col">@lang('colors.name')</th>
-                                        <th scope="col">@lang('colors.delete')</th>
+                                        <th scope="col">{{ __('colors.name') }}</th>
+                                        <th scope="col">{{ __('colors.name_ar') }}</th>
+                                        <th scope="col">{{ __('colors.delete') }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
