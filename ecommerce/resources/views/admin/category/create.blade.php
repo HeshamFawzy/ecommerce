@@ -173,7 +173,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="btn btn-success mt-5 float-right">Create</button>
+                                    <button class="btn btn-success mt-5 float-right"><span class="fas fa-plus"></span>
+                                    </button>
                                 </form>
                             </div>
                         </div>

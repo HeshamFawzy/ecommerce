@@ -82,8 +82,11 @@
 
 @push('custom-foot')
     <script>
-        $(document).ready(function () {
-            $('#Table').DataTable();
+        $('#Table').DataTable({
+            "language": {
+                "search": "ابحث",
+                "lengthMenu": "_MENU_ اظهر",
+            }
         });
     </script>
 @endpush

@@ -37,7 +37,7 @@
                                                placeholder="Please Enter a Color Name In Arabic"
                                                name="colorName_ar" required>
                                         <button type="submit" class="btn btn-success float-right mt-3"><span
-                                                class="fas fa-upload"></span>
+                                                class="fas fa-plus"></span>
                                         </button>
                                     </form>
                                 </div>

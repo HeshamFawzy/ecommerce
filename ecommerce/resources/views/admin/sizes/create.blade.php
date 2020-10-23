@@ -33,7 +33,7 @@
                                         <input type="text" class="form-control" placeholder="Please Enter a Size Name"
                                                name="sizeName">
                                         <button type="submit" class="btn btn-success float-right mt-3"><span
-                                                class="fas fa-upload"></span>
+                                                class="fas fa-plus"></span>
                                         </button>
                                     </form>
                                 </div>

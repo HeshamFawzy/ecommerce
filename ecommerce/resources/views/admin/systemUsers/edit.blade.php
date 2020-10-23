@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ __('users.edit-user') }}</h1>
+                        <h1 class="m-0 text-dark">{{ __('admins.edit') }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -32,27 +32,27 @@
                                             @csrf
                                             @method('PUT')
                                             <div class="row">
-                                                <h6>{{ __('users.name') }}</h6>
+                                                <h6>{{ __('admins.name') }}</h6>
                                                 <input type="text" class="form-control"
                                                        placeholder="Please Enter a User Name" name="userName"
                                                        value="{{ $user->name }}" required>
                                             </div>
                                             <div class="row">
-                                                <h6>{{ __('users.email') }}</h6>
+                                                <h6>{{ __('admins.email') }}</h6>
                                                 <input type="email" class="form-control"
                                                        placeholder="Please Enter a User Email"
                                                        value="{{ $user->email }}" name="userEmail"
                                                        required>
                                             </div>
                                             <div class="row">
-                                                <h6>{{ __('users.user-password') }}</h6>
+                                                <h6>{{ __('admins.password') }}</h6>
                                                 <input type="password" class="form-control"
                                                        placeholder="Please Enter a User Password"
                                                        name="userPassword"
                                                 >
                                             </div>
                                             <div class="row">
-                                                <h6>{{ __('users.roles') }}</h6>
+                                                <h6>{{ __('admins.roles') }}</h6>
                                             </div>
                                             <div class="row">
                                                 @foreach ($roles as $role)
@@ -62,11 +62,12 @@
                                                                value="{{ $role->name }}" name="userRoles[]"
                                                                @foreach ($user->roles->pluck('name') as $uRoles) @if ($uRoles == $role->name) checked @endif @endforeach>
                                                         <label class="form-check-label"
-                                                               for="formInput111">{{ $role->name }}</label>
+                                                               for="formInput111">{{ __('admins.order-status-' . $role->name) }}</label>
                                                     </div>
                                                 @endforeach
                                             </div>
-                                            <button class="btn btn-success float-right mt-3" type="submit">Edit User
+                                            <button class="btn btn-warning float-right mt-3" type="submit"><span
+                                                    class="fas fa-user-edit"></span>
                                             </button>
                                         </form>
                                     </div>

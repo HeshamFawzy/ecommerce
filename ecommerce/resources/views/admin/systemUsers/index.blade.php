@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ __('users.title') }}</h1>
+                        <h1 class="m-0 text-dark">{{ __('admins.title') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -23,10 +23,10 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">{{ __('users.name') }}</th>
-                                        <th scope="col">{{ __('users.email') }}</th>
-                                        <th scope="col">{{ __('users.roles') }}</th>
-                                        <th scope="col">{{ __('users.actions') }}</th>
+                                        <th scope="col">{{ __('admins.name') }}</th>
+                                        <th scope="col">{{ __('admins.email') }}</th>
+                                        <th scope="col">{{ __('admins.roles') }}</th>
+                                        <th scope="col">{{ __('admins.actions') }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -34,16 +34,20 @@
                                         <tr>
                                             <td>{{ $systemUser->name }}</td>
                                             <td>{{ $systemUser->email }}</td>
-                                            <td>{{ $systemUser->roles->pluck('name') }}</td>
+                                            <td>@foreach ($systemUser->roles->pluck('name') as $role)
+                                                    {{ __('admins.order-status-'.$role) }}
+                                                @endforeach</td>
                                             <td>
                                                 <a class="btn btn-warning"
-                                                   href="{{ route('systemUsers.edit' , $systemUser) }}">Edit</a>
+                                                   href="{{ route('systemUsers.edit' , $systemUser) }}"><span
+                                                        class="fas fa-pen"></span> </a>
                                                 <form class="" method="POST"
                                                       action="{{ route('systemUsers.destroy' , $systemUser->id) }}"
                                                       enctype="multipart/form-data>">
                                                     @method('delete')
                                                     @csrf
-                                                    <button type="submit" class="btn btn-danger mt-2">Delete
+                                                    <button type="submit" class="btn btn-danger mt-2"><span
+                                                            class="fas fa-trash"></span>
                                                     </button>
                                                 </form>
                                             </td>
@@ -67,7 +71,12 @@
 @push('custom-foot')
     <script>
         $(document).ready(function () {
-            $('#Table').DataTable();
+            $('#Table').DataTable({
+                "language": {
+                    "search": "ابحث",
+                    "lengthMenu": "_MENU_ اظهر",
+                }
+            });
         });
     </script>
 @endpush

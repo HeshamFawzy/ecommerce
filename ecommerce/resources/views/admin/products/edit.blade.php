@@ -237,7 +237,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-warning float-right">@lang('products.edit-btn')
+                                    <button type="submit" class="btn btn-warning float-right"><span
+                                            class="fas fa-edit"></span>
                                     </button>
                                 </form>
                             </div>

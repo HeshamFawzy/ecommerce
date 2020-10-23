@@ -39,7 +39,7 @@
                                                    placeholder="Please Enter a Material Quantity"
                                                    name="quantity" required>
                                             <button type="submit" class="btn btn-success float-right mt-3"><span
-                                                    class="fas fa-upload"></span>
+                                                    class="fas fa-plus"></span>
                                             </button>
                                         </form>
                                     </div>
@@ -88,8 +88,11 @@
 
 @push('custom-foot')
     <script>
-        $(document).ready(function () {
-            $('#Table').DataTable();
+        $('#Table').DataTable({
+            "language": {
+                "search": "ابحث",
+                "lengthMenu": "_MENU_ اظهر",
+            }
         });
     </script>
 @endpush

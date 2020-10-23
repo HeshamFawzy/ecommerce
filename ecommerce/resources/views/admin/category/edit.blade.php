@@ -96,7 +96,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-warning float-right">Edit
+                                    <button type="submit" class="btn btn-warning float-right"><span
+                                            class="fas fa-edit"></span>
                                     </button>
                                 </form>
                             </div>

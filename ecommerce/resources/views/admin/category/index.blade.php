@@ -63,13 +63,15 @@
                                             <td>
                                                 <div>
                                                     <a class="btn btn-warning"
-                                                       href="{{ route('categories.edit' , $category) }}">Edit</a>
+                                                       href="{{ route('categories.edit' , $category) }}"><span
+                                                            class="fas fa-pen"></span> </a>
                                                     <form method="POST"
                                                           action="{{ route('categories.destroy' , $category->id) }}"
                                                           enctype="multipart/form-data>">
                                                         @method('delete')
                                                         @csrf
-                                                        <button type="submit" class="btn btn-danger">Delete
+                                                        <button type="submit" class="btn btn-danger"><span
+                                                                class="fas fa-trash"></span>
                                                         </button>
                                                     </form>
                                                 </div>
@@ -94,8 +96,11 @@
 
 @push('custom-foot')
     <script>
-        $(document).ready(function () {
-            $('#Table').DataTable();
+        $('#Table').DataTable({
+            "language": {
+                "search": "ابحث",
+                "lengthMenu": "_MENU_ اظهر",
+            }
         });
     </script>
 @endpush

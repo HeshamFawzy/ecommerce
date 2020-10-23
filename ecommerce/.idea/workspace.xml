@@ -20,13 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="770cbcd0-a237-4385-b1d4-c1f52a268881" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/admins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/chart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/colors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/colors/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/colors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/colors/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/mainSidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/mainSidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/includes/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/includes/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/orders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sizes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sizes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sizes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sizes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/store/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/store/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/systemUsers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/systemUsers/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/systemUsers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/systemUsers/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/systemUsers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/systemUsers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,10 +278,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="453" y="86" key="NewPhpClassDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1602509372976" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1603380827373">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="519" y="-481" key="NewPhpFileDialog" timestamp="1603393199586">
+      <screen x="4" y="-768" width="1360" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1603380827373" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/4.-768.1360.728@0.0.1366.728" timestamp="1603382804624" />
+    <state x="519" y="-481" key="NewPhpFileDialog/0.0.1366.728/4.-768.1360.728@4.-768.1360.728" timestamp="1603393199586" />
     <state x="487" y="66" key="RollbackChangesDialog" timestamp="1602779530901">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
