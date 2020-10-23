@@ -34,7 +34,8 @@ class CategoryController extends Controller
     public function create()
     {
         $parts = Part::all();
-        return view('admin.category.create', compact(['parts']));
+        $sizes = Size::all();
+        return view('admin.category.create', compact(['parts', 'sizes']));
     }
 
     /**
@@ -98,12 +99,8 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
-        $sizes = PartSize::where('category_id', $id)->get();
         $parts = Part::all();
-
-        foreach ($parts as $key => $part) {
-            $part['sizes'] = PartSize::where('category_id', $id)->where('part_id', $part->id)->get();
-        }
+        $sizes = Size::all();
         return view('admin.category.edit', compact(['category', 'sizes', 'parts']));
     }
 
@@ -166,7 +163,6 @@ class CategoryController extends Controller
                 "size_original_filename" => $sizeImage->getClientOriginalName(),
                 "size_filename" => $sizeImage->getFilename() . "." . $sizeImageExtension,
             ]);
-
         }
         toastr()->warning('Edited Successfully', 'Edit');
         return redirect()->route('categories.index');
