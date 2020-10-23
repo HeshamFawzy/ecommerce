@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ __('categories.create-category') }}</h1>
+                        <h1 class="m-0 text-dark">{{ __('categories.create') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="container" data-pg-collapsed>
                                             <div class="row">
-                                                <p>{{ __('categories.name_en') }}</p>
+                                                <p>{{ __('categories.name_ar') }}</p>
                                             </div>
                                             <div class="col-12" data-pg-collapsed>
                                                 <input type="text" class="form-control"

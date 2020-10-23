@@ -51,7 +51,7 @@ class ColorController extends Controller
                 'name_ar' => $request->colorName_ar
             ]);
         }
-        toastr()->info('Saved Successfully', 'Save');
+        toastr()->success('Saved Successfully', 'Save');
         return redirect()->route('colors.index');
     }
 
@@ -99,7 +99,7 @@ class ColorController extends Controller
     {
         $color = Color::find($id);
         $color->delete();
-        toastr()->error('Deleted Successfully', 'Delete');
+        toastr()->success('Deleted Successfully', 'Delete');
         return redirect()->route('colors.index');
     }
 }

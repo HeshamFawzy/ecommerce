@@ -50,7 +50,7 @@ class SystemUsersController extends Controller
         foreach ($request->userRoles as $userRole) {
             $user->assignRole($userRole);
         }
-        toastr()->info('Saved Successfully', 'Save');
+        toastr()->success('Saved Successfully', 'Save');
         return redirect()->route('systemUsers.index');
     }
 
@@ -105,7 +105,7 @@ class SystemUsersController extends Controller
                 $user->assignRole($userRole);
             }
         }
-        toastr()->warning('Edited Successfully', 'Edit');
+        toastr()->success('Edited Successfully', 'Edit');
         return redirect()->route('systemUsers.index');
     }
 
@@ -119,7 +119,7 @@ class SystemUsersController extends Controller
     {
         $user = Admin::find($id);
         $user->delete();
-        toastr()->error('Deleted Successfully', 'Delete');
+        toastr()->success('Deleted Successfully', 'Delete');
         return redirect()->route('systemUsers.index');
     }
 }

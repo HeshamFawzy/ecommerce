@@ -15,30 +15,7 @@ class ColorsSeeder extends Seeder
         $colors = [
             [
                 'name' => 'White',
-            ],
-            [
-                'name' => 'Black',
-            ],
-            [
-                'name' => 'Red',
-            ],
-            [
-                'name' => 'Orange',
-            ],
-            [
-                'name' => 'Yellow',
-            ],
-            [
-                'name' => 'Green',
-            ],
-            [
-                'name' => 'Blue',
-            ],
-            [
-                'name' => 'Indigo',
-            ],
-            [
-                'name' => 'Violet',
+                'name_ar' => 'أبيض'
             ],
         ];
 

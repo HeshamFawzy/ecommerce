@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">{{ $product->name_en }}</h1>
+                        <h1 class="m-0 text-dark">{{ $product->name_ar }}</h1>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li class="text text-danger">{{ $error }}</li>
@@ -34,48 +34,48 @@
                                         <div id="info1">
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>{{ __('products.name') }}</p>
+                                                    <p>{{ __('products.name_en') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
-                                                           placeholder="@lang('products.name')"
-                                                           name="{{Config::get('app.locale') == 'en' ? 'name_en' : 'name_ar'}}"
+                                                           placeholder="Please Enter a Product Name in English"
+                                                           name="name_en"
                                                            required
-                                                           value="{{ Config::get('app.locale') == 'en' ? $product->name_en : $product->name_ar }}">
+                                                           value="{{ $product->name_en }}">
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>@lang('products.name-alt'):</p>
+                                                    <p>{{ __('products.name_ar') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                     <input type="text" class="form-control"
-                                                           placeholder="@lang('products.name-alt')"
-                                                           name="{{Config::get('app.locale') == 'en' ? 'name_ar' : 'name_en'}}"
+                                                           placeholder="Please Enter a Product Name in Arabic"
+                                                           name="name_ar"
                                                            required
-                                                           value="{{ Config::get('app.locale') == 'en' ? $product->name_ar : $product->name_en }}">
+                                                           value="{{ $product->name_ar }}">
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>@lang('products.desc'):</p>
+                                                    <p>{{ __('products.desc_en') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                 <textarea type="text" class="form-control"
-                                                          placeholder="@lang('products.desc')"
-                                                          name="{{Config::get('app.locale') == 'en' ? 'description_en' : 'description_ar'}}"
-                                                          required>{{ Config::get('app.locale') == 'en' ? $product->description_en : $product->description_ar }}</textarea>
+                                                          placeholder="Please Enter a Product Description in English"
+                                                          name="description_en"
+                                                          required>{{ $product->description_en }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>
                                                 <div class="row">
-                                                    <p>@lang('products.desc-alt'):</p>
+                                                    <p>{{ __('products.desc_ar') }}</p>
                                                 </div>
                                                 <div class="col-12" data-pg-collapsed>
                                                 <textarea type="text" class="form-control"
-                                                          placeholder="@lang('products.desc-alt')"
-                                                          name="{{Config::get('app.locale') == 'en' ? 'description_ar' : 'description_en'}}"
-                                                          required>{{ Config::get('app.locale') == 'en' ? $product->description_ar : $product->description_en }}</textarea>
+                                                          placeholder="Please Enter a Product Description in Arabic"
+                                                          name="description_ar"
+                                                          required>{{ $product->description_ar }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="container" data-pg-collapsed>

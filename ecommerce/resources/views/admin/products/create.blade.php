@@ -133,7 +133,7 @@
                                                         <div class="p-2 d-inline">
                                                             <input name="colors[]" type="checkbox" class="check"
                                                                    value="{{ $color->id }}">
-                                                            <label for="colors[]">{{ $color->name }}</label>
+                                                            <label for="colors[]">{{ $color->name_ar }}</label>
                                                         </div>
                                                     @endforeach
                                                 </div>

@@ -42,7 +42,7 @@ class SystemRolesController extends Controller
         } else {
             $role = Role::create(['guard_name' => 'admin', 'name' => $request->roleName]);
         }
-        toastr()->info('Saved Successfully', 'Save');
+        toastr()->success('Saved Successfully', 'Save');
         return redirect()->route('systemRoles.index');
     }
 
@@ -90,7 +90,7 @@ class SystemRolesController extends Controller
     {
         $role = Role::find($id);
         $role->delete();
-        toastr()->error('Deleted Successfully', 'Delete');
+        toastr()->success('Deleted Successfully', 'Delete');
         return redirect()->route('systemRoles.index');
     }
 }

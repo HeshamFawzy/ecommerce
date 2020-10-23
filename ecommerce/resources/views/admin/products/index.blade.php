@@ -23,8 +23,8 @@
                                 <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th>{{ __('products.name_en') }}</th>
-                                        <th>{{ __('products.desc_en') }}</th>
+                                        <th>{{ __('products.name_ar') }}</th>
+                                        <th>{{ __('products.desc_ar') }}</th>
                                         <th>@lang('products.cat-name')</th>
                                         <th></th>
                                     </tr>
@@ -34,13 +34,13 @@
                                         @foreach ($products as $product)
                                             <tr>
                                                 <td>
-                                                    <div>{{ $product->name_en }}</div>
+                                                    <div>{{ $product->name_ar }}</div>
                                                 </td>
                                                 <td>
-                                                    <div>{{ $product->description_en }}</div>
+                                                    <div>{{ $product->description_ar }}</div>
                                                 </td>
                                                 <td>
-                                                    <div>{{ $product->categoryR->name_en }}</div>
+                                                    <div>{{ $product->categoryR->name_ar}}</div>
                                                 </td>
                                                 <td style="width: 25%">
                                                     <div

@@ -47,7 +47,7 @@ class SizeController extends Controller
         } else {
             $size = Size::create(['name' => ucfirst(strtolower($request->sizeName))]);
         }
-        toastr()->info('Saved Successfully', 'Save');
+        toastr()->success('Saved Successfully', 'Save');
         return redirect()->route('sizes.index');
     }
 
@@ -95,7 +95,7 @@ class SizeController extends Controller
     {
         $size = Size::find($id);
         $size->delete();
-        toastr()->error('Deleted Successfully', 'Delete');
+        toastr()->success('Deleted Successfully', 'Delete');
         return redirect()->route('sizes.index');
     }
 }

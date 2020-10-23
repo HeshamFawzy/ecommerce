@@ -41,7 +41,7 @@ class PublicController extends Controller
             "image_original_filename" => $image->getClientOriginalName(),
             "image_filename" => $image->getFilename() . "." . $imageExtension,
         ]);
-        toastr()->info('Saved Successfully', 'Save');
+        toastr()->success('Saved Successfully', 'Save');
         return redirect()->back();
     }
 
@@ -50,7 +50,7 @@ class PublicController extends Controller
         $image = Slider::find($id);
         $image->delete();
         File::delete('sliders/' . $image->image_filename);
-        toastr()->error('Deleted Successfully', 'Delete');
+        toastr()->success('Deleted Successfully', 'Delete');
         return redirect()->route('public.slider');
     }
 
@@ -65,7 +65,7 @@ class PublicController extends Controller
             'about_en' => $request->about_en,
             'about_ar' => $request->about_ar,
         ]);
-        toastr()->info('Saved Successfully', 'Save');
+        toastr()->success('Saved Successfully', 'Save');
         return redirect()->route('public.about');
     }
 
@@ -80,7 +80,7 @@ class PublicController extends Controller
             'contact_en' => $request->contact_en,
             'contact_ar' => $request->contact_ar,
         ]);
-        toastr()->info('Saved Successfully', 'Save');
+        toastr()->success('Saved Successfully', 'Save');
         return redirect()->route('public.contact');
     }
 

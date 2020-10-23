@@ -192,7 +192,7 @@
                 <li class="nav-item">
                     <a href="{{ route('members') }}" class="nav-link">
                         <i class="fas fa-list nav-icon"></i>
-                        <p>الاعضاء</p>
+                        <p>@lang('side-bar.members')</p>
                     </a>
                 </li>
             </ul>
