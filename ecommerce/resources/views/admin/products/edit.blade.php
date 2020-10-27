@@ -182,7 +182,8 @@
                                                            name="price" required value="{{ $product->price }}">
                                                 </div>
                                             </div>
-                                            <div class="container" data-pg-collapsed>
+                                            <input type="hidden" name="discount" value="0">
+                                            {{--<div class="container" data-pg-collapsed>
                                                 <div class="row">
                                                     <p>@lang('products.has-discount') :</p>
                                                 </div>
@@ -234,7 +235,7 @@
                                                             for="percentage">@lang('products.has-discount-perc')</label>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>--}}
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-warning float-right"><span

@@ -165,7 +165,8 @@
                                                            name="price" required>
                                                 </div>
                                             </div>
-                                            <div class="container" data-pg-collapsed>
+                                            <input type="hidden" name="discount" value="0">
+                                            {{--<div class="container" data-pg-collapsed>
                                                 <div class="row">
                                                     <p>{{ __('products.has-discount') }}</p>
                                                 </div>
@@ -207,7 +208,7 @@
                                                             for="percentage">{{ __('products.has-discount-perc') }}</label>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>--}}
                                         </div>
                                     </div>
                                     <button class="btn btn-success mt-5 float-right"><span class="fas fa-plus"></span>

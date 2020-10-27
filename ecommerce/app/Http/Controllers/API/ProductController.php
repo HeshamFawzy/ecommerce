@@ -77,14 +77,14 @@ class ProductController extends Controller
 
     public function latestProducts()
     {
-        return Product::orderBy('created_at', 'desc')->take(6)->get();
+        return ProductResource::collection(Product::orderBy('created_at', 'desc')->take(6)->get());
     }
 
     public function ratedProducts()
     {
-        $ratedProducts = Product::withCount('orderproductsR')->orderBy('orderproducts_r_count', 'desc')->take(6)->get();
+        $ratedProducts = ProductResource::collection(Product::withCount('orderproductsR')->orderBy('orderproducts_r_count', 'desc')->take(6)->get());
         if ($ratedProducts->count() == 0) {
-            $ratedProducts = Product::all()->random(6);
+            $ratedProducts = ProductResource::collection(Product::all()->random(6));
         }
         return $ratedProducts;
     }

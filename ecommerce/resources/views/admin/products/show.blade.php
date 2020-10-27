@@ -51,7 +51,7 @@
                                         <td>
                                             <h3>{{ $product->price}} {{Config::get('app.locale') == 'en' ? 'EGP' : 'جم' }}</h3>
                                     </tr>
-                                    <tr>
+                                    {{--<tr>
                                         <td class="table-active">{{ __('products.has-discount') }}</td>
                                         @if ($product->discount == 1)
                                             <td><i class="fa fa-check-circle text-success" aria-hidden="true"></i></td>
@@ -69,7 +69,7 @@
                                                 @else
                                                     <td><i class="fa fa-times" aria-hidden="true"></i></td>
                                                 @endif
-                                    </tr>
+                                    </tr>--}}
                                     <tr>
                                         <td class="table-active">{{ __('products.available-colors') }}</td>
                                         <td>
