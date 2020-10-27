@@ -29,7 +29,7 @@ class SystemUsersController extends Controller
      */
     public function create()
     {
-        $roles = Role::all()->where('name', '!=', 'superAdmin');
+        $roles = Role::all();
         return view('admin.systemUsers.create', compact('roles'));
     }
 

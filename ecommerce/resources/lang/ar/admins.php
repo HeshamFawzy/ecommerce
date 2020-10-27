@@ -14,4 +14,5 @@ return [
     'order-status-Finishing' => 'تم الانتهاء',
     'order-status-Delivered' => 'تم التوصيل',
     'order-status-Done' => 'تم التحصيل',
+    'order-status-superAdmin' => 'مدير عام'
 ];

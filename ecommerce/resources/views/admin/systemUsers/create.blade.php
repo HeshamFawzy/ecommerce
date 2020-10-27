@@ -52,13 +52,22 @@
                                             </div>
                                             <div class="row">
                                                 @foreach ($roles as $role)
-                                                    <div class="form-check p-3">
-                                                        <input class="form-check-input" type="checkbox"
-                                                               id="formInput111"
-                                                               value="{{ $role->name }}" name="userRoles[]">
-                                                        <label class="form-check-label"
-                                                               for="formInput111">{{ __('admins.order-status-' . $role->name) }}</label>
-                                                    </div>
+                                                    @if($role->name == 'superAdmin')
+                                                        <div class="form-check p-3 badge badge-warning col-12">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   id="superRole"
+                                                                   value="{{ $role->name }}" name="userRoles[]">
+                                                            <label class="form-check-label"
+                                                                   for="formInput111">{{ __('admins.order-status-' . $role->name) }}</label>
+                                                        </div>
+                                                    @else
+                                                        <div class="form-check p-3 col-12 otherRoles">
+                                                            <input class="form-check-input otherRoles" type="checkbox"
+                                                                   value="{{ $role->name }}" name="userRoles[]">
+                                                            <label class="form-check-label"
+                                                                   for="formInput111">{{ __('admins.order-status-' . $role->name) }}</label>
+                                                        </div>
+                                                    @endif
                                                 @endforeach
                                             </div>
                                             <button class="btn btn-success float-right mt-3" type="submit"><span
@@ -78,3 +87,17 @@
         <!-- /.content -->
     </div>
 @endsection
+
+@push('custom-foot')
+    <script>
+        $(function () {
+            $("#superRole").click(function () {
+                if ($(this).is(":checked")) {
+                    $(".otherRoles").hide();
+                } else {
+                    $(".otherRoles").show();
+                }
+            });
+        })
+    </script>
+@endpush

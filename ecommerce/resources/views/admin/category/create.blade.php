@@ -130,8 +130,6 @@
 @push('custom-foot')
     <script>
         $(function () {
-            var s = {{ $sizes }};
-            console.log(s);
             $('.Xs, .S, .M, .L, .Xl').hide();
             $(function () {
                 $("#formInputXs").click(function () {
