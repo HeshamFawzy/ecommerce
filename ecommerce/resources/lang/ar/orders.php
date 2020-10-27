@@ -18,7 +18,7 @@ return [
     'order-user' => 'اسم العميل',
     'order-phone' => 'رقم العميل',
     'order-date' => 'التاريخ',
-    'order-details-btn' =>  "عرض تفاصيل الطلب",
+    'order-details-btn' => "عرض تفاصيل الطلب",
     'order-done-btn' => 'تأكيد',
     'order-status-Ordered' => 'تم الطلب',
     'order-status-Chopping' => 'تم القص',
@@ -30,4 +30,5 @@ return [
     'details-qty' => "كميه المنتج",
     'details-color' => "لون المنتج",
     'details-size' => "مقاس المنتج",
+    'details-bill' => "تم تحصيل",
 ];

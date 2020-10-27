@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">@lang('orders.details')</h1>
+                        <h1 class="m-0 text-dark">{{ __('users.title') }}</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -20,22 +20,27 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <table class="table table-striped">
+                                <table class="table table-striped" id="Table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">@lang('orders.details-name')</th>
-                                        <th scope="col">@lang('orders.details-qty')</th>
-                                        <th scope="col">@lang('orders.details-color')</th>
-                                        <th scope="col">@lang('orders.details-size')</th>
+                                        <th scope="col">{{ __('orders.order-code') }}</th>
+                                        <th scope="col">{{ __('orders.order-user') }}</th>
+                                        <th scope="col">{{ __('orders.order-phone') }}</th>
+                                        <th scope="col">{{ __('orders.order-date') }}</th>
+                                        <th scope="col"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($orderProducts as $orderProduct)
+                                    @foreach ($orders as $order)
                                         <tr>
-                                            <td>{{ Config::get('app.locale') == 'en' ? $orderProduct->productR->name_en : $orderProduct->productR->name_ar }}</td>
-                                            <td>{{ $orderProduct->quantity }}</td>
-                                            <td>{{ $orderProduct->colorR->name_ar }}</td>
-                                            <td>{{ $orderProduct->sizeR->name }}</td>
+                                            <td>{{ $order->code }}</td>
+                                            <td>{{ $order->userR->email }}</td>
+                                            <td>{{ $order->userR->phoneNumber }}</td>
+                                            <td>{{ date('d-m-Y h:m A', strtotime($order->created_at)) }}</td>
+                                            <td>
+                                                <a class="btn btn-info"
+                                                   href="{{ route('bills.show' , $order->id ) }}">@lang('orders.order-details-btn')</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>

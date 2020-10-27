@@ -34,5 +34,6 @@ return [
     'products-list' => "قائمة المنتجات",
     'products-create' => "أضافه منتج",
     'orders' => "الطلبات",
-    'members' => 'الأعضاء'
+    'members' => 'الأعضاء',
+    'bills' => 'الفواتير'
 ];

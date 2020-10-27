@@ -195,6 +195,14 @@
                         <p>@lang('side-bar.members')</p>
                     </a>
                 </li>
+                @hasrole('superAdmin' , 'admin')
+                <li class="nav-item">
+                    <a href="{{ route('bills.index') }}" class="nav-link">
+                        <i class="fas fa-list nav-icon"></i>
+                        <p>@lang('side-bar.bills')</p>
+                    </a>
+                </li>
+                @endhasrole
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -2,16 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Admin;
-use App\Events\MyEvent;
-use App\Events\Order;
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\User;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
-use Spatie\Permission\Models\Role;
 
 class HomeController extends Controller
 {

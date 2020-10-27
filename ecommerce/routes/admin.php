@@ -46,4 +46,5 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::get('orders/done/{id}', 'OrderController@done')->name('orders.done');
     Route::resource('orders', 'OrderController');
     Route::resource('store', 'StoreController');
+    Route::resource('bills', 'BillController');
 });

@@ -27,6 +27,7 @@
                                         <th scope="col">@lang('orders.details-qty')</th>
                                         <th scope="col">@lang('orders.details-color')</th>
                                         <th scope="col">@lang('orders.details-size')</th>
+                                        <th scope="col">@lang('orders.details-bill')</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -36,6 +37,7 @@
                                             <td>{{ $orderProduct->quantity }}</td>
                                             <td>{{ $orderProduct->colorR->name_ar }}</td>
                                             <td>{{ $orderProduct->sizeR->name }}</td>
+                                            <td class="text text-warning">{{ $orderProduct->productR->price * $orderProduct->quantity}}</td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -51,3 +53,4 @@
         <!-- /.content -->
     </div>
 @endsection
+

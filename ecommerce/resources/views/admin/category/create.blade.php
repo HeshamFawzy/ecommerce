@@ -91,8 +91,6 @@
                                                             <tr>
                                                                 <td>
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                               id="formInput{{$size->name}}" value="">
                                                                         <label class="form-check-label"
                                                                                for="formInput56">{{ $size->name }}</label>
                                                                     </div>
@@ -130,54 +128,6 @@
 @push('custom-foot')
     <script>
         $(function () {
-            $('.Xs, .S, .M, .L, .Xl').hide();
-            $(function () {
-                $("#formInputXs").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".Xs").show();
-                        $(".Xs").prop('required', true);
-                    } else {
-                        $(".Xs").hide();
-                        $(".Xs").prop('required', false);
-                    }
-                });
-                $("#formInputS").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".S").show();
-                        $(".S").prop('required', true);
-                    } else {
-                        $(".S").hide();
-                        $(".S").prop('required', false);
-                    }
-                });
-                $("#formInputM").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".M").show();
-                        $(".M").prop('required', true);
-                    } else {
-                        $(".M").hide();
-                        $(".M").prop('required', false);
-                    }
-                });
-                $("#formInputL").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".L").show();
-                        $(".L").prop('required', true);
-                    } else {
-                        $(".L").hide();
-                        $(".L").prop('required', false);
-                    }
-                });
-                $("#formInputXl").click(function () {
-                    if ($(this).is(":checked")) {
-                        $(".Xl").show();
-                        $(".Xl").prop('required', true);
-                    } else {
-                        $(".Xl").hide();
-                        $(".Xl").prop('required', false);
-                    }
-                });
-            });
             $('#uploadImage').change(function () {
                 var input = this;
                 var url = $(this).val();
