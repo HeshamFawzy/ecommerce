@@ -18,7 +18,7 @@ class SystemUsersController extends Controller
      */
     public function index()
     {
-        $systemUsers = Admin::orderBy('created_at', 'DESC')->where('email', '!=', 'Admin@test.com')->paginate(10);
+        $systemUsers = Admin::orderBy('created_at', 'DESC')->where('email', '!=', 'Admin@cashmere-ey.com')->paginate(10);
         return view('admin.systemUsers.index', compact('systemUsers'));
     }
 
