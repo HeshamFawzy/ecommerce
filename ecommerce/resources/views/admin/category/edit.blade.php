@@ -96,6 +96,41 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="container pt-4">
+                                        <div class="row">
+                                            <div class="table-responsive">
+                                                <table id="sizesTable" class="table table-active">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>Size</th>
+                                                        <th>Chest</th>
+                                                        <th>Waist</th>
+                                                        <th>Regular</th>
+                                                        <th>Inseam</th>
+                                                        <th>Long(Tall) Inseam</th>
+                                                    </tr>
+                                                    @foreach ($sizes as $size)
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <label class="form-check-label"
+                                                                           for="formInput56">{{ $size->name }}</label>
+                                                                </div>
+                                                            </td>
+                                                            @foreach ($parts as $key => $part)
+                                                                <td>
+                                                                    <input type="text"
+                                                                           class="form-control"
+                                                                           name="value[{{ $part->name }}][]" value="{{ $size->parts[$key]->value }}">
+                                                                </td>
+                                                            @endforeach
+                                                        </tr>
+                                                    @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <button type="submit" class="btn btn-warning float-right"><span
                                             class="fas fa-edit"></span>
                                     </button>

@@ -101,6 +101,9 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $parts = Part::all();
         $sizes = Size::all();
+        foreach ($sizes as $size) {
+            $size['parts'] = PartSize::where('category_id', $id)->where('size_id', $size->id)->get();
+        }
         return view('admin.category.edit', compact(['category', 'sizes', 'parts']));
     }
 
@@ -164,6 +167,17 @@ class CategoryController extends Controller
                 "size_filename" => $sizeImage->getFilename() . "." . $sizeImageExtension,
             ]);
         }
+
+        foreach ($request->value as $pkey => $part) {
+            foreach ($part as $skey => $size) {
+                $partId = Part::where('name', $pkey)->first()->id;
+                $v = PartSize::where('category_id', $id)->where('size_id', $skey + 1)->where('part_id', $partId)->first();
+                PartSize::where('id', $v->id)->update([
+                    'value' => $size,
+                ]);
+            }
+        }
+
         toastr()->success('Edited Successfully', 'Edit');
         return redirect()->route('categories.index');
     }

@@ -98,7 +98,7 @@
                                                                 @foreach ($parts as $part)
                                                                     <td>
                                                                         <input type="text"
-                                                                               class="form-control {{ $size->name }}"
+                                                                               class="form-control"
                                                                                name="value[{{ $part->name }}][]">
                                                                     </td>
                                                                 @endforeach
