@@ -42,10 +42,10 @@ class SizeController extends Controller
             'sizeName' => 'required',
         ]);
 
-        if (Size::where('name', ucfirst(strtolower($request->sizeName)))->first() != null) {
+        if (Size::where('name', $request->sizeName)->first() != null) {
             return redirect()->back()->withErrors(['Size Exists']);
         } else {
-            $size = Size::create(['name' => ucfirst(strtolower($request->sizeName))]);
+            $size = Size::create(['name' => $request->sizeName]);
         }
         toastr()->success('Saved Successfully', 'Save');
         return redirect()->route('sizes.index');

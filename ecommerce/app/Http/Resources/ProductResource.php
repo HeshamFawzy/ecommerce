@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources;
 
+use App\Color;
+use App\PartSize;
 use Illuminate\Http\Resources\Json\JsonResource;
-use phpDocumentor\Reflection\Types\Array_;
-use phpDocumentor\Reflection\Types\Collection;
 
 class ProductResource extends JsonResource
 {
@@ -43,6 +43,7 @@ class ProductResource extends JsonResource
             $data[] = array(
                 'id' => $color['id'],
                 'name' => $color['name'],
+                'name_ar' => Color::where('id', $color['id'])->select('name_ar')->first()->name_ar,
                 'image' => $colorImages[$key],
                 'alter' => $colorAlterImages[$key]
             );
@@ -59,6 +60,7 @@ class ProductResource extends JsonResource
             $type = null;
         }
 
+        $sizeTable = PartSize::where('category_id', $this->CategoryR->id)->with(['sizeR', 'partR'])->get();
 
         return [
             'id' => $this->id,
@@ -75,6 +77,7 @@ class ProductResource extends JsonResource
                 "name_ar" => $this->CategoryR->name_ar,
                 "image_filename" => $image,
                 "size_filename" => $sizeImage,
+                "sizeTable" => $sizeTable
             ],
             "discount_r" => [
                 "end_date" => $end_date,

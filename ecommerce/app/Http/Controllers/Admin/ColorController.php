@@ -43,11 +43,11 @@ class ColorController extends Controller
             'colorName_ar' => 'required',
         ]);
 
-        if (Color::where('name', ucfirst(strtolower($request->colorName)))->first() != null) {
+        if (Color::where('name', $request->colorName)->first() != null) {
             return redirect()->back()->withErrors(['Color Exists']);
         } else {
             $color = Color::create([
-                'name' => ucfirst(strtolower($request->colorName)),
+                'name' => $request->colorName,
                 'name_ar' => $request->colorName_ar
             ]);
         }
